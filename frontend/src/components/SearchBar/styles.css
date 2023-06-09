@@ -1,0 +1,17 @@
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search__searchbox {
+    border: 1px solid red;
+    height: 2em;
+    width: 85%;
+    margin-right: 0.5em;
+}
+
+.search__filter {
+    border: 1px solid red;
+    height: 2em;
+    width: 10%;
+}
