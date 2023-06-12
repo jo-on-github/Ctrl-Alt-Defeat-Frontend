@@ -1,0 +1,38 @@
+
+h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #970e0e;
+    border: #970e0e 2px solid;
+}
+
+.header__img--logo {
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    border: #970e0e 2px solid;
+    padding: 2em;
+}
+
+.userInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #970e0e;
+}
+
+.userInput__btn--randomiser {
+    width: 100px;
+    height: 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
