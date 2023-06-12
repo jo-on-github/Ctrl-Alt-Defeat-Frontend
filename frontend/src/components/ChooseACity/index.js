@@ -1,12 +1,14 @@
 import React from 'react';
+import './styles.css';
 
 function ChooseACity() {
     return (
         <div className="overlay">
             <div className="header">
                 <div className="header__title">
+                  <h1>Title</h1>
                 </div>
-                <div className="header__img--logo">
+                <div className="header__img--logo" > logo
                 </div>
             </div>
             <div className="userInput">
@@ -26,5 +28,4 @@ function ChooseACity() {
         </div>
     )
 }
-
 export default ChooseACity
