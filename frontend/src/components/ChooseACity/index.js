@@ -6,21 +6,21 @@ function ChooseACity() {
         <div className="overlay">
             <div className="header">
                 <div className="header__title">
-                  <h1>Title</h1>
+                  <h1>Neighbourhood Nomad</h1>
                 </div>
                 <div className="header__img--logo" > logo
                 </div>
             </div>
             <div className="userInput">
-                <div className="userInput__input">
+                <div className="userInput__input"> Search city 
                 </div>
-                <div className="userInput__btn--randomiser">
+                <div className="userInput__btn--randomiser"> I'm feeling adventurous!
                 </div>
             </div>
             <div className="main">
-                <div className="main__animated--globe">           
+                <div className="main__animated--globe">   globe        
                 </div>
-                <div className="main__btn--submit">
+                <div className="main__btn--submit"> Search
                 </div>
             </div>
 
