@@ -1,0 +1,15 @@
+.newPlanner_btn{
+    display: flex;
+    flex-direction: column;;
+    justify-content: flex-end;
+    
+}
+
+.newPlanner{
+  
+    width: 90%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;;
+    justify-content: flex-end;
+}
