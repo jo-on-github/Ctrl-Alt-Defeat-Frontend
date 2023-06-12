@@ -1,0 +1,26 @@
+.navBar__top {
+    height: 4.2em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar__top--image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0.5em;
+}
+
+.navBar__top--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navBar__top--title {
+    font-weight: bold;
+}
