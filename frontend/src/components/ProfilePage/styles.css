@@ -1,0 +1,27 @@
+.profileHeader{
+
+    
+    height: 4.2em;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileHeader__btn--back{
+
+    height: 1.5em;
+    margin-right: 7.6em;
+    font-size: 2em;
+
+}
+.profileHeader__btn--addGuide{
+
+    height: 1.5em;
+    font-size: 2em;
+
+}
+
+button:hover{
+    cursor: pointer;
+}
