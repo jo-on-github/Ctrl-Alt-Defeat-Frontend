@@ -4,21 +4,27 @@
 }
 
 .search__searchbox {
-    border: 1px solid red;
-    height: 2em;
+    height: 2.3em;
     width: 85%;
     margin-right: 0.5em;
 }
+.search_searchbox--searchIcon{
+    position: absolute;
+    left: 2.8em;
+    top: 6.4em;
+}
 
 .search__filter {
-    border: 1px solid red;
     height: 2em;
     width: 10%;
+    display: flex;
+    justify-content: center;
 }
 
 input {
     width: 95%;
-    height: 85%;
+    height: 100%;
     border-radius: 30px;
     text-align: center;
+
 }
