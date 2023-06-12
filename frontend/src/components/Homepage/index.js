@@ -2,16 +2,14 @@ import React from "react";
 import "./styles.css";
 import SearchBar from "../SearchBar";
 import NavBar from "../NavBar";
+import Header from "../Header/index";
+import dummy from "../images/profile_photo/dummy.jpg";
 
 function Homepage() {
     return (
         <div className="overlay">
             <div className="header">
-                Header component goes here
-                <div className="header__btn--back"></div>
-                <div className="header__marker"></div>
-                <div className="header__title"></div>
-                <div className="header__btn--profile"></div>
+                <Header imageUrl={dummy} altText="My Image" location="London" />
             </div>
             <div className="search">
                 <SearchBar />
