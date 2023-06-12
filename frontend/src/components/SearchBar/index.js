@@ -8,6 +8,9 @@ function SearchBar() {
     return (
         <div className="search">
             <div className="search__searchbox">
+                <span className="search_searchbox--searchIcon">
+                <SearchIcon />
+                </span>
             <input type="text" placeholder="Search..."></input>
             </div>
             <div className="search__filter">
