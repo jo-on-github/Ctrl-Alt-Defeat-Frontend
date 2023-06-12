@@ -28,5 +28,4 @@ function ChooseACity() {
         </div>
     )
 }
-ChooseACity()
 export default ChooseACity
