@@ -5,19 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 
 
 function ChooseACity(props) {
-    const buttonStyle = {
-        color: 'black',
-        backgroundColor: 'red',
-        size: 'large',
-    }
-
-    const buttonStyleTwo = {
-        color: "red",
-    };
-
-    // const glassStyle = {
-    //     colour: "grey",    
-    // }
+ 
 
     return (
         <div className="overlay">
@@ -33,9 +21,7 @@ function ChooseACity(props) {
 
             <div className="userInput">
                 <div className="userInput__input"> 
-                <Button style={buttonStyle}> Search city 
-                <SearchIcon />
-                </Button>
+                
                 </div>
                 <div className="userInput__btn--randomiser"> I'm feeling adventurous!
                 </div>
@@ -45,8 +31,7 @@ function ChooseACity(props) {
                 <div className="main__animated--globe">   globe        
                 </div>
                 <div className="main__btn--submit"> 
-                <Button style={buttonStyleTwo}> Search  
-                </Button>
+              
                 </div>
             </div>
 
