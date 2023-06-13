@@ -12,15 +12,19 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
-    height: 13em;
+    height: 16em;
     width: 90%;
     border: 1px solid red;
 }
 
 .header__title {
-    margin-top: 1em;
-    font-size: 13px;
-    border: 1px solid red;
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(46, 41, 41, 0.69);
 }
 
 /* .header__img--logo {
@@ -31,24 +35,28 @@
 } */
 
 .logo__image {
-    padding: 1em;
-    width: 7em;
-    height: 7em;
+    margin-top: 0em;
+    width: 8em;
+    height: 8em;
 }
 
-.userInput {
-    margin-top: 1em;
+.userInput__input {
+    margin-top: 0.25em;
     height: 2.5em;
-    width: 15em;
+    width: 18em;
     border-radius: 18px;
-    margin-bottom: 2em;
-    border: 1px solid red;
+    margin-bottom: 1em;
+    border: 1px light rgb(172, 171, 171) ;
+    text-align: left;
 }
+
+
 
 .userInput__btn--randomiser {
-    margin-top: 0.5em;
+    font-family: 'Product Sans';
+    margin-top: 0em;
     margin-bottom: 1em;
-    border: 1px solid red;
+
 }
 
 .main {
@@ -73,10 +81,14 @@
 }
 
 .main__btn--submit {
-    margin-top: 1em;
-    height: 2.5em;
-    width: 15em;
-    border-radius: 10px;
-    margin-bottom: 2em;
-    border: 1px solid red;
-}
+
+        margin-top: 1em;
+        height: 3.5em;
+        width: 14em;
+        border-radius: 10px;
+        margin-bottom: 2em;
+        background: #0002FF;
+        border-radius: 2em; 
+        color: white;
+    }
+
