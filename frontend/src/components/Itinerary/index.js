@@ -25,7 +25,7 @@ function Itinerary() {
             </div>
             <FloatingActionButton />
             <div className="main">
-                <h2>Your Trips</h2>
+                <h2 className="your_trips">Your Trips</h2>
                 <Box className="main__listItems" sx={{ flexGrow: 1 }}>
                     <Grid
                         className="main__listItems--grid"

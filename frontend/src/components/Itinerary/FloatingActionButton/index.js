@@ -9,7 +9,7 @@ export default function FloatingActionButton() {
             sx={{
                 "& > :not(style)": { m: 1 },
                 position: "fixed",
-                top: 70,
+                bottom: 65,
                 right: 10,
             }}
         >
