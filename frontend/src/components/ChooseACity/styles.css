@@ -1,38 +1,82 @@
-
-h1{
-    font-size: 2.5em;
-    font-weight: 700;
-    margin-bottom: 1em;
-    text-align: center;
-    color: #970e0e;
-    border: #970e0e 2px solid;
+.overlay {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 45em;
+    width: 90%;
+    border: 1px solid red;
 }
 
-.header__img--logo {
-    width: 40%;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: contain;
-    border: #970e0e 2px solid;
+.header {
+    margin-top: 1em;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 13em;
+    width: 90%;
+    border: 1px solid red;
+}
+
+.header__title {
+    margin-top: 1em;
+    font-size: 13px;
+    border: 1px solid red;
+}
+
+/* .header__img--logo {
     padding: 2em;
+    width: 3em;
+    margin-top: 1.5em;
+    border: 1px solid red;
+} */
+
+.logo__image {
+    padding: 1em;
+    width: 7em;
+    height: 7em;
 }
 
 .userInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: #970e0e;
+    margin-top: 1em;
+    height: 2.5em;
+    width: 15em;
+    border-radius: 18px;
+    margin-bottom: 2em;
+    border: 1px solid red;
 }
 
 .userInput__btn--randomiser {
-    width: 100px;
-    height: 30px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    margin-left: 10px;
-    cursor: pointer;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid red;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    height: 18em;
+    width: 13em;
+    padding: 1em;
+    border: 1px solid red;
+}
+
+.main__animated--globe {
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.main__btn--submit {
+    margin-top: 1em;
+    height: 2.5em;
+    width: 15em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    border: 1px solid red;
 }

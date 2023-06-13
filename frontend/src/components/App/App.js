@@ -1,13 +1,13 @@
 import "./App.css";
+
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-
 //import Homepage from "../Homepage";
-
-// import Favourites from "../Favourites";
-// import ListItem from "../ListItem";
-//import Itinerary from "../Itinerary";
-//import FixedBottomNavigation from "../bottomNavFixed";
+//import ProfilePage from "../ProfilePage";
+//import ChooseACity from "../ChooseACity";
+//import Favourites from "../Favourites";
+//import ListItem from "../ListItem";
+//import GuideOverview from "../GuideOverview";
 import Itinerary from "../Itinerary";
 
 function App() {
@@ -40,6 +40,10 @@ function App() {
             {isTabletOrMobile && <Itinerary />}
         </div>
     );
+
+
+
+
 }
 
 export default App;
