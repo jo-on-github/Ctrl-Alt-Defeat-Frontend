@@ -1,0 +1,58 @@
+.guideOverlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.guideHeader {
+  width: 95%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.guideHeader__btn--back {
+  margin-top: 5%;
+}
+
+
+.guideHeader__heading {
+  height: 95%;
+  width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.guideHeader__heading--author {
+    height: 50%;
+
+  }
+
+  .guideHeader__heading--title {
+    height: 80%;
+
+  }
+
+.guideHeader__img--profile {
+  height: 60%;
+  width: 20%;
+  margin-top: 3%;
+}
+
+.guideHeader__img--profile>img {
+  height: 90%;
+  width: 90%;
+  border-radius: 50%;
+}
+
+.guideSubHeader {
+    width: 95%;
+    height: 15%;
+}
+
+.guideHeader__heading--title>h5 {
+    margin-top: -10%;
+}
+
