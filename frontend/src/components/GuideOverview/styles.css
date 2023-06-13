@@ -23,12 +23,14 @@
   width: 60%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+  text-align: left;
 }
 
-.guideHeader__heading--author {
-    height: 50%;
+.guideHeader__heading--title>h5 {
+    margin-top: -1em;
+}
 
-  }
 
   .guideHeader__heading--title {
     height: 80%;
@@ -49,10 +51,31 @@
 
 .guideSubHeader {
     width: 95%;
-    height: 15%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.guideSubHeader__icons{
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.guideSubHeader__icons--thumbUpRating{
+  margin-left: .5em;
+}
+.guideSubHeader__icons--thumbDownRating{
+  margin-left: .5em;
+}
+.guideSubHeader__additionalIcons{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.guide__img>img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.guideHeader__heading--title>h5 {
-    margin-top: -10%;
-}
 
