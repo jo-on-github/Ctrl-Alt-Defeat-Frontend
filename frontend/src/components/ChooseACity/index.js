@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.css';
-import { Button } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
 
 
-function ChooseACity(props) {
+
+
+function ChooseACity() {
  
 
     return (
@@ -20,19 +20,20 @@ function ChooseACity(props) {
             </div>
 
             <div className="userInput">
-                <div className="userInput__input"> 
-                
-                </div>
-                <div className="userInput__btn--randomiser"> I'm feeling adventurous!
-                </div>
+                <input className="userInput__input" type="text"
+          placeholder="Choose your location..."> 
+          
+                </input>
+                <button className="userInput__btn--randomiser"> I'm feeling adventurous!
+                </button>
             </div>
 
             <div className="main">
                 <div className="main__animated--globe">   globe        
                 </div>
-                <div className="main__btn--submit"> 
+                <button className="main__btn--submit"> EXPLORE CITY
               
-                </div>
+                </button>
             </div>
 
             
