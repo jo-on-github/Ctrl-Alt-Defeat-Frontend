@@ -1,25 +1,36 @@
-.newPlanner_btn{
+.newPlanner_btn {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     justify-content: flex-end;
-    
 }
 
-.newPlanner{
-  
+.newPlanner {
     width: 90%;
     height: 3em;
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
     justify-content: flex-end;
 }
 
-.main__list{
+.main {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
-    margin-top: 1em;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    background-color: aqua;
+}
+
+.main__listItems {
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__listItems--grid {
+    background-color: pink;
+    display: flex;
+    
+    justify-content: space-around;
+    
 }
