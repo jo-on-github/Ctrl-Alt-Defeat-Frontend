@@ -5,6 +5,7 @@ import Button from '@mui/material-next/Button';
 import AddIcon from '@mui/icons-material/Add';
 import "./styles.css";
 import dummy from "../images/profile_photo/dummy.jpg";
+import ListItem  from "../ListItem";
 
 function Itinerary() {
   const buttonStyle = {
@@ -25,7 +26,12 @@ function Itinerary() {
         </div>
       </div>
       <div className="main">
-        <div className="main__list"></div>
+        <div className="main__list">
+          <ListItem/>
+          <ListItem/>
+          <ListItem/>
+        </div>
+          
         <div className="main__map"></div>
       </div>
       <div className="footer">
