@@ -8,9 +8,8 @@ function ListItem () {
     const iconStyle = {
         color: 'white'
     }
-
     return (
-        <div className='listItem'>
+        <div className='listItem' theme xs={4} sm={5} md={7} lg={9} xl={11}>
             <div className='listItem__icons'>
                 <div className='listItem__icons--activity'>
                     <RestaurantIcon style={iconStyle} />
@@ -30,3 +29,6 @@ function ListItem () {
 }
 
 export default ListItem;
+
+
+

@@ -1,15 +1,96 @@
-.newPlanner_btn{
+.newPlanner_btn {
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     justify-content: flex-end;
-    
 }
 
-.newPlanner{
-  
+.newPlanner {
     width: 90%;
     height: 3em;
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
     justify-content: flex-end;
+    margin-top: 1em;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    /* background-color: aqua; */
+}
+
+.main__listItems {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .newPlanner_btn {
+      width: 12em;
+      height: 12em;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .your_trips{
+        height: 3em;
+        width: 100%;
+        margin-top: 50em;
+    }
+  
+    .newPlanner {
+      
+    }
+  
+    .main {
+      height: 100%;
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .listItem {
+      width: 15em;
+      height: 15em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons {
+      margin-top: 0;
+    }
+  
+    .listItem__title {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .listItem {
+      width: 18em;
+      height: 18em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons {
+      margin-top: 0;
+    }
+  
+    .listItem__title {
+      margin-bottom: 0;
+    }
+  }
+.main__listItems--grid {
+    /* background-color: pink; */
+    display: flex;
+
+    justify-content: space-around;
+}
+

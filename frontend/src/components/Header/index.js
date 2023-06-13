@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import Paper from "@mui/material/Paper";
 import "./styles.css";
 
 function Header(props) {
@@ -8,7 +9,11 @@ function Header(props) {
         color: "black",
     };
     return (
-        <div className="navBar__top">
+        <Paper
+            sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
+            elevation={3}
+            className="navBar__top"
+        >
             <div className="navBar__top--back">
                 <Button style={buttonStyle}>
                     <KeyboardBackspaceIcon />
@@ -20,7 +25,7 @@ function Header(props) {
             <div className="navBar__top--image">
                 <img src={props.imageUrl} alt={props.altText} />
             </div>
-        </div>
+        </Paper>
     );
 }
 

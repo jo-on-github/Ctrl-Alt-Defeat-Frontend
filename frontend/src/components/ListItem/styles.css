@@ -27,3 +27,107 @@
 .listItem__title >h3 {
     color: white;
 }
+
+/*media queries for list item to make them relative to page size*/
+
+@media (min-width: 600px) {
+    .listItem {
+      width: 12em;
+      height: 12em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons--activity {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 9em;
+        margin-left: 0.5em;
+       
+    }
+
+    .listItem__icons--favourite{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 9em;
+        margin-left: 8em;
+    }
+  
+    .listItem__title {
+        text-align: left;
+        margin-top: 5em;
+        margin-bottom: 0;
+        margin-left: -8.5em;
+        font-size: large;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .listItem {
+      width: 15em;
+      height: 15em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons--activity {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 11.5em;
+        margin-left: 0.5em;
+       
+    }
+
+    .listItem__icons--favourite{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 11em;
+        margin-left: 11em;
+    }
+  
+    .listItem__title {
+        text-align: left;
+        margin-top: 4.5em;
+        margin-bottom: 0;
+        margin-left: -8.5em;
+        font-size: x-large;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .listItem {
+      width: 18em;
+      height: 18em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons--activity {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 14em;
+        margin-left: 0.5em;
+       
+    }
+
+    .listItem__icons--favourite{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 11em;
+        margin-left: 14em;
+    }
+  
+    .listItem__title {
+        text-align: left;
+        margin-top: 4.3em;
+        margin-bottom: 0;
+        margin-left: -8.5em;
+        font-size: xx-large;
+    }
+  }
