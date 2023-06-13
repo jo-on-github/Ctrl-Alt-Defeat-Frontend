@@ -1,14 +1,15 @@
 import "./App.css";
 import Homepage from "../Homepage";
+import ProfilePage from "../ProfilePage";
 import ChooseACity from "../ChooseACity";
-
 import Favourites from "../Favourites";
 import ListItem from "../ListItem";
+import GuideOverview from "../GuideOverview";
 
 function App() {
   return (
     <div className="App">
-      <ChooseACity />
+      <GuideOverview />
     </div>
   )
 }
