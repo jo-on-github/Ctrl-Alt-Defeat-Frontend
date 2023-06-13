@@ -27,10 +27,61 @@
     align-items: center;
 }
 
-.main__listItems--grid {
-    background-color: pink;
-    display: flex;
-    
-    justify-content: space-around;
-    
-}
+@media (min-width: 600px) {
+    .newPlanner_btn {
+      width: 12em;
+      height: 12em;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    h2{
+        height: 3em;
+        width: 100%;
+    }
+  
+    .newPlanner {
+      
+    }
+  
+    .main {
+      height: 100%;
+        width: 100%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .listItem {
+      width: 15em;
+      height: 15em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons {
+      margin-top: 0;
+    }
+  
+    .listItem__title {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .listItem {
+      width: 18em;
+      height: 18em;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .listItem__icons {
+      margin-top: 0;
+    }
+  
+    .listItem__title {
+      margin-bottom: 0;
+    }
+  }
