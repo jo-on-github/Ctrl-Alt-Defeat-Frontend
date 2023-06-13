@@ -21,8 +21,8 @@ function ChooseACity() {
 
             <div className="userInput">
                 <input className="userInput__input" type="text"
-          placeholder="City name"> 
-         
+          placeholder="Choose your location..."> 
+          
                 </input>
                 <button className="userInput__btn--randomiser"> I'm feeling adventurous!
                 </button>
