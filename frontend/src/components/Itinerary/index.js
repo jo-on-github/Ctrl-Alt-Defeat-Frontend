@@ -8,57 +8,52 @@ import dummy from "../images/profile_photo/dummy.jpg";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import FloatingActionButton from "./FloatingActionButton";
 
 function Itinerary() {
-    const buttonStyle = {
-        color: "white",
-        backgroundColor: "#0002FF",
-        height: "2em",
-        width: "11em",
-    };
+    // const buttonStyle = {
+    //     color: "white",
+    //     backgroundColor: "#0002FF",
+    //     height: "2em",
+    //     width: "11em",
+    // };
 
     return (
         <div className="overlay">
             <div className="header">
                 <Header imageUrl={dummy} altText="My Image" location="London" />
             </div>
-            <div className="newPlanner">
-                <div className="newPlanner_btn">
-                    <Button
-                        variant="contained"
-                        style={buttonStyle}
-                        size="small"
-                    >
-                        <AddIcon />
-                        Plan New Trip
-                    </Button>
-                </div>
-            </div>
+            <FloatingActionButton />
             <div className="main">
                 <h2>Your Trips</h2>
                 <Box className="main__listItems" sx={{ flexGrow: 1 }}>
                     <Grid
                         className="main__listItems--grid"
                         container
-                        rowSpacing={1.5}
-                        columnSpacing={0}
+                        spacing={2}
                     >
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={3}>
                             <ListItem />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={3}>
                             <ListItem />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={3}>
                             <ListItem />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={3}>
                             <ListItem />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={3}>
                             <ListItem />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid item xs={6} sm={4} md={3}>
+                            <ListItem />
+                        </Grid>
+                        <Grid item xs={6} sm={4} md={3}>
+                            <ListItem />
+                        </Grid>
+                        <Grid item xs={6} sm={4} md={3}>
                             <ListItem />
                         </Grid>
                     </Grid>
@@ -72,3 +67,16 @@ function Itinerary() {
 }
 
 export default Itinerary;
+
+// <div className="newPlanner">
+//                 <div className="newPlanner_btn">
+//                     <Button
+//                         variant="contained"
+//                         style={buttonStyle}
+//                         size="small"
+//                     >
+//                         <AddIcon />
+//                         Plan New Trip
+//                     </Button>
+//                 </div>
+//             </div>

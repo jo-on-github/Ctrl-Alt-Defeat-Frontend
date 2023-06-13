@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-top: 1em;
 }
 
 .main {
@@ -17,11 +18,11 @@
     flex-direction: column;
     align-items: center;
     width: 95%;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .main__listItems {
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,3 +86,10 @@
       margin-bottom: 0;
     }
   }
+.main__listItems--grid {
+    /* background-color: pink; */
+    display: flex;
+
+    justify-content: space-around;
+}
+
