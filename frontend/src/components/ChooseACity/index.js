@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 import SearchIcon from '@mui/icons-material/Search';
-import NavBar from "../NavBar";
+
 
 function ChooseACity() {
   return (
