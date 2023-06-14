@@ -8,6 +8,7 @@ import Paper from "@mui/material/Paper";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     //controls state of buttons to highlight when clicked
@@ -25,22 +26,30 @@ function NavBar() {
                     setValue(newValue);
                 }}
             >
-                <BottomNavigationAction
-                    label="Home"
-                    icon={<HomeOutlinedIcon />}
-                />
-                <BottomNavigationAction
-                    label="Map"
-                    icon={<MapOutlinedIcon />}
-                />
-                <BottomNavigationAction
-                    label="Location"
-                    icon={<LocationOnOutlinedIcon />}
-                />
-                <BottomNavigationAction
-                    label="Favourites"
-                    icon={<BookmarkBorderOutlinedIcon />}
-                />
+                <Link to={"/home"}>
+                    <BottomNavigationAction
+                        label="Home"
+                        icon={<HomeOutlinedIcon />}
+                    />
+                </Link>
+                <Link to={"/planner"}>
+                    <BottomNavigationAction
+                        label="planner"
+                        icon={<MapOutlinedIcon />}
+                    />
+                </Link>
+                <Link to={"/map"}>
+                    <BottomNavigationAction
+                        label="Location"
+                        icon={<LocationOnOutlinedIcon />}
+                    />
+                </Link>
+                <Link to={"/favourites"}>
+                    <BottomNavigationAction
+                        label="Favourites"
+                        icon={<BookmarkBorderOutlinedIcon />}
+                    />
+                </Link>
             </BottomNavigation>
         </Paper>
     );

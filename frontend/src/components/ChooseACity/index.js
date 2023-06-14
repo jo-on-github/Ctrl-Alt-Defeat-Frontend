@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './styles.css';
 import SearchIcon from '@mui/icons-material/Search';
@@ -29,5 +30,6 @@ function ChooseACity() {
     </div>
   )
 }
+
 
 export default ChooseACity;
