@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CreateItinerary() {
+export default function Map() {
     return (
         <div className="overlay">
             <div className="header">
