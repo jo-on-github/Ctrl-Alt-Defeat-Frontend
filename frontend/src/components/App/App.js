@@ -30,7 +30,9 @@ function App() {
                     mobile or tablet site.
                 </p>
             )}
+
             {isTabletOrMobile && <ChooseACity />}
+
         </div>
     );
 }
