@@ -2,12 +2,12 @@ import "./App.css";
 
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import Homepage from "../Homepage";
+// import Homepage from "../Homepage";
 //import ProfilePage from "../ProfilePage";
 //import ChooseACity from "../ChooseACity";
 //import Favourites from "../Favourites";
 //import ListItem from "../ListItem";
-//import GuideOverview from "../GuideOverview";
+import GuideOverview from "../GuideOverview";
 //import Itinerary from "../Itinerary";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
                     mobile or tablet site.
                 </p>
             )}
-            {isTabletOrMobile && <Homepage />}
+            {isTabletOrMobile && <GuideOverview />}
         </div>
     );
 }
