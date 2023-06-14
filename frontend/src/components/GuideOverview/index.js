@@ -11,7 +11,7 @@ import cath from "../../assets/cath.png";
 
 function GuideOverview() {
   const buttonStyle = {
-    color: "black",
+    color: "#444445",
   };
 
   return (
@@ -38,20 +38,20 @@ function GuideOverview() {
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
           <div className="guideSubHeader__icons--thumbUp">
-            <ThumbUpAltOutlinedIcon />
+            <ThumbUpAltOutlinedIcon style={buttonStyle}/>
             <span className="guideSubHeader__icons--thumbUpRating">88%</span>
           </div>
           <div className="guideSubHeader__icons--thumbDown">
-            <ThumbDownAltOutlinedIcon />
+            <ThumbDownAltOutlinedIcon style={buttonStyle}/>
             <span className="guideSubHeader__icons--thumbDownRating">12%</span>
           </div>
         </div>
         <div className="guideSubHeader__additionalIcons">
           <div className="guideSubHeader__additionalIcons--pin">
-            <PushPinOutlinedIcon />
+            <PushPinOutlinedIcon style={buttonStyle}/>
           </div>
           <div div className="guideSubHeader__additionalIcons--favourite">
-            <BookmarkBorderOutlinedIcon />
+            <BookmarkBorderOutlinedIcon style={buttonStyle}/>
           </div>
         </div>
       </div>
@@ -59,15 +59,26 @@ function GuideOverview() {
         <img src={cath} alt="cath" />
       </div>
       <div className="middleNavBar">
-      <div className="middleNavBar__btn--overview"></div>
-      <div className="middleNavBar__btn--experience"></div>
-      <div className="middleNavBar__btn--reviews"></div>
+        <div className="middleNavBar__btn--overview">
+          <button>Overview</button>
+        </div>
+        <div className="middleNavBar__btn--experience">
+          <button>Experience</button>
+        </div>
+        <div className="middleNavBar__btn--reviews">
+          <button>Reviews</button>
+        </div>
       </div>
       <div className="selectedPageHeading">
-      <div className="">
+        <div className="selectedPageHeading__title">
+          <h2>Overview</h2>
+        </div>
 
       </div>
+      <div className="guideDesc">
+        <div className="guideDesc--info">
 
+        </div>
       </div>
     </div>
   );
