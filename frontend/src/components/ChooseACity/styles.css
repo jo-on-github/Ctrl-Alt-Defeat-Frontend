@@ -1,89 +1,110 @@
 .overlay {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    height: 45em;
-    width: 90%;
-    border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 45em;
+  width: 90%;
+  border: 1px solid rgb(252, 252, 252);
 }
 
 .header {
-    margin-top: 1em;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    height: 16em;
-    width: 90%;  
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 16em;
+  width: 90%;
 }
 
 .header__title {
-    font-family: 'Product Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 40px;
-    text-align: center;
-    color: rgba(46, 41, 41, 0.69);
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 15px;
+  /* line-height: 40px; */
+  text-align: center;
+  color: rgba(47, 43, 43, 0.793);
 }
 
-
 .logo__image {
-    margin-top: 0em;
-    width: 8em;
-    height: 8em;
+  width: 8em;
+  height: 8em;
+}
+
+.userInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
 }
 
 .userInput__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 0.25em;
     height: 2.5em;
     width: 18em;
     border-radius: 18px;
-    margin-bottom: 1em;
-    border: 1px light rgb(172, 171, 171) ;
-    text-align: left;
+    border: 1px solid rgb(172, 171, 171);
+    text-align: center;
+    position: relative;
 }
 
-
-
+.userInput__icon {
+    position: absolute;
+    left: 10.5em;
+    transform: translateY(-50%);
+    color: rgba(46, 41, 41, 0.69);
+}
 .userInput__btn--randomiser {
     color: rgba(46, 41, 41, 0.69);
-    margin-top: 0em;
-    margin-bottom: 1em;
     background-color: white;
-    border: 0px ;
+    border: 0px;
     text-decoration: underline;
+    display: block;
+    margin-top: 0.5em;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
-    height: 18em;
-    width: 13em;
-    padding: 1em;
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  height: 18em;
+  width: 13em;
+  padding: 1em;
 }
 
 .main__animated--globe {
-    height: 12em;
-    width: 12em;
-    border-radius: 50%;
-    margin-bottom: 1em;
-    display: flex;
-    justify-content: center;
-    border: 1px solid red;
+  height: 12em;
+  width: 12em;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
 }
 
 .main__btn--submit {
+  margin-top: 1em;
+  font-weight: 700;
+  height: 3.5em;
+  width: 14em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  background: #0002FF;
+  color: white;
+}
 
-        margin-top: 1em;
-        height: 3.5em;
-        width: 14em;
-        border-radius: 10px;
-        margin-bottom: 2em;
-        background: #0002FF;
-        border-radius: 2em; 
-        color: white;
+/* nesthub med screen */
+@media screen and (max-width:477px) {
+    .overlay__header-heading {
+        margin-right: 0;
     }
 
+    .overlay__header-btn>button {
+        margin-left: .5em;
+    }
+}
