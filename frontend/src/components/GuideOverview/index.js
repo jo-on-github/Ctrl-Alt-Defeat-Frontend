@@ -4,8 +4,8 @@ import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
-import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-import PushPinOutlinedIcon from '@mui/icons-material/PushPinOutlined';
+import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 import profileImg from "../../assets/profileImg.png";
 import cath from "../../assets/cath.png";
 
@@ -47,7 +47,6 @@ function GuideOverview() {
           </div>
         </div>
         <div className="guideSubHeader__additionalIcons">
-          
           <div className="guideSubHeader__additionalIcons--pin">
             <PushPinOutlinedIcon />
           </div>
@@ -58,6 +57,17 @@ function GuideOverview() {
       </div>
       <div className="guide__img">
         <img src={cath} alt="cath" />
+      </div>
+      <div className="middleNavBar">
+      <div className="middleNavBar__btn--overview"></div>
+      <div className="middleNavBar__btn--experience"></div>
+      <div className="middleNavBar__btn--reviews"></div>
+      </div>
+      <div className="selectedPageHeading">
+      <div className="">
+
+      </div>
+
       </div>
     </div>
   );
