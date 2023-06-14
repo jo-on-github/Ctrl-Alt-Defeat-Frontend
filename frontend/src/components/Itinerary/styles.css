@@ -13,6 +13,12 @@
     margin-top: 1em;
 }
 
+.your_trips{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -26,9 +32,83 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 490px){
+    .listItem {
+        width: 8em;
+        height: 8em;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+      }
+  
+      .your_trips{
+          display: flex;
+          flex-direction: row;
+          margin-top: 0.5em;
+      }
+    
+      .newPlanner {
+        
+      }
+    
+      .main {
+          height: 100%;
+          width: 100%;
+      }
+  
+      .main__listItems {
+          /* background-color: green; */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 1em;
+          margin-right: 2em;
+      }
+
+}
+
+@media (max-width: 650px){
+    .listItem {
+        width: 9em;
+        height: 9em;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0px;
+        padding: 0px;
+      }
+  
+      .your_trips{
+          display: flex;
+          flex-direction: row;
+          margin-top: 0.5em;
+      }
+    
+      .newPlanner {
+        
+      }
+    
+      .main {
+          height: 100%;
+          width: 100%;
+      }
+  
+      .main__listItems {
+          /* background-color: green; */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 1em;
+          margin-right: 2em;
+      }
+
+}
+
+@media (min-width: 769px) {
     .newPlanner_btn {
       width: 12em;
       height: 12em;
@@ -39,9 +119,8 @@
     }
 
     .your_trips{
-        height: 3em;
-        width: 100%;
-        margin-top: 50em;
+        display: flex;
+        flex-direction: row;
     }
   
     .newPlanner {
@@ -49,12 +128,21 @@
     }
   
     .main {
-      height: 100%;
+        height: 100%;
         width: 100%;
+    }
+
+    .main__listItems {
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5em;
+        margin-right: 5em;
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 967px) {
     .listItem {
       width: 15em;
       height: 15em;
@@ -71,7 +159,7 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1164px) {
     .listItem {
       width: 18em;
       height: 18em;

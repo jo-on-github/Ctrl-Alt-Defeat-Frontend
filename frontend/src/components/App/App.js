@@ -3,6 +3,7 @@ import "./App.css";
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import Homepage from "../Homepage";
+import Itinerary from "../Itinerary";
 //import ProfilePage from "../ProfilePage";
 //import ChooseACity from "../ChooseACity";
 //import Favourites from "../Favourites";
@@ -37,7 +38,7 @@ function App() {
                     mobile or tablet site.
                 </p>
             )}
-            {isTabletOrMobile && <Homepage />}
+            {isTabletOrMobile && <Itinerary />}
         </div>
     );
 }
