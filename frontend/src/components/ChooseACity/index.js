@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles.css';
 import SearchIcon from '@mui/icons-material/Search';
+import { useMediaQuery } from 'react-responsive';
 
 
 function ChooseACity() {
