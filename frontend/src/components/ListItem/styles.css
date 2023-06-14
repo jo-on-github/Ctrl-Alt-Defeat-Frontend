@@ -30,7 +30,77 @@
 
 /*media queries for list item to make them relative to page size*/
 
-@media (min-width: 600px) {
+@media (max-width: 490px){
+    .listItem {
+        width: 8em;
+        height: 8em;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    
+      .listItem__icons--activity {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 6em;
+          margin-left: 0.5em;
+         
+      }
+  
+      .listItem__icons--favourite{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 6em;
+          margin-left: 4em;
+      }
+    
+      .listItem__title {
+          text-align: left;
+          margin-top: 5em;
+          margin-bottom: 0;
+          margin-left: -8.5em;
+          font-size: small;
+      }
+
+}
+
+@media (max-width: 650px){
+    .listItem {
+        width: 9em;
+        height: 9em;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    
+      .listItem__icons--activity {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 6em;
+          margin-left: 0.5em;
+         
+      }
+  
+      .listItem__icons--favourite{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          margin-bottom: 6em;
+          margin-left: 4em;
+      }
+    
+      .listItem__title {
+          text-align: left;
+          margin-top: 5em;
+          margin-bottom: 0;
+          margin-left: -8.5em;
+          font-size: small;
+      }
+
+}
+
+@media (min-width: 769px) {
     .listItem {
       width: 12em;
       height: 12em;
@@ -64,7 +134,7 @@
     }
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 967px) {
     .listItem {
       width: 15em;
       height: 15em;
@@ -98,7 +168,7 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1164px) {
     .listItem {
       width: 18em;
       height: 18em;
