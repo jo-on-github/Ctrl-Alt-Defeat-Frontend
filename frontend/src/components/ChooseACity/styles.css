@@ -50,6 +50,7 @@
     transform: translateY(-50%);
     color: rgba(46, 41, 41, 0.69);
 }
+
 .userInput__btn--randomiser {
     color: rgba(46, 41, 41, 0.69);
     background-color: white;
@@ -59,13 +60,13 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1em;
-  height: 18em;
-  width: 13em;
-  padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    height: 18em;
+    width: 13em;
+    padding: 1em;
 }
 
 .main__animated--globe {
@@ -78,13 +79,15 @@
     justify-content: center;
     border: 1px solid red;
 }
+
 .main__btn--submit {
-  font-weight: 700;
-  height: 4em;
-  width: 14em;
-  border-radius: 10px;
-  background: #0002FF;
-  color: white;
+    font-weight: 700;
+    height: 4em;
+    width: 14em;
+    border-radius: 10px;
+    background: #0002FF;
+    color: white;
 }
+
 
 
