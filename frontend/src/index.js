@@ -11,7 +11,7 @@ import GuideOverview from "./components/GuideOverview";
 import Favourites from "./components/Favourites";
 import Itinerary from "./components/Itinerary";
 import CreateItinerary from "./components/CreateItinerary";
-import Map from "./components/Map";
+import Map from "./components/Map/index";
 
 //REACT ROUTER
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
