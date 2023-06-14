@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './styles.css';
-import SearchIcon from '@mui/icons-material/Search';
+
 
 
 
@@ -13,13 +13,13 @@ function ChooseACity() {
           <h1>Neighbourhood Nomad</h1>
         </div>
         <div className="header__img--logo">
-          <img className="logo__image" src="../image/image-(2).png" alt="logo" />
+          <img className="logo__image" src="../image/image-(1).png" alt="logo" />
         </div>
       </div>
 
       <div className="userInput">
-        <input className="userInput__input" type="text" placeholder="Choose your location..." />
-        <SearchIcon className="userInput__icon" />
+        <input className="userInput__input" type="text" placeholder="Choose your location...            🔍" />
+        
         <button className="userInput__btn--randomiser">I'm feeling adventurous!</button>
       </div>
 

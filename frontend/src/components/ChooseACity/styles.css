@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
-    border: 1px solid rgba(252, 252, 252, 0.962);
+    width: 100%;
+    
 }
 
 .header {
@@ -19,20 +19,20 @@
     text-align: center;
     color: rgba(34, 31, 31, 0.793);
     margin-bottom: -1.9em;
+    width: 90%;
 }
 
 .logo__image {
-    width: 15em;
-    height: 15em;
+    width: 12em;
+    height: 12em;
 }
 
 .userInput {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 9em;
     width: 80%;
+    
 }
 
 .userInput__input {
@@ -42,13 +42,6 @@
     border: 1px solid rgb(172, 171, 171);
     text-align: center;
     position: relative;
-}
-
-.userInput__icon {
-    position: absolute;
-    left: 10.5em;
-    transform: translateY(-50%);
-    color: rgba(46, 41, 41, 0.69);
 }
 
 .userInput__btn--randomiser {
@@ -66,15 +59,14 @@
     margin-top: 1em;
     height: 18em;
     width: 13em;
-    padding: 1em;
 }
 
 .main__animated--globe {
     height: 14em;
     width: 14em;
     border-radius: 50%;
-    position: relative;
-    top: -2em;
+   
+
     display: flex;
     justify-content: center;
     border: 1px solid red;
@@ -87,6 +79,7 @@
     border-radius: 10px;
     background: #0002FF;
     color: white;
+    margin-top: 1em;
 }
 
 
