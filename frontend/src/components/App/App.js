@@ -1,7 +1,7 @@
 import "./App.css";
-
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+
 import Homepage from "../Homepage";
 import Itinerary from "../Itinerary";
 //import ProfilePage from "../ProfilePage";
@@ -10,6 +10,9 @@ import Itinerary from "../Itinerary";
 //import ListItem from "../ListItem";
 //import GuideOverview from "../GuideOverview";
 //import Itinerary from "../Itinerary";
+
+import ChooseACity from "../ChooseACity";
+
 
 function App() {
     //Defining Media Queries for responsive design -
@@ -38,7 +41,13 @@ function App() {
                     mobile or tablet site.
                 </p>
             )}
-            {isTabletOrMobile && <Itinerary />}
+
+   
+
+
+            {isTabletOrMobile && <ChooseACity />}
+
+
         </div>
     );
 }
