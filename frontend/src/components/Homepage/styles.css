@@ -5,12 +5,10 @@
 }
 
 .header {
-    border: 1px solid red;
     height: 4.2em;
     width: 95%;
 }
 .search {
-    border: 1px solid red;
     height: 4.2em;
     width: 95%;
     display: flex;
@@ -18,7 +16,6 @@
     align-items: center;
 }
 .main {
-    border: 1px solid red;
     height: 36.6em;
     width: 95%;
     display: flex;
@@ -27,14 +24,12 @@
 }
 
 .main__list {
-    border: 1px solid red;
     height: 35em;
     width: 95%;
     margin: 0.5em;
 }
 
 .footer {
-    border: 1px solid red;
     height: 4.5em;
     width: 95%;
     display: flex;
