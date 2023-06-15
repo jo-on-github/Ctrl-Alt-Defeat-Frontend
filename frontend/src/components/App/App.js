@@ -3,9 +3,10 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import Homepage from "../Homepage";
 import Itinerary from "../Itinerary";
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, useLocation} from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
+import Header from "../Header";
 
 
 
@@ -20,6 +21,9 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
         setCity(city);
     }
 
+  const location = useLocation();
+  const [currentPage, setCurrentPage] = React.useState(location.pathname);
+
     return (
         <div>
 
@@ -29,7 +33,7 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
                 <Route path="/planner" element={<Itinerary />} />
                 <Route path="/guide-overview" element={<GuideOverview/>} />
            </Routes>
-
+            
         </div>
     );
 }
