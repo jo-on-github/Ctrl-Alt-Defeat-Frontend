@@ -9,11 +9,10 @@ import ChooseACity from "../ChooseACity";
 import Header from "../Header";
 
 
-
-
 function App() {
-const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
-const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+    return (
+        <div>
+             <ChooseACity />
 
     const [city, setCity] = React.useState("hi");
 
@@ -27,6 +26,7 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
     return (
         <div>
 
+
            <Routes>
                 <Route path="/" element={<ChooseACity updateCity={updateCity}/>} />
                 <Route path="/home" element={<Homepage city={city}/>} />
@@ -39,3 +39,21 @@ const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 }
 
 export default App;
+
+
+
+// {isDesktopOrLaptop && (
+//     <p>
+//         We currently do not support this size device. Please use our
+//         mobile or tablet site.
+//     </p>
+// )}
+// {isBigScreen && (
+//     <p>
+//         We currently do not support this size device. Please use our
+//         mobile or tablet site.
+//     </p>
+// )}
+// mobile or tablet site.
+
+// {isTabletOrMobile && <ChooseACity />}

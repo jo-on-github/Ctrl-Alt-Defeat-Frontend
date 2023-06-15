@@ -4,9 +4,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Link,  NavLink, useNavigate} from "react-router-dom";
 import cityRandomData from "../../dummyData/cityRandom";
 
-
-
-
 function ChooseACity({updateCity}) {
 
     const navigate = useNavigate();
