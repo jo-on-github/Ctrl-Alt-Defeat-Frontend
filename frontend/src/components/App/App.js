@@ -14,7 +14,7 @@ import {Route, Routes} from "react-router-dom";
 // import ChooseACity from "../ChooseACity";
 //import Favourites from "../Favourites";
 //import ListItem from "../ListItem";
-//import GuideOverview from "../GuideOverview";
+import GuideOverview from "../GuideOverview";
 // import Itinerary from "../Itinerary";
 
 
@@ -32,17 +32,20 @@ function App() {
 const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
 const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
-    const [city, setCity] = React.useState("city");
+    const [city, setCity] = React.useState("hi");
 
-
+    const updateCity = (city) => {
+        setCity(city);
+    }
 
     return (
         <div>
 
            <Routes>
-                <Route path="/" element={<ChooseACity setCity={setCity}/>} />
+                <Route path="/" element={<ChooseACity updateCity={updateCity}/>} />
                 <Route path="/home" element={<Homepage city={city}/>} />
                 <Route path="/planner" element={<Itinerary />} />
+                <Route path="/guide-overview" element={<GuideOverview/>} />
            </Routes>
 
         </div>

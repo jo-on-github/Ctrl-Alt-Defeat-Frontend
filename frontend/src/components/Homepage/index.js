@@ -12,11 +12,10 @@ function Homepage({city}) {
     return (
         <div className="overlay">
             <div className="header">
-                <Header imageUrl={dummy} altText="My Image" location="London" />
+                <Header imageUrl={dummy} altText="My Image" location={city} />
             </div>
             <div className="search">
                 <SearchBar />
-                <p>{city} hello</p>
             </div>
             <div className="main">
                 <div className="main__list">
