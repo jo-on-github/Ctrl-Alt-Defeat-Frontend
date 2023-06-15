@@ -47,12 +47,25 @@
         text-align: center;
         color: rgba(34, 31, 31, 0.793);
         margin-bottom: -1.8em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-    .main__list li {
-        display: inline-block;
-        /* or 'inline-flex' for more control */
-        margin-right: 10px;
-        /* adjust spacing between list items */
+    .main__listItems--grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    .main__listItems--grid>* {
+        flex-basis: calc(5% - 12px);
+        /* Adjust the width as per your requirements */
+
+        margin-bottom: 12px;
+        /* Adjust the spacing between list items */
+
     }
 }

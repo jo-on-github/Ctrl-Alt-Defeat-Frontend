@@ -7,6 +7,7 @@ import dummy from "../images/profile_photo/dummy.jpg";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import useMediaQueries from "media-queries-in-react";
 
 function Homepage() {
     return (
@@ -57,7 +58,7 @@ function Homepage() {
                 <NavBar />
             </div>
         </div>
-    );
+    )
 }
 
 export default Homepage;
