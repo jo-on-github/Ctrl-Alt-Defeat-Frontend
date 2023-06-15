@@ -8,57 +8,67 @@ import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import useMediaQueries from "media-queries-in-react";
+import useMediaQuery from '@mui/material/useMediaQuery'
+
 
 function Homepage() {
-    return (
-        <div className="overlay">
-            <div className="header">
-                <Header imageUrl={dummy} altText="My Image" location="London" />
-            </div>
-            <div className="search">
-                <SearchBar />
-            </div>
-            <div className="main">
-                <div className="main__list">
-                    <Box className="main__listItems" sx={{ flexGrow: 1 }}>
-                        <Grid
-                            className="main__listItems--grid"
-                            container
-                            spacing={2}
-                        >
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                            <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
-                            </Grid>
-                        </Grid>
-                    </Box>
-                </div>
-            </div>
-            <div className="footer">
-                <NavBar />
-            </div>
+  const matches = useMediaQuery('(min-width:833px)');
+
+  return (
+    <div className="overlay">
+      <div className="header">
+        <Header imageUrl={dummy} altText="My Image" location="London" />
+      </div>
+      <div className="search">
+        <SearchBar />
+      </div>
+      <div className="main">
+        <div className="main__list">
+          <Box className="main__listItems" sx={{ flexGrow: 1 }}>
+            <Grid
+              className="main__listItems--grid"
+              container
+              spacing={2}
+            >
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+              <Grid item xs={6} sm={4} md={3}>
+                <ListItem />
+              </Grid>
+
+              {matches && (
+                <Grid item xs={6} sm={4} md={3}>
+                  <ListItem />
+                </Grid>
+              )}
+            </Grid>
+          </Box>
         </div>
-    )
+      </div>
+      <div className="footer">
+        <NavBar />
+      </div>
+    </div>
+  );
 }
 
 export default Homepage;
