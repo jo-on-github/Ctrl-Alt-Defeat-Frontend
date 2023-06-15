@@ -3,10 +3,21 @@ import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Paper from "@mui/material/Paper";
 import "./styles.css";
+import {useNavigate, useLocation} from "react-router-dom";
 
-function Header(props) {
+function Header(props ) {
     const buttonStyle = {
         color: "black",
+    };
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const handleClick = () => {
+        if (location.pathname === '/home') {
+            navigate('/');
+          } else {
+            navigate(-1);
+          }
     };
     return (
         <Paper
@@ -15,7 +26,7 @@ function Header(props) {
             className="navBar__top"
         >
             <div className="navBar__top--back">
-                <Button style={buttonStyle}>
+                <Button style={buttonStyle} onClick={handleClick}>
                     <KeyboardBackspaceIcon />
                 </Button>
             </div>

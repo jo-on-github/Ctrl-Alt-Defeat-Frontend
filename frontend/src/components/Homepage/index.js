@@ -7,12 +7,13 @@ import dummy from "../images/profile_photo/dummy.jpg";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
 
-function Homepage() {
+function Homepage({city}) {
     return (
         <div className="overlay">
             <div className="header">
-                <Header imageUrl={dummy} altText="My Image" location="London" />
+                <Header imageUrl={dummy} altText="My Image" location={city} />
             </div>
             <div className="search">
                 <SearchBar />
@@ -26,7 +27,9 @@ function Homepage() {
                             spacing={2}
                         >
                             <Grid item xs={6} sm={4} md={3}>
-                                <ListItem />
+                                <Link to="/guide-overview">
+                                    <ListItem />
+                                </Link>
                             </Grid>
                             <Grid item xs={6} sm={4} md={3}>
                                 <ListItem />
