@@ -27,7 +27,7 @@ function Homepage({city}) {
                             spacing={2}
                         >
                             <Grid item xs={6} sm={4} md={3}>
-                                <Link to="/guide-overview">
+                                <Link to="/guide/overview">
                                     <ListItem />
                                 </Link>
                             </Grid>
