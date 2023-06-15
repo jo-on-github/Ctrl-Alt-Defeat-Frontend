@@ -131,8 +131,8 @@
     }
     
     .main__animated--globe {
-        height: 100em;
-        width: 25em;
+        height: 80em;
+        width: 22em;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -141,7 +141,7 @@
     
     .main__btn--submit {
         font-weight: 700;
-        height: 30em;
+        height: 20em;
         width: 20em;
         border-radius: 10px;
         background: #0002FF;
@@ -150,18 +150,61 @@
     }
 }
     
-    
-    
-    @media (min-width: 441px){
-        .header__title {
-            font-family: 'Product Sans';
-            line-height: 2.5em;
-            text-align: center;
-            color: rgba(34, 31, 31, 0.793);
-            margin-bottom: -1.9em;
-            width: 80%;
-        }
+@media (min-width: 1279px){
+    .header__title {
+        font-family: 'Product Sans';
+        font-size: 43px;
+        text-align: center;
+        color: rgba(34, 31, 31, 0.793);
+        margin-bottom: -1.8em;
+        
     }
+    .logo__image {
+        width: 14em;
+        height: 14em;
+    }
+    .userInput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin-top: 7em;
+    }
+    .userInput__input {
+        height: 2em;
+        width: 16em;
+        font-size: 28px;
+        border-radius: 18px;
+        border: 1px solid rgb(172, 171, 171);
+        text-align: center;
+        position: relative;
+    }
+    .userInput__btn--randomiser {
+        color: rgba(46, 41, 41, 0.69);
+        font-size: 20px;
+        background-color: white;
+        border: 0px;
+        text-decoration: underline;
+        display: block;
+    }
+    .main__animated--globe {
+        height: 24em;
+        width: 13em;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        border: 1px solid red;
+    }
+    .main__btn--submit {
+        font-weight: 700;
+        height: 7em;
+        width: 28em;
+        border-radius: 10px;
+        background: #0002FF;
+        color: white;
+        margin-top: 1em;
+    }
+}
     
     
     /* .userInput {
