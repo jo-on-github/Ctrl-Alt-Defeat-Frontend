@@ -82,5 +82,26 @@
     margin-top: 1em;
 }
 
+@media (min-width: 417px){
+    .header__title {
+        font-family: 'Product Sans';
+        line-height: 2.5em;
+        text-align: center;
+        color: rgba(34, 31, 31, 0.793);
+        margin-bottom: -1.9em;
+        width: 85%;
+    }
+}
 
+
+@media (min-width: 441px){
+    .header__title {
+        font-family: 'Product Sans';
+        line-height: 2.5em;
+        text-align: center;
+        color: rgba(34, 31, 31, 0.793);
+        margin-bottom: -1.9em;
+        width: 80%;
+    }
+}
 
