@@ -3,16 +3,21 @@ import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Paper from "@mui/material/Paper";
 import "./styles.css";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useLocation} from "react-router-dom";
 
-function Header(props) {
+function Header(props ) {
     const buttonStyle = {
         color: "black",
     };
 
     const navigate = useNavigate();
+    const location = useLocation();
     const handleClick = () => {
-        navigate(-1);
+        if (location.pathname === '/home') {
+            navigate('/');
+          } else {
+            navigate(-1);
+          }
     };
     return (
         <Paper

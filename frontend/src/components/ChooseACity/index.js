@@ -2,13 +2,13 @@ import React from "react";
 import "./styles.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { Link,  NavLink, useNavigate} from "react-router-dom";
-import useRef from "react";
+import cityRandomData from "../../dummyData/cityRandom";
 
 function ChooseACity({updateCity}) {
 
     const navigate = useNavigate();
 
-    function handleClick(event){
+    function handleClickSubmit(event){
 
         console.log("clicked");
         navigate("/home");
@@ -17,6 +17,13 @@ function ChooseACity({updateCity}) {
     function handleInputChange(event) {
         updateCity(event.target.value); // Update the input value when it changes
       }
+
+    function handleClickRandomiser(event){
+        console.log("clicked");
+        let randomCity = cityRandomData[Math.floor(Math.random() * cityRandomData.length)];
+        updateCity(randomCity.city);
+        navigate("/home");
+    }
 
     return (
         <div className="overlay">
@@ -41,16 +48,14 @@ function ChooseACity({updateCity}) {
                     onChange={handleInputChange}
                 />
                 <SearchIcon className="userInput__icon" />
-                <NavLink className="navlink" to={"home"}>
-                    <button className="userInput__btn--randomiser">
+                    <button className="userInput__btn--randomiser" onClick={handleClickRandomiser}>
                         I'm feeling adventurous!
-                    </button>
-                </NavLink>
+                    </button>  
             </div>
 
             <div className="main">
                 <div className="main__animated--globe">globe</div>
-                    <button className="main__btn--submit" onClick={handleClick}>EXPLORE CITY</button>
+                    <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
             </div>
         </div>
     );
