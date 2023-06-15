@@ -82,14 +82,64 @@
     margin-top: 1em;
 }
 
-@media (min-width: 417px){
+@media (min-width: 833px){
     .header__title {
         font-family: 'Product Sans';
-        line-height: 2.5em;
+        font-size: 32px;
         text-align: center;
         color: rgba(34, 31, 31, 0.793);
         margin-bottom: -1.9em;
-        width: 85%;
+        
+    }
+    .logo__image {
+        width: 15em;
+        height: 15em;
+    }
+    
+    .userInput {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        
+    }
+    
+    .userInput__input {
+        height: 2.5em;
+        width: 18em;
+        border-radius: 18px;
+        border: 1px solid rgb(172, 171, 171);
+        text-align: center;
+        position: relative;
+    }
+    
+    .userInput__btn--randomiser {
+        color: rgba(46, 41, 41, 0.69);
+        background-color: white;
+        border: 0px;
+        text-decoration: underline;
+        display: block;
+    }
+
+    .main__animated--globe {
+        height: 14em;
+        width: 14em;
+        border-radius: 50%;
+       
+    
+        display: flex;
+        justify-content: center;
+        border: 1px solid red;
+    }
+    
+    .main__btn--submit {
+        font-weight: 700;
+        height: 4em;
+        width: 14em;
+        border-radius: 10px;
+        background: #0002FF;
+        color: white;
+        margin-top: 1em;
     }
 }
 

@@ -1,14 +1,10 @@
 
 import React from 'react';
 import './styles.css';
-import { useMediaQuery } from "react-responsive";
-
-
 
 
 function ChooseACity() {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-width: 1537px)",});
+
   return (
     <div className="overlay">
       <div className="header">
@@ -27,11 +23,6 @@ function ChooseACity() {
       </div>
 
         <div className="main">
-        {isDesktopOrLaptop && (
-          <div className="main__image--carousel">
-            
-          </div>
-        )}
         <div className="main__animated--globe">globe</div>
         <button className="main__btn--submit">EXPLORE CITY</button>
       </div>
