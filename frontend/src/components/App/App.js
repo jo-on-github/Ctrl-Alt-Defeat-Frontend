@@ -3,40 +3,39 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import Homepage from "../Homepage";
 import Itinerary from "../Itinerary";
-import {Route, Routes, useLocation} from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
-import Header from "../Header";
-
+import Overview from "../GuideOverview/overview/index.js";
 
 function App() {
-    return (
-        <div>
-             <ChooseACity />
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
 
-    const [city, setCity] = React.useState("hi");
+  const [city, setCity] = React.useState("hi");
 
-    const updateCity = (city) => {
-        setCity(city);
-    }
-
-  const location = useLocation();
+  const updateCity = (city) => {
+    setCity(city);
+  };
+  
+   const location = useLocation();
   const [currentPage, setCurrentPage] = React.useState(location.pathname);
 
-    return (
-        <div>
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<ChooseACity updateCity={updateCity} />} />
+        <Route path="/home" element={<Homepage city={city} />} />
+        <Route path="/planner" element={<Itinerary />} />
+        <Route path="/guide" element={<GuideOverview />}>
+          <Route path="/guide/overview" element={<Overview />} />
+          <Route path="/guide/experience" element={<h1>Experience</h1>} />
+          <Route path="/guide/reviews" element={<h1>Reviews</h1>} />
+        </Route>
+      </Routes>
+    </div>
+  );
 
-
-           <Routes>
-                <Route path="/" element={<ChooseACity updateCity={updateCity}/>} />
-                <Route path="/home" element={<Homepage city={city}/>} />
-                <Route path="/planner" element={<Itinerary />} />
-                <Route path="/guide-overview" element={<GuideOverview/>} />
-           </Routes>
-            
-        </div>
-    );
-}
 
 export default App;
 

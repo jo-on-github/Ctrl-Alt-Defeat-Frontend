@@ -1,0 +1,25 @@
+.overview{
+    width: 90%;
+    height: 4%;
+    margin-top: .7em;
+    display: flex;
+    align-items: center;
+  }
+  .overview__title{
+    font-size: 11px;
+    text-decoration: underline;
+    color: #747475;
+  }
+  .overview__description{
+    width: 90%;
+    height: 40%;
+    border-radius: 10px;
+    background-color: #cecfd178;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .guideDesc--info{
+    height: 95%;
+    width: 95%;
+  }
