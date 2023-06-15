@@ -3,7 +3,13 @@ import "./styles.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
 
-function ChooseACity() {
+function ChooseACity({setCity}) {
+
+    function handleClick(event){
+        console.log("hello")
+        setCity("hello")
+    }
+
     return (
         <div className="overlay">
             <div className="header">
@@ -35,7 +41,7 @@ function ChooseACity() {
 
             <div className="main">
                 <div className="main__animated--globe">globe</div>
-                <button className="main__btn--submit">EXPLORE CITY</button>
+                <button className="main__btn--submit" onClick={handleClick}>EXPLORE CITY</button>
             </div>
         </div>
     );

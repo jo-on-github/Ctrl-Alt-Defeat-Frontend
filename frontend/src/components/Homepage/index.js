@@ -8,7 +8,7 @@ import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-function Homepage() {
+function Homepage({city}) {
     return (
         <div className="overlay">
             <div className="header">
@@ -16,6 +16,7 @@ function Homepage() {
             </div>
             <div className="search">
                 <SearchBar />
+                <p>{city} hello</p>
             </div>
             <div className="main">
                 <div className="main__list">
