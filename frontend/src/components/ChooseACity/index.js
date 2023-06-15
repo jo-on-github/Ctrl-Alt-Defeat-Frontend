@@ -1,9 +1,23 @@
 import React from "react";
 import "./styles.css";
 import SearchIcon from "@mui/icons-material/Search";
-import { NavLink } from "react-router-dom";
+import { Link,  NavLink, useNavigate} from "react-router-dom";
+import useRef from "react";
 
-function ChooseACity() {
+function ChooseACity({updateCity}) {
+
+    const navigate = useNavigate();
+
+    function handleClick(event){
+
+        console.log("clicked");
+        navigate("/home");
+
+    }
+    function handleInputChange(event) {
+        updateCity(event.target.value); // Update the input value when it changes
+      }
+
     return (
         <div className="overlay">
             <div className="header">
@@ -24,6 +38,7 @@ function ChooseACity() {
                     className="userInput__input"
                     type="text"
                     placeholder="Choose your location..."
+                    onChange={handleInputChange}
                 />
                 <SearchIcon className="userInput__icon" />
                 <NavLink className="navlink" to={"home"}>
@@ -35,7 +50,7 @@ function ChooseACity() {
 
             <div className="main">
                 <div className="main__animated--globe">globe</div>
-                <button className="main__btn--submit">EXPLORE CITY</button>
+                    <button className="main__btn--submit" onClick={handleClick}>EXPLORE CITY</button>
             </div>
         </div>
     );
