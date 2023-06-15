@@ -8,6 +8,8 @@ import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlin
 import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 import profileImg from "../../assets/profileImg.png";
 import cath from "../../assets/cath.png";
+import NavBar from "../NavBar";
+import { Outlet } from "react-router-dom";
 
 function GuideOverview() {
   const buttonStyle = {
@@ -38,20 +40,20 @@ function GuideOverview() {
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
           <div className="guideSubHeader__icons--thumbUp">
-            <ThumbUpAltOutlinedIcon style={buttonStyle}/>
+            <ThumbUpAltOutlinedIcon style={buttonStyle} />
             <span className="guideSubHeader__icons--thumbUpRating">88%</span>
           </div>
           <div className="guideSubHeader__icons--thumbDown">
-            <ThumbDownAltOutlinedIcon style={buttonStyle}/>
+            <ThumbDownAltOutlinedIcon style={buttonStyle} />
             <span className="guideSubHeader__icons--thumbDownRating">12%</span>
           </div>
         </div>
         <div className="guideSubHeader__additionalIcons">
           <div className="guideSubHeader__additionalIcons--pin">
-            <PushPinOutlinedIcon style={buttonStyle}/>
+            <PushPinOutlinedIcon style={buttonStyle} />
           </div>
           <div div className="guideSubHeader__additionalIcons--favourite">
-            <BookmarkBorderOutlinedIcon style={buttonStyle}/>
+            <BookmarkBorderOutlinedIcon style={buttonStyle} />
           </div>
         </div>
       </div>
@@ -69,17 +71,11 @@ function GuideOverview() {
           <button>Reviews</button>
         </div>
       </div>
-      <div className="selectedPageHeading">
-        <div className="selectedPageHeading__title">
-          <h2>Overview</h2>
-        </div>
-
+      <div className="Callums-baby">
+        <Outlet />
       </div>
-      <div className="guideDesc">
-        <div className="guideDesc--info">
 
-        </div>
-      </div>
+      <NavBar />
     </div>
   );
 }
