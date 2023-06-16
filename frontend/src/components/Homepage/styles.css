@@ -39,7 +39,7 @@
 
 
   /* resonsiveness starts here */
-@media (min-width: 1279px) {
+@media (min-width: 833px) {
     .main__list {
         font-family: 'Product Sans';
         font-size: 15px;
@@ -68,4 +68,18 @@
         /* Adjust the spacing between list items */
 
     }
+
+
+     .search {
+            height: 4.2em;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -2.7em;
+            position: relative;
+            margin-bottom: 1em;
+            margin-top: 1em;
+            
+        }
 }
