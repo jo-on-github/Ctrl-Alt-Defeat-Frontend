@@ -6,25 +6,28 @@ import cityRandomData from "../../dummyData/cityRandom";
 function ChooseACity({updateCity, city}) {
 
     const [errorMessage, setErrorMessage] = React.useState("");
-
     const navigate = useNavigate();
 
     function handleClickSubmit(event) {
-        console.log("clicked");
       
         if (city === "") {
           setErrorMessage("Please enter a location");
           return;
         }
-      
-        const isValidCity = cityRandomData.some((data) => data.city.toLowerCase === city.toLowerCase);
+        const isValidCity = cityRandomData.some((data) => data.city.toLowerCase() === city.toLowerCase());
         if (!isValidCity) {
           setErrorMessage("Is not a valid location or location is currently not supported. Please select another location");
           return;
         }
-      
         navigate("/home");
       }
+
+      function enterKeyPressed(event) {
+        if(event.keyCode === 13){
+            handleClickSubmit(event);
+        }
+      }
+
     function handleInputChange(event) {
         const inputValue = event.target.value;
         const capitalizedValue = inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
@@ -70,6 +73,7 @@ function ChooseACity({updateCity, city}) {
                     type="text"
                     placeholder="🔍      Choose your location..."
                     onChange={handleInputChange}
+                    onKeyDown={enterKeyPressed}
                 />
     
                     <button className="userInput__btn--randomiser" onClick={handleClickRandomiser}>
