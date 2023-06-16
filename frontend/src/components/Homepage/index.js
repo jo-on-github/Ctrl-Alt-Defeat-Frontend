@@ -33,7 +33,7 @@ function Homepage({ city, updateSearchFilter }) {
                 <SearchBar
                     sx={{ zIndex: 0 }}
                     handleSearchFilterChange={handleSearchFilterChange}
-                    updateSearchFilter={updateSearchFilter}
+                    
                 />
             </div>
             <Box className="main__listItems" sx={{ flexGrow: 1 }}>

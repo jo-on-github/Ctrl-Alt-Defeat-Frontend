@@ -42,8 +42,17 @@ import TuneIcon from "@mui/icons-material/Tune";
 import SearchIcon from "@mui/icons-material/Search";
 import DirectionsIcon from "@mui/icons-material/Directions";
 
-export default function SearchBar() {
+export default function SearchBar({handleSearchFilterChange}) {
+
+        function handleChange(event) {
+
+            handleSearchFilterChange(event.target.value);
+        }
+
     return (
+
+      
+
         <Paper
             component="form"
             sx={{
@@ -60,6 +69,8 @@ export default function SearchBar() {
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="Choose a guide"
                 inputProps={{ "aria-label": "search google maps" }}
+                onChange={handleChange}
+                
             />
             <IconButton sx={{ p: "10px" }} aria-label="menu">
                 <TuneIcon />
