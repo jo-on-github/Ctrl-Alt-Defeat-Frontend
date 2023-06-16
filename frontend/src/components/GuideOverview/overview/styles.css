@@ -1,25 +1,25 @@
-.overview{
+.subInfo{
     width: 90%;
-    height: 4%;
+    height: 100%;
     margin-top: .7em;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  .overview__title{
-    font-size: 11px;
+  .subInfo__title{
+    font-size: 18px;
+    font-weight: bold;
     text-decoration: underline;
     color: #747475;
+    margin-bottom: .5em;
+    margin-left: .5em;
   }
-  .overview__description{
-    width: 90%;
-    height: 40%;
+  .subInfo__description{
+    width: 95%;
+    height: 60%;
     border-radius: 10px;
     background-color: #cecfd178;
     display: flex;
-    align-items: center;
     justify-content: center;
-  }
-  .guideDesc--info{
-    height: 95%;
-    width: 95%;
+    padding: .5em;
   }

@@ -6,6 +6,8 @@ import { Route, Routes} from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
 import Overview from "../GuideOverview/overview/index.js";
+import Experience from "../GuideOverview/experience/index.js";
+import Reviews from "../GuideOverview/reviews/index.js";
 
 function App() {
   const [city, setCity] = React.useState("hi");
@@ -22,8 +24,8 @@ function App() {
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
           <Route path="/guide/overview" element={<Overview />} />
-          <Route path="/guide/experience" element={<h1>Experience</h1>} />
-          <Route path="/guide/reviews" element={<h1>Reviews</h1>} />
+          <Route path="/guide/experience" element={<Experience />} />
+          <Route path="/guide/reviews" element={<Reviews />} />
         </Route>
       </Routes>
     </div>

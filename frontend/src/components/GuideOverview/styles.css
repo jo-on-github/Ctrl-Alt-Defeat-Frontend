@@ -8,7 +8,7 @@
 
 .guideHeader {
   width: 100%;
-  height: 15%;
+  height: 5em;
   display: flex;
   justify-content: space-between;
 }
@@ -59,6 +59,7 @@
     height: 5%;
     display: flex;
     justify-content: space-between;
+    margin-top: 25%;
 }
 .guideSubHeader__icons{
   width: 40%;
@@ -79,6 +80,8 @@
 }
 .guide__img{
   height: 37%;
+  width: 90%;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .guide__img>img{
   height: 85%;
@@ -134,6 +137,11 @@
   height: 95%;
   width: 95%;
 }
+
+.container__lower {
+  background-color: red;
+}
+
 
 
 
