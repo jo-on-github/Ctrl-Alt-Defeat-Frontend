@@ -9,14 +9,15 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 
-function Homepage({city}) {
+function Homepage({city, handleSearchFilterChange}) {
+
     return (
         <div className="overlay">
             <div className="header">
                 <Header imageUrl={dummy} altText="My Image" location={city} />
             </div>
             <div className="search">
-                <SearchBar />
+                <SearchBar onChange={handleSearchFilterChange}/>
             </div>
             <div className="main">
                 <div className="main__list">

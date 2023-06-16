@@ -6,6 +6,8 @@ import { Route, Routes} from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
 import Overview from "../GuideOverview/overview/index.js";
+import { ListItem } from "@mui/material";
+import SearchBar from "../SearchBar";
 
 function App() {
   const [city, setCity] = React.useState("hi");
@@ -13,12 +15,19 @@ function App() {
   const updateCity = (city) => {
     setCity(city);
   };
+
+const [searchFilter, setSearchFilter] = React.useState("");
+
+function handleSearchFilterChange(event) {
+    setSearchFilter(event.target.value);
+    console.log(event.target.value);
+}
   
   return (
     <div>
       <Routes>
         <Route path="/" element={<ChooseACity updateCity={updateCity} />} />
-        <Route path="/home" element={<Homepage city={city} />} />
+        <Route path="/home" element={<Homepage city={city} handleSearchFilterChange={handleSearchFilterChange}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
           <Route path="/guide/overview" element={<Overview />} />
