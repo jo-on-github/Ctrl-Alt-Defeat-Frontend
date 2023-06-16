@@ -9,18 +9,12 @@ import ChooseACity from "../ChooseACity";
 import Overview from "../GuideOverview/overview/index.js";
 
 function App() {
-  const isBigScreen = useMediaQuery({ query: "(min-width: 1824px)" });
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-
   const [city, setCity] = React.useState("hi");
 
   const updateCity = (city) => {
     setCity(city);
   };
   
-   const location = useLocation();
-  const [currentPage, setCurrentPage] = React.useState(location.pathname);
-
   return (
     <div>
       <Routes>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles.css";
-import SearchIcon from "@mui/icons-material/Search";
-import { Link,  NavLink, useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import cityRandomData from "../../dummyData/cityRandom";
 
 function ChooseACity({updateCity}) {
@@ -47,7 +46,6 @@ function ChooseACity({updateCity}) {
                     placeholder="Choose your location..."
                     onChange={handleInputChange}
                 />
-                <SearchIcon className="userInput__icon" />
                     <button className="userInput__btn--randomiser" onClick={handleClickRandomiser}>
                         I'm feeling adventurous!
                     </button>  
