@@ -23,9 +23,11 @@ function GuideOverview() {
             elevation={3} className="guideHeader">
       {/* <div className="guideHeader"> */}
         <div className="guideHeader__btn--back">
+          <NavLink to ="/home" activeClassName="active"> 
           <Button style={buttonStyle}>
             <KeyboardBackspaceIcon />
           </Button>
+          </NavLink>
         </div>
         <div className="guideHeader__heading">
           <div className="guideHeader__heading--title">
