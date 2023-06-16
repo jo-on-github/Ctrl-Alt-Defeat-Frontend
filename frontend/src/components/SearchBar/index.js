@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import TuneIcon from '@mui/icons-material/Tune';
 import "./styles.css";
 
-function SearchBar() {
+function SearchBar(searchResult) {
     return (
         <div className="search">
             <div className="search__searchbox">

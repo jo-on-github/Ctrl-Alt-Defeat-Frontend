@@ -10,6 +10,7 @@ import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 
 function Homepage({city}) {
+
     return (
         <div className="overlay">
             <div className="header">
