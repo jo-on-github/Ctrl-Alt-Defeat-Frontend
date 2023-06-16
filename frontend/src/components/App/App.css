@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Product-Sans';
+  src: url('../../fonts/Product-Sans.ttf');
+}
+
+* {
+  font-family: 'Product-Sans';
+}
+
+
+
 .App {
   text-align: center;
 }
