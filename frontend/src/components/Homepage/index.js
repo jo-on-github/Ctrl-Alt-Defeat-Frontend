@@ -13,7 +13,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 
 function Homepage() {
   const matches = useMediaQuery('(min-width: 833px)');
-  const matches2 = useMediaQuery('(min-width: 1279px)');
+  const matches2 = useMediaQuery('(min-width: 1279px) ');
 
   return (
     <div className="overlay">
@@ -60,6 +60,7 @@ function Homepage() {
 
               {matches2 && (
                 <Grid item xs={12} sm={6} md={4}>
+        
                 </Grid>
               )}
             </Grid>
@@ -74,3 +75,4 @@ function Homepage() {
 }
 
 export default Homepage;
+
