@@ -17,15 +17,17 @@ function App() {
   };
 
 const [searchFilter, setSearchFilter] = React.useState("");
-const searchResult = (searchFilter) => {
-  setSearchFilter(searchFilter);
-};
+
+function handleSearchFilterChange(event) {
+    setSearchFilter(event.target.value);
+    console.log(event.target.value);
+}
   
   return (
     <div>
       <Routes>
         <Route path="/" element={<ChooseACity updateCity={updateCity} />} />
-        <Route path="/home" element={<Homepage city={city} />} />
+        <Route path="/home" element={<Homepage city={city} handleSearchFilterChange={handleSearchFilterChange}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
           <Route path="/guide/overview" element={<Overview />} />
@@ -33,7 +35,6 @@ const searchResult = (searchFilter) => {
           <Route path="/guide/reviews" element={<h1>Reviews</h1>} />
         </Route>
       </Routes>
-      <SearchBar searchResult={searchResult} />
     </div>
   );}
 
