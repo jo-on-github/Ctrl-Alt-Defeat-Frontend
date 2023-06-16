@@ -3,9 +3,9 @@ import "./styles.css";
 
 export default function Overview() {
   return (
-    <div className="overview">
-      <div className="overview__title">Overview</div>
-      <div className="overview__description">The Cathedral of Milan - an impressive blah blah with blah blah blah.</div>
+    <div className="subInfo">
+      <div className="subInfo__title">Overview</div>
+      <div className="subInfo__description">The Duomo di Milano is a magnificent Gothic cathedral located in Milan, Italy. With its awe-inspiring architecture, intricate details, and pink-tinged white marble exterior, it stands as one of the world's largest and most renowned cathedrals.</div>
     </div>
   );
 }
