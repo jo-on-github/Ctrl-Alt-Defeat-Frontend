@@ -11,6 +11,7 @@ import Overview from "../GuideOverview/overview/index.js";
 
 import Experience from "../GuideOverview/experience/index.js";
 import Reviews from "../GuideOverview/reviews/index.js";
+import ProfilePage from "../ProfilePage";
 
 
 
@@ -36,6 +37,8 @@ function App() {
           <Route path="/guide/experience" element={<Experience />} />
           <Route path="/guide/reviews" element={<Reviews />} />
         </Route>
+        <Route path="/ProfilePage" element=
+        {<ProfilePage />} />
       </Routes>
     </div>
   );}

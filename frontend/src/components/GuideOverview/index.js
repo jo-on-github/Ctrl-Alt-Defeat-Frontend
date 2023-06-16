@@ -37,8 +37,10 @@ function GuideOverview() {
             </h5>
           </div>
         </div>
-        <div className="guideHeader__img--profile">
-          <img src={profileImg} alt="profileImg" />
+        <div >
+          <NavLink to="/ProfilePage" activeClassName="active">
+          <img className="guideHeader__img--profile" src={profileImg} alt="profileImg" />
+          </NavLink>
         </div>
       {/* </div> */}
       </Paper>   
