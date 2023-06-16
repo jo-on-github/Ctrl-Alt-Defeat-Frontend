@@ -12,6 +12,7 @@ import Overview from "../GuideOverview/overview/index.js";
 import Experience from "../GuideOverview/experience/index.js";
 import Reviews from "../GuideOverview/reviews/index.js";
 import ProfilePage from "../ProfilePage";
+import Favourites from "../Favourites";
 
 
 
@@ -39,7 +40,9 @@ function App() {
         </Route>
         <Route path="/ProfilePage" element=
         {<ProfilePage />} />
+        <Route path= "/Favourites" element={<Favourites />} />
       </Routes>
+      
     </div>
   );}
 

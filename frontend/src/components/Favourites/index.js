@@ -11,6 +11,8 @@ function Favourites() {
         <div className="header__btn--profile"></div>
       </div>
       <div className="main">
+
+      <h1> Hello AHHHHHH</h1>
         <div className="main__list"></div>
       </div>
       <div className="footer"></div>
