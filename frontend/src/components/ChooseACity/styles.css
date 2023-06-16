@@ -3,76 +3,72 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
-}
-
-.header {
+  }
+  
+  .header {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 16em;
-}
-
-.header__title {
+  }
+  
+  .header__title {
     font-family: 'Product Sans';
     line-height: 2.5em;
     text-align: center;
     color: rgba(34, 31, 31, 0.793);
     margin-bottom: -1.9em;
     width: 90%;
-}
-
-.logo__image {
+  }
+  
+  .logo__image {
     width: 12em;
     height: 12em;
-}
-
-.userInput {
+  }
+  
+  .userInput {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
-    
-}
-
-.userInput__input {
+  }
+  
+  .userInput__input {
     height: 2.5em;
     width: 18em;
     border-radius: 18px;
     border: 1px solid rgb(172, 171, 171);
-    text-align: left;
+    text-align: center;
     position: relative;
-}
-
-.userInput__btn--randomiser {
+  }
+  
+  .userInput__btn--randomiser {
     color: rgba(46, 41, 41, 0.69);
     background-color: white;
     border: 0px;
     text-decoration: underline;
     display: block;
-}
-
-.main {
+  }
+  
+  .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 1em;
     height: 18em;
     width: 13em;
-}
-
-.main__animated--globe {
+  }
+  
+  .main__animated--globe {
     height: 14em;
     width: 14em;
     border-radius: 50%;
-   
-
     display: flex;
     justify-content: center;
     border: 1px solid red;
-}
-
-.main__btn--submit {
+  }
+  
+  .main__btn--submit {
     font-weight: 700;
     height: 4em;
     width: 14em;
@@ -80,142 +76,76 @@
     background: #0002FF;
     color: white;
     margin-top: 1em;
-}
+  }
+  
+  @media (min-width: 833px) { 
 
-@media (min-width: 833px){
+    .header__title {
+      font-family: 'Product Sans';
+      font-size: 32px;
+      text-align: center;
+      color: rgba(34, 31, 31, 0.793);
+      margin-bottom: -1.9em;
+    }
+  
+    .logo__image {
+      width: 15em;
+      height: 15em;
+    }
+  
+    .userInput {
+      width: 80%;
+      margin: auto;
+    }
+  
+    .userInput__input {
+      height: 2.5em;
+      width: 18em;
+      border-radius: 18px;
+      border: 1px solid rgb(172, 171, 171);
+      text-align: center;
+      position: relative;
+    }
+  
+    .userInput__btn--randomiser {
+      color: rgba(46, 41, 41, 0.69);
+      background-color: white;
+      border: 0px;
+      text-decoration: underline;
+      display: block;
+    }
+  
+    .main__animated--globe {
+      height: 14em;
+      width: 14em;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      border: 1px solid red;
+    }
+  
+    .main__btn--submit {
+      font-weight: 700;
+      height: 4em;
+      width: 14em;
+      border-radius: 10px;
+      background: #0002FF;
+      color: white;
+      margin-top: 1em;
+    }
+  
+
+
+/* @media (min-width: 441px){
     .header__title {
         font-family: 'Product Sans';
-        font-size: 32px;
+        line-height: 2.5em;
         text-align: center;
         color: rgba(34, 31, 31, 0.793);
         margin-bottom: -1.9em;
-        
-    }
-    .logo__image {
-        width: 20em;
-        height: 20em;
-    }
-
-
-    .userInput {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 80%;
-        margin-top: 16em; /* Add a margin-top property to move it down */
     }
-    
-    .userInput__input {
-        height: 2.5em;
-        width: 30em;
-        border-radius: 18px;
-        border: 1px solid rgb(172, 171, 171);
-        text-align: left;
-        position: relative;
-    }
-    
-    .userInput__btn--randomiser {
-        color: rgba(46, 41, 41, 0.69);
-        background-color: white;
-        border: 0px;
-        text-decoration: underline;
-        display: block;
-        font-size: 16px;
-    }
+} */
 
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 32em;
-        
-    }
-    
-    .main__animated--globe {
-        height: 80em;
-        width: 22em;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        border: 1px solid red;
-    }
-    
-    .main__btn--submit {
-        font-weight: 700;
-        height: 20em;
-        width: 20em;
-        border-radius: 10px;
-        background: #0002FF;
-        color: white;
-        font-size: 18px;
-    }
-}
-    /*start from here for responsiness for macbook*/
-@media (min-width: 1279px){
-    .header__title {
-        font-family: 'Product Sans';
-        font-size: 38px;
-        text-align: center;
-        color: rgba(34, 31, 31, 0.793);
-        margin-bottom: -1.8em;
-        
-    }
-    .logo__image {
-        width: 14em;
-        height: 14em;
-    }
-    .userInput {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin-top: 5em;
-    }
-    .userInput__input {
-        height: 2em;
-        width: 16em;
-        font-size: 28px;
-        border-radius: 18px;
-        border: 1px solid rgb(172, 171, 171);
-        text-align: center;
-        position: relative;
-    }
-    .userInput__btn--randomiser {
-        color: rgba(46, 41, 41, 0.69);
-        font-size: 20px;
-        background-color: white;
-        border: 0px;
-        text-decoration: underline;
-        display: block;
-        margin-top: 0.5em;
-    }
-    .main__animated--globe {
-        height: 14em;
-        width: 12em;
-        border-radius: 50%; 
-        display: flex;
-        justify-content: center;
-        border: 1px solid red;
-        margin-top: -7em;
-    }
-    .main__btn--submit {
-        font-weight: 700;
-        height: 5em;
-        width: 20em;
-        border-radius: 10px;
-        background: #0002FF;
-        color: white;
-        margin-top: em;
-    }
-}
-    
-    
-    /*end of media resonsive*/
-    
-  
-    
-    
 
-    
-    
-
+  }

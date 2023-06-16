@@ -26,7 +26,7 @@
 .main__list {
     height: 35em;
     width: 95%;
-    margin: 0.5em;
+ 
 }
 
 .footer {
@@ -35,4 +35,55 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+
+  /* resonsiveness starts here */
+@media (min-width: 833px) {
+    .main__list {
+        font-family: 'Product Sans';
+        font-size: 15px;
+        flex-direction: row;
+        text-align: center;
+        color: rgba(34, 31, 31, 0.793);
+        margin-bottom: -1.8em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .main__listItems--grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    .main__listItems--grid>* {
+        flex-basis: calc(5% - 12px);
+        /* Adjust the width as per your requirements */
+
+        margin-bottom: 12px;
+        /* Adjust the spacing between list items */
+
+    }
+
+
+     .search {
+            height: 4.2em;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -2.7em;
+            position: relative;
+            margin-bottom: 1em;
+            margin-top: 1em;
+            
+        }
+}
+
+@media (min-width: 1279px) {
+
 }
