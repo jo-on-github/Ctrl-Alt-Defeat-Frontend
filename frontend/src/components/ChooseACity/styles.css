@@ -4,6 +4,39 @@
     align-items: center;
     width: 100%;
   }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .error{
+    width: 17em;
+    height: 7em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0002FF;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+  }
+  .error>button{
+    background-color: white;
+    color: #0002FF;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-weight: 600;
+  }
   
   .header {
     display: flex;

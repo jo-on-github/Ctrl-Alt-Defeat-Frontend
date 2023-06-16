@@ -17,7 +17,7 @@ import Reviews from "../GuideOverview/reviews/index.js";
 
 function App() {
 
-  const [city, setCity] = React.useState("hi");
+  const [city, setCity] = React.useState("");
 
   const updateCity = (city) => {
     setCity(city);
@@ -28,7 +28,7 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<ChooseACity updateCity={updateCity} />} />
+        <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} />} />
         <Route path="/home" element={<Homepage city={city}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
