@@ -8,11 +8,11 @@
     width: 85%;
     margin-right: 0.5em;
 }
-.search_searchbox--searchIcon{
+/* .search_searchbox--searchIcon{
     position: absolute;
     left: 2.8em;
     top: 6.4em;
-}
+} */
 
 .search__filter {
     height: 2em;
