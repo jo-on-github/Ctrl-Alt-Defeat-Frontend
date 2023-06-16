@@ -43,9 +43,10 @@ function ChooseACity({updateCity}) {
                 <input
                     className="userInput__input"
                     type="text"
-                    placeholder="Choose your location..."
+                    placeholder="🔍      Choose your location..."
                     onChange={handleInputChange}
                 />
+    
                     <button className="userInput__btn--randomiser" onClick={handleClickRandomiser}>
                         I'm feeling adventurous!
                     </button>  
