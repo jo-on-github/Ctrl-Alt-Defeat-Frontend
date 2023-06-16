@@ -6,46 +6,40 @@ import reportWebVitals from "./reportWebVitals";
 
 //IMPORT COMPONENTS TO RENDER IN ROUTES
 import App from "./components/App/App.js";
-import Homepage from "./components/Homepage";
-import GuideOverview from "./components/GuideOverview";
-import Favourites from "./components/Favourites";
-import Itinerary from "./components/Itinerary";
-import CreateItinerary from "./components/CreateItinerary";
-import Map from "./components/Map/index";
 
 //REACT ROUTER
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "./error/ErrorPage";
-
+import { BrowserRouter } from "react-router-dom";
 //SET UP ROUTES
 //WHAT PATH TO NAVIGATE TO AND WHAT COMPONENT TO RENDER AT THAT PATH
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-        errorElement: <ErrorPage />,
-    },
-    { path: "home", element: <Homepage /> },
-    { path: "guide/:guideId", element: <GuideOverview /> },
-    {
-        path: "favourites",
-        element: <Favourites />,
-    },
-    {
-        path: "planner",
-        element: <Itinerary />,
-    },
-    {
-        path: "map",
-        element: <Map />,
-    },
-    { path: "tripbuilder", element: <CreateItinerary /> },
-]);
+// const router = createBrowserRouter([
+//     {
+//         path: "/",
+//         element: <App />,
+//         errorElement: <ErrorPage />,
+//     },
+//     { path: "home", element: <Homepage /> },
+//     { path: "guide/:guideId", element: <GuideOverview /> },
+//     {
+//         path: "favourites",
+//         element: <Favourites />,
+//     },
+//     {
+//         path: "planner",
+//         element: <Itinerary />,
+//     },
+//     {
+//         path: "map",
+//         element: <Map />,
+//     },
+//     { path: "tripbuilder", element: <CreateItinerary /> },
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </React.StrictMode>
 );
 

@@ -1,70 +1,47 @@
 import "./App.css";
 import React from "react";
-
-// import { useMediaQuery } from "react-responsive";
-//import Homepage from "../Homepage";
-
-import { useMediaQuery } from "react-responsive";
-
 import Homepage from "../Homepage";
-// import Itinerary from "../Itinerary";
 
-//import ProfilePage from "../ProfilePage";
-// import ChooseACity from "../ChooseACity";
-//import Favourites from "../Favourites";
-//import ListItem from "../ListItem";
-//import GuideOverview from "../GuideOverview";
-// import Itinerary from "../Itinerary";
+import Itinerary from "../Itinerary";
+import { Route, Routes} from "react-router-dom";
+import GuideOverview from "../GuideOverview";
+import ChooseACity from "../ChooseACity";
+import Overview from "../GuideOverview/overview/index.js";
 
 
-
-// import ChooseACity from "../ChooseACity";
-
-
+import Experience from "../GuideOverview/experience/index.js";
+import Reviews from "../GuideOverview/reviews/index.js";
 
 
 
 
 function App() {
-  //Defining Media Queries for responsive design -
-//   const isDesktopOrLaptop = useMediaQuery({
-//     query: "(min-width: 1537px)",
-// });
-// const isBigScreen = useMediaQuery({ query: "(min-width: 1537)" });
-// const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1537px)" });
-//const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
-//const isRetina = useMediaQuery({ query: "(min-resolution: 2dppx)" });
+
+  const [city, setCity] = React.useState("hi");
+
+  const updateCity = (city) => {
+    setCity(city);
+  };
 
 
-//Logic inside return statement either renders app or renders error message dependent on size of screen vieweing content.
-//If you need to render something to screen render it after {isTabletorMobile && RENDER-COMPONENT-HERE}
-    return (
-        <div>
+  
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<ChooseACity updateCity={updateCity} />} />
+        <Route path="/home" element={<Homepage city={city}/>} />
+        <Route path="/planner" element={<Itinerary />} />
+        <Route path="/guide" element={<GuideOverview />}>
+          <Route path="/guide/overview" element={<Overview />} />
+          <Route path="/guide/experience" element={<Experience />} />
+          <Route path="/guide/reviews" element={<Reviews />} />
+        </Route>
+      </Routes>
+    </div>
+  );}
 
-             {/* <ChooseACity /> */}
-             {<Homepage />}
 
-
-        </div>
-    );
-}
 
 export default App;
 
 
-
-// {isDesktopOrLaptop && (
-//     <p>
-//         We currently do not support this size device. Please use our
-//         mobile or tablet site.
-//     </p>
-// )}
-// {isBigScreen && (
-//     <p>
-//         We currently do not support this size device. Please use our
-//         mobile or tablet site.
-//     </p>
-// )}
-// mobile or tablet site.
-
-// {isTabletOrMobile && <ChooseACity />}

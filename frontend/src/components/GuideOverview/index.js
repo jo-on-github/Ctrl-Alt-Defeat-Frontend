@@ -7,7 +7,10 @@ import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 import profileImg from "../../assets/profileImg.png";
-import cath from "../../assets/cath.png";
+import cath from "../../assets/cath.jpg";
+import NavBar from "../NavBar";
+import { NavLink, Outlet } from "react-router-dom";
+import { Paper } from "@mui/material";
 
 function GuideOverview() {
   const buttonStyle = {
@@ -16,7 +19,9 @@ function GuideOverview() {
 
   return (
     <div className="guideOverlay">
-      <div className="guideHeader">
+    <Paper sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
+            elevation={3} className="guideHeader">
+      {/* <div className="guideHeader"> */}
         <div className="guideHeader__btn--back">
           <Button style={buttonStyle}>
             <KeyboardBackspaceIcon />
@@ -33,25 +38,26 @@ function GuideOverview() {
         <div className="guideHeader__img--profile">
           <img src={profileImg} alt="profileImg" />
         </div>
-      </div>
+      {/* </div> */}
+      </Paper>   
 
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
           <div className="guideSubHeader__icons--thumbUp">
-            <ThumbUpAltOutlinedIcon style={buttonStyle}/>
+            <ThumbUpAltOutlinedIcon style={buttonStyle} />
             <span className="guideSubHeader__icons--thumbUpRating">88%</span>
           </div>
           <div className="guideSubHeader__icons--thumbDown">
-            <ThumbDownAltOutlinedIcon style={buttonStyle}/>
+            <ThumbDownAltOutlinedIcon style={buttonStyle} />
             <span className="guideSubHeader__icons--thumbDownRating">12%</span>
           </div>
         </div>
         <div className="guideSubHeader__additionalIcons">
           <div className="guideSubHeader__additionalIcons--pin">
-            <PushPinOutlinedIcon style={buttonStyle}/>
+            <PushPinOutlinedIcon style={buttonStyle} />
           </div>
           <div div className="guideSubHeader__additionalIcons--favourite">
-            <BookmarkBorderOutlinedIcon style={buttonStyle}/>
+            <BookmarkBorderOutlinedIcon style={buttonStyle} />
           </div>
         </div>
       </div>
@@ -60,26 +66,26 @@ function GuideOverview() {
       </div>
       <div className="middleNavBar">
         <div className="middleNavBar__btn--overview">
+        <NavLink to="/guide/overview" activeClassName="active">
           <button>Overview</button>
+          </NavLink>
         </div>
         <div className="middleNavBar__btn--experience">
+        <NavLink to="/guide/experience" activeClassName="active">
           <button>Experience</button>
+          </NavLink>
         </div>
         <div className="middleNavBar__btn--reviews">
+        <NavLink to="/guide/reviews" activeClassName="active">
           <button>Reviews</button>
+          </NavLink>
         </div>
       </div>
-      <div className="selectedPageHeading">
-        <div className="selectedPageHeading__title">
-          <h2>Overview</h2>
-        </div>
+      {/* <div className="container__lower"> */}
+        <Outlet />
+      {/* </div> */}
 
-      </div>
-      <div className="guideDesc">
-        <div className="guideDesc--info">
-
-        </div>
-      </div>
+      <NavBar />
     </div>
   );
 }

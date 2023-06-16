@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../Header";
 import NavBar from "../NavBar";
-import Button from "@mui/material-next/Button";
-import AddIcon from "@mui/icons-material/Add";
 import "./styles.css";
 import dummy from "../images/profile_photo/dummy.jpg";
 import ListItem from "../ListItem";

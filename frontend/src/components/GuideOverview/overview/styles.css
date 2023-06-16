@@ -1,0 +1,25 @@
+.subInfo{
+    width: 90%;
+    height: 100%;
+    margin-top: .7em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .subInfo__title{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #747475;
+    margin-bottom: .5em;
+    margin-left: .5em;
+  }
+  .subInfo__description{
+    width: 95%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: #cecfd178;
+    display: flex;
+    justify-content: center;
+    padding: .5em;
+  }
