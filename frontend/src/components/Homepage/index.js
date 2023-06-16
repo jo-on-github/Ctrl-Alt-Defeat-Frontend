@@ -4,19 +4,18 @@ import SearchBar from "../SearchBar";
 import NavBar from "../NavBar";
 import Header from "../Header/index";
 import dummy from "../images/profile_photo/dummy.jpg";
+import listItemData from "../../dummyData/listItemData";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 
 function Homepage({ city, updateSearchFilter }) {
+  const [searchFilter, setSearchFilter] = React.useState(null);
 
-
-    const [searchFilter, setSearchFilter] = React.useState(null);
-
-    function updateSearchFilter(searchFilter) {
-      setSearchFilter(searchFilter);
-    }
+  const handleSearchFilterChange = (searchFilter) => {
+    setSearchFilter(searchFilter);
+  };
 
   return (
     <div className="overlay">
@@ -24,38 +23,24 @@ function Homepage({ city, updateSearchFilter }) {
         <Header imageUrl={dummy} altText="My Image" location={city} />
       </div>
       <div className="search">
-        <SearchBar updateSearchFilter={updateSearchFilter} />
+        <SearchBar
+          handleSearchFilterChange={handleSearchFilterChange}
+          updateSearchFilter={updateSearchFilter}
+        />
       </div>
       <div className="main">
         <div className="main__list">
           <Box className="main__listItems" sx={{ flexGrow: 1 }}>
             <Grid className="main__listItems--grid" container spacing={2}>
-              <Grid item xs={6} sm={4} md={3}>
-                <Link to="/guide/overview">
-                  <ListItem />
-                </Link>
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
-              <Grid item xs={6} sm={4} md={3}>
-                <ListItem />
-              </Grid>
+              {listItemData.map((item, index) => (
+                <Grid item xs={6} sm={4} md={3} key={index}>
+                  <Link to="/guide/overview">
+                    <ListItem
+                      title={item.title}
+                    />
+                  </Link>
+                </Grid>
+              ))}
             </Grid>
           </Box>
         </div>

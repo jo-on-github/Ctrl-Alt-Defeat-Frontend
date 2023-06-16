@@ -3,7 +3,7 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import './styles.css';
 
-function ListItem () {
+function ListItem ({title}) {
 
     const iconStyle = {
         color: 'white'
@@ -19,7 +19,7 @@ function ListItem () {
                 </div>
             </div>
             <div className='listItem__title'>
-                <h3>Activity Name</h3>
+                <h3>{title}</h3>
             </div>
 
 
