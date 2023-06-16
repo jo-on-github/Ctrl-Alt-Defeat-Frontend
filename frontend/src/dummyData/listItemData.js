@@ -1,28 +1,28 @@
 const listItemData = [
     {
-        activityName: 'Best Burgers In Town',
+      title: 'Best Burgers In Town',
     },
     {
-        activityName: 'Top 10 Pizza Places',
+      title: 'Top 10 Pizza Places',
     },
     {
-        activityName: 'Best Wings In Town',
+      title: 'Best Wings In Town',
     },
     {
-        activityName: 'Authentic Mexican Food',
+      title: 'Authentic Mexican Food',
     },
     {
-        activityName: 'My Favourite Sushi Places',
+      title: 'My Favourite Sushi Places',
     },
     {
-        activityName: 'The Kebab That Will Change Your Life',
+      title: 'The Kebab That Will Change Your Life',
     },
     {
-        activityName: 'Korma Heaven',
+      title: 'Korma Heaven',
     },
     {
-        activityName: 'Italian Food Done Right',
+      title: 'Italian Food Done Right',
     }
-];
-
-export default listItemData;
+  ];
+  
+  export default listItemData;

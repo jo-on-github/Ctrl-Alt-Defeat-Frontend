@@ -20,18 +20,13 @@ function App() {
     setCity(city);
   };
 
-const [searchFilter, setSearchFilter] = React.useState("");
 
-function handleSearchFilterChange(event) {
-    setSearchFilter(event.target.value);
-    console.log(event.target.value);
-}
   
   return (
     <div>
       <Routes>
         <Route path="/" element={<ChooseACity updateCity={updateCity} />} />
-        <Route path="/home" element={<Homepage city={city} handleSearchFilterChange={handleSearchFilterChange}/>} />
+        <Route path="/home" element={<Homepage city={city}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
           <Route path="/guide/overview" element={<Overview />} />
