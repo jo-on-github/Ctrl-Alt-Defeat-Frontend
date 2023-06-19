@@ -24,18 +24,18 @@ function Homepage({ city, updateSearchFilter }) {
     return (
         <div className="overlay">
             <Header
-                sx={{ zIndex: 1 }}
+                sx={{ zIndex: 12 }}
                 imageUrl={dummy}
                 altText="My Image"
                 location={city}
+                position="absolute"
             />
-            <div className="search">
-                <SearchBar
-                    sx={{ zIndex: 0 }}
-                    handleSearchFilterChange={handleSearchFilterChange}
-                    
-                />
-            </div>
+            <SearchBar
+                sx={{ zIndex: 1 }}
+                handleSearchFilterChange={handleSearchFilterChange}
+                position="relative"
+            />
+
             <Box className="main__listItems" sx={{ flexGrow: 1 }}>
                 <Grid className="main__listItems--grid" container spacing={2}>
                     {listItemData.map((item, index) => (
