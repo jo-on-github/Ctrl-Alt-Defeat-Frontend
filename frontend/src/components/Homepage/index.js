@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import "./styles.css";
 import SearchBar from "../SearchBar";
 import NavBar from "../NavBar";
@@ -13,7 +13,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 
 function Homepage({ city, updateSearchFilter }) {
-    const [searchFilter, setSearchFilter] = React.useState(null);
+    const [searchFilter, setSearchFilter] = useState(null);
+    const [filterClicked, setFilterClicked] = useState(false);
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
 
@@ -21,8 +22,50 @@ function Homepage({ city, updateSearchFilter }) {
         setSearchFilter(searchFilter);
     };
 
+    const handleFilterClick = () => {
+        setFilterClicked(false);
+    };
+
     return (
         <div className="overlay">
+
+            {filterClicked && 
+                <div className="modal-overlay">
+                    <div  className="filterBar">
+                        <div className="filterBar__title">
+                        <h1>Filter</h1>
+                        </div>
+                        <div className="filterBar__options">
+                            <div className="filterBar__options--option">
+                                <label htmlFor="foodanddrink">Food & Drink</label>
+                                <input type="checkbox" id="foodanddrink" name="foodanddrink" value="foodanddrink" />
+                            </div>
+                            <div className="filterBar__options--option">
+                                <label htmlFor="sightseeing">Sightseeing</label>
+                                <input type="checkbox" id="sightseeing" name="sightseeing" value="sightseeing" />
+                            </div>
+                            <div className="filterBar__options--option">
+                                <label htmlFor="historical">Historical</label>
+                                <input type="checkbox" id="historical" name="historical" value="historical" />
+                            </div>
+                            <div className="filterBar__options--option">
+                                <label htmlFor="nightlife">Nightlife</label>
+                                <input type="checkbox" id="nightlife" name="nightlife" value="nightlife" />
+                            </div>
+                            <div className="filterBar__options--option">
+                                <label htmlFor="nature">Nature</label>
+                                <input type="checkbox" id="nature" name="nature" value="nature" />
+                            </div>
+                            <div className="filterBar__options--option">
+                                <label htmlFor="entertainment">Entertainment</label>
+                                <input type="checkbox" id="entertainment" name="entertainment" value="entertainment" />
+                            </div>
+
+                        </div>
+                        <button  onClick={handleFilterClick}>Save</button>
+                </div>
+            </div>}
+        
             <Header
                 sx={{ zIndex: 12 }}
                 imageUrl={dummy}
@@ -34,9 +77,11 @@ function Homepage({ city, updateSearchFilter }) {
                 sx={{ zIndex: 1 }}
                 handleSearchFilterChange={handleSearchFilterChange}
                 position="relative"
+                setFilterClicked={setFilterClicked}
+                filterClicked={filterClicked}
             />
 
-            <Box className="main__listItems" sx={{ flexGrow: 1 }}>
+            <Box className="main__listItems" sx={{ flexGrow: 1, mb:10 }}>
                 <Grid className="main__listItems--grid" container spacing={2}>
                     {listItemData.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>

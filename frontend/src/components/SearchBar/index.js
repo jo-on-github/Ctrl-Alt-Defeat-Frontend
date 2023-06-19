@@ -15,8 +15,7 @@ import { useState } from "react";
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-export default function SearchBar({ handleSearchFilterChange }) {
-    const [filterClicked, setFilterClicked] = useState(false);
+export default function SearchBar({ handleSearchFilterChange, setFilterClicked, filterClicked }) {
 
     function handleChange(event) {
         handleSearchFilterChange(event.target.value);
@@ -37,8 +36,11 @@ export default function SearchBar({ handleSearchFilterChange }) {
                 alignItems: "center",
                 justifyContent: "center",
                 width: 400,
+                pb: 1,
+                pt: 1,
+                mb: 2,
                 // backgroundColor: "pink",
-                mt: 7.5,
+                mt: 9,
                 // mb: 20,
                 // ml: 5,
                 // mr: 5,
@@ -53,6 +55,7 @@ export default function SearchBar({ handleSearchFilterChange }) {
                     display: "flex",
                     alignItems: "center",
                     width: 200,
+                    ml: 2,
                     // backgroundColor: "green",
                 }}
                 placeholder="Choose a guide"
@@ -95,9 +98,6 @@ export default function SearchBar({ handleSearchFilterChange }) {
             >
                 <TuneIcon />
             </IconButton>
-            <div>
-                The button is <p>{filterClicked ? "clicked" : "not-clicked"}</p>
-            </div>
         </Paper>
     );
 }
