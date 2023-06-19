@@ -1,3 +1,29 @@
+@font-face {
+  font-family: 'Product-Sans';
+  src: url('../../fonts/Product-Sans.ttf');
+}
+
+@font-face {
+  font-family: 'Product-Sans-Bold';
+  src: url('../../fonts/Product-Sans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Product-Sans-Italic';
+  src: url('../../fonts/Product-Sans-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Product-Sans-Bold-Italic';
+  src: url('../../fonts/Product-Sans-Bold-Italic.ttf');
+}
+
+* {
+  font-family: 'Product-Sans';
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -36,3 +62,4 @@
     transform: rotate(360deg);
   }
 }
+

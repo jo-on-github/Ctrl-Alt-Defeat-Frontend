@@ -14,14 +14,18 @@ import { Paper } from "@mui/material";
 
 function GuideOverview() {
   const buttonStyle = {
-    color: "#444445",
+    // color: "#444445",
+    color: "#0D0D0D",
   };
 
   return (
     <div className="guideOverlay">
-    <Paper sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
-            elevation={3} className="guideHeader">
-      {/* <div className="guideHeader"> */}
+      <Paper
+        sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1 }}
+        elevation={3}
+        className="guideHeader"
+      >
+        {/* <div className="guideHeader"> */}
         <div className="guideHeader__btn--back">
           <NavLink to ="/home" activeClassName="active"> 
           <Button style={buttonStyle}>
@@ -42,8 +46,8 @@ function GuideOverview() {
           <img className="guideHeader__img--profile" src={profileImg} alt="profileImg" />
           </NavLink>
         </div>
-      {/* </div> */}
-      </Paper>   
+        {/* </div> */}
+      </Paper>
 
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
@@ -70,24 +74,22 @@ function GuideOverview() {
       </div>
       <div className="middleNavBar">
         <div className="middleNavBar__btn--overview">
-        <NavLink to="/guide/overview" activeClassName="active">
-          <button>Overview</button>
+          <NavLink to="/guide/overview" activeClassName="active">
+            <button>Overview</button>
           </NavLink>
         </div>
         <div className="middleNavBar__btn--experience">
-        <NavLink to="/guide/experience" activeClassName="active">
-          <button>Experience</button>
+          <NavLink to="/guide/experience" activeClassName="active">
+            <button>Experience</button>
           </NavLink>
         </div>
         <div className="middleNavBar__btn--reviews">
-        <NavLink to="/guide/reviews" activeClassName="active">
-          <button>Reviews</button>
+          <NavLink to="/guide/reviews" activeClassName="active">
+            <button>Reviews</button>
           </NavLink>
         </div>
       </div>
-      {/* <div className="container__lower"> */}
-        <Outlet />
-      {/* </div> */}
+      <Outlet />
 
       <NavBar />
     </div>
