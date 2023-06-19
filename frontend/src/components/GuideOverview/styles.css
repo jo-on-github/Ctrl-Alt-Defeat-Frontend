@@ -92,7 +92,7 @@
 .middleNavBar {
   background-color: #0002FF;
   width: 80%;
-  height: 5.5%;
+  height: 5em;
   border-radius: 42px;
   display: flex;
   justify-content: space-between;
@@ -109,9 +109,15 @@
   border: none;
   background-color: transparent;
   color: white;
-  font-size: .9em;
-  font-weight: 500;
+  font-size: 1em;
 }
+
+.active button {
+  text-decoration: underline;
+  color: white;
+  font-family: product-sans-bold; 
+}
+
 .selectedPageHeading{
   width: 90%;
   height: 4%;
@@ -141,7 +147,6 @@
 .container__lower {
   background-color: red;
 }
-
 
 
 
