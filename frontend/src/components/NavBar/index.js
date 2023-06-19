@@ -8,7 +8,7 @@ import Paper from "@mui/material/Paper";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import "./styles.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function NavBar() {
     //controls state of buttons to highlight when clicked
@@ -44,12 +44,12 @@ function NavBar() {
                         icon={<LocationOnOutlinedIcon />}
                     />
                 </Link>
-                <Link to={"/favourites"}>
+                <NavLink to={"/Favourites"} activeClassName = "active">
                     <BottomNavigationAction
                         label="Favourites"
                         icon={<BookmarkBorderOutlinedIcon />}
                     />
-                </Link>
+                </NavLink>
             </BottomNavigation>
         </Paper>
     );
