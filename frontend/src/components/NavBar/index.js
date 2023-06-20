@@ -36,12 +36,12 @@ function NavBar() {
                         icon={<AddBoxOutlinedIcon />}
                     />
                 </Link>
-                <NavLink to={"/Favourites"} activeClassName = "active">
+                <Link to={"/Favourites"}>
                     <BottomNavigationAction
                         label="Favourites"
                         icon={<BookmarkBorderOutlinedIcon />}
                     />
-                </NavLink>
+                </Link>
             </BottomNavigation>
         </Paper>
     );
