@@ -4,7 +4,7 @@ import { Paper } from "@mui/material";
 
 function LogInSignUp() {
     return(
-       <div className="login_signup_overlay">
+       <div className="login_overlay">
             <div className="header">
                 <h1 className="header__title">Welcome To Neighbourhood Nomad</h1>
             </div>

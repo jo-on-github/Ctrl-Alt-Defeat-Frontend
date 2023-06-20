@@ -1,22 +1,10 @@
-.login_signup_overlay{
+.signup_overlay{
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
 }
-.header{
-    border-bottom: 1px solid #d9d9d9;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: .6em;
-}
-.header>h1{
-    margin-bottom: 1px;
-}
-.login_container{
+.signup_container{
     width: 100%;
     height: 90%;
     display: flex;
@@ -24,7 +12,7 @@
     justify-content: center;
     align-items: center;
 }
-.login_container__title{
+.signup_container__title{
     width: 100%;
     height: 10%;
     display: flex;
@@ -33,14 +21,15 @@
     text-align: center;
     font-size: 1em;
 }
-.login_container__formcontainer{
+.signup_container__formcontainer{
     width: 100%;
     height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
-.login_container__form{
+.signup_container__form{
     width: 95%;
     height: 70%;
     border-radius: 40px;
@@ -48,15 +37,16 @@
     flex-direction: column;
     padding: 15px 0px;
     background-color: #e6e2e2;
-    
+
 }
-.login_container__form>form {
+.signup_container__form>form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.login_container__form > form > input {
+
+.signup_container__form > form > input {
     width: 80%;
     height: 18%;
     padding: 10px;
@@ -64,28 +54,9 @@
     border-radius: 42px;
     margin-bottom: 1em;
     
-    
 }
-.login_container__form > form > button{
-    width: 18em;
-    height: 3em;
-    padding: 10px;
-    text-align: center;
-    border-radius: 42px;
-    margin-top: .5em;
-    background-color: #0002FF;
-    color: white;
-    border: 1px solid transparent;
-}
-.login_container__signup_container{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.login_container__signup_container>button{
+
+.signup_container__form > form > button{
     width: 18em;
     height: 3em;
     padding: 10px;

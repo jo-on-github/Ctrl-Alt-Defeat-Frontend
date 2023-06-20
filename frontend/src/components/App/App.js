@@ -12,7 +12,8 @@ import Reviews from "../GuideOverview/reviews/index.js";
 import ProfilePage from "../ProfilePage";
 import Favourites from "../Favourites";
 
-import LogInSignUp from "../LogIn_SignUp";
+import LogIn from "../LogIn";
+import SignUp from "../SignUp";
 
 
 
@@ -31,7 +32,8 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/login" element={<LogInSignUp />} />
+        <Route path="/login" element={<LogIn />} />
+          <Route path="/login/signup" element={<SignUp/>} />
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} />} />
         <Route path="/home" element={<Homepage city={city}/>} />
         <Route path="/planner" element={<Itinerary />} />
