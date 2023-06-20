@@ -8,7 +8,7 @@ import listItemData from "../../dummyData/listItemData";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-
+import {getlistItemData } from "../Data/index.js";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 
@@ -17,10 +17,18 @@ function Homepage({ city, updateSearchFilter }) {
     const [filterClicked, setFilterClicked] = useState(false);
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
+    const [uniqueID, setUniqueID] = useState();
+
+   const handleListItemClick = (id) => {
+        setUniqueID(id);
+    }
 
     const handleSearchFilterChange = (searchFilter) => {
         setSearchFilter(searchFilter);
     };
+
+    const cityData = getlistItemData();
+    console.log(cityData);
 
     const handleFilterClick = () => {
         setFilterClicked(false);
@@ -80,13 +88,13 @@ function Homepage({ city, updateSearchFilter }) {
                 setFilterClicked={setFilterClicked}
                 filterClicked={filterClicked}
             />
-
+       
             <Box className="main__listItems" sx={{ flexGrow: 1, mb:10 }}>
                 <Grid className="main__listItems--grid" container spacing={2}>
-                    {listItemData.map((item, index) => (
+                    {cityData.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <Link to="/guide/overview">
-                                <ListItem title={item.title} />
+                                <ListItem title={item.title} id={item._id} onClick={handleListItemClick}/>
                             </Link>
                         </Grid>
                     ))}

@@ -3,13 +3,19 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import './styles.css';
 
-function ListItem ({title}) {
+
+function ListItem ({title, city, handleListItemClick, id, imageURL}) {
+    
+    function handleClick(id) {
+        handleListItemClick(id)
+    }
+    
 
     const iconStyle = {
         color: 'white'
     }
     return (
-        <div className='listItem' theme xs={4} sm={5} md={7} lg={9} xl={11}>
+        <div className='listItem'  theme xs={4} sm={5} md={7} lg={9} xl={11}>
             <div className='listItem__icons'>
                 <div className='listItem__icons--activity'>
                     <RestaurantIcon style={iconStyle} />
@@ -20,6 +26,7 @@ function ListItem ({title}) {
             </div>
             <div className='listItem__title'>
                 <h3>{title}</h3>
+                
             </div>
 
 
@@ -31,4 +38,4 @@ function ListItem ({title}) {
 export default ListItem;
 
 
-
+// style={{backgroundImage: `url("${imageURL}")`}}

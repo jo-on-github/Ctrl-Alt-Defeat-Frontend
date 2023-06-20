@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 import cityRandomData from "../../dummyData/cityRandom";
+import { setlistItemData } from "../Data/index.js";
 
 function ChooseACity({updateCity, city}) {
 
@@ -21,7 +22,7 @@ function ChooseACity({updateCity, city}) {
         }
         
         await getCity(city);
-        // navigate("/home");
+        navigate("/home");
       }
 
       async function getCity(city) {
@@ -32,7 +33,8 @@ function ChooseACity({updateCity, city}) {
         const data = await response.json();
         console.log(data);
         // console.log(data.payload[0]);
-        //setlistItemData(data.payload[0]);
+        // how does our data display when calling this function
+        setlistItemData(data);
     }
 
       function enterKeyPressed(event) {
