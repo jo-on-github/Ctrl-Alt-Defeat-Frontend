@@ -40,8 +40,7 @@ function App() {
           <Route path="/guide/experience" element={<Experience />} />
           <Route path="/guide/reviews" element={<Reviews />} />
         </Route>
-        <Route path="/ProfilePage" element=
-        {<ProfilePage />} />
+        <Route path="/ProfilePage" element={<ProfilePage />} />
         <Route path= "/Favourites" element={<Favourites />} />
       </Routes>
       
