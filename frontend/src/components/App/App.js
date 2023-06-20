@@ -10,6 +10,8 @@ import Experience from "../GuideOverview/experience/index.js";
 import Reviews from "../GuideOverview/reviews/index.js";
 
 import ProfilePage from "../ProfilePage";
+import EditProfilePage from "../EditProfilePage";
+
 import Favourites from "../Favourites";
 
 import LogIn from "../LogIn";
@@ -43,6 +45,7 @@ function App() {
           <Route path="/guide/reviews" element={<Reviews />} />
         </Route>
         <Route path="/ProfilePage" element={<ProfilePage />} />
+          <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
         <Route path= "/Favourites" element={<Favourites />} />
       </Routes>
       

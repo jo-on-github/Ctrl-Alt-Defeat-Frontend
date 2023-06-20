@@ -4,7 +4,7 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import "./styles.css";
 import profileImg from "../../assets/profileImg.png";
-import { useNavigate } from "react";
+import { useNavigate } from "react-router-dom";
 
 function ProfilePage() {
     const iconStyle = {
@@ -16,11 +16,11 @@ function ProfilePage() {
         border: "none",
     };
 
-    const navigate = useNavigate();
-
+    
     const handleClick = () => {
         navigate(-1, { replace: false });
     };
+        const navigate = useNavigate();
 
     return (
         <div className="profileOverlay">
