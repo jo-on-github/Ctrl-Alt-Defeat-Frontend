@@ -1,12 +1,10 @@
 import React from "react";
-//import { Button } from "@mui/material";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import Paper from "@mui/material/Paper";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import "./styles.css";
 import { Link, NavLink } from "react-router-dom";
 
@@ -35,13 +33,7 @@ function NavBar() {
                 <Link to={"/planner"}>
                     <BottomNavigationAction
                         label="planner"
-                        icon={<MapOutlinedIcon />}
-                    />
-                </Link>
-                <Link to={"/map"}>
-                    <BottomNavigationAction
-                        label="Location"
-                        icon={<LocationOnOutlinedIcon />}
+                        icon={<AddBoxOutlinedIcon />}
                     />
                 </Link>
                 <NavLink to={"/Favourites"} activeClassName = "active">

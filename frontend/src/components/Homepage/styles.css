@@ -4,6 +4,69 @@
     align-items: center;
 }
 
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  .filterBar{
+    width: 45%;
+    height: 55%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+  }
+  .filterBar__title{
+    border-bottom: 1px solid ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .5em;
+    box-shadow: 0px 1px 1px -5px rgba(0,0,0,0.2), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);
+    background-color: #CECFD1;
+    border-radius: 40px 40px 0 0;
+  }
+  .filterBar__options{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+  }
+
+  .filterBar__options--option{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+    .filterBar > button {
+      width: 100%;
+      height: 13%;
+      background-color: #0002FF;
+        color: white;
+      border: none;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+        border-radius: 0 0 40px 40px;
+
+    }
+
+    
+    
+
 .header {
     height: 4.2em;
     width: 95%;

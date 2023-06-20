@@ -1,8 +1,9 @@
 .listItem {
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items: space-between;
+    justify-content: center;
     width: 9em;
     height: 9em;
     border-radius: 10px;
@@ -10,16 +11,19 @@
     background-size: cover;
 }
 .listItem__icons {
+    border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 13.3em;
+    height: 2em;
     margin-top: .6em;
 }
 
 .listItem__title {
+    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     text-align: left;
     margin-bottom: .5em;
 }
