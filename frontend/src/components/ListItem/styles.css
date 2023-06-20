@@ -1,5 +1,4 @@
 .listItem {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -11,7 +10,6 @@
     background-size: cover;
 }
 .listItem__icons {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     width: 13.3em;
@@ -20,16 +18,19 @@
 }
 
 .listItem__title {
-    border: 1px solid red;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     width: 100%;
     text-align: left;
     margin-bottom: .5em;
+    
 }
 
 .listItem__title >h3 {
     color: white;
+    text-align: center;
 }
 
 /*media queries for list item to make them relative to page size*/
@@ -56,14 +57,12 @@
           justify-content: space-between;
           width: 100%;
           margin-bottom: 6em;
-          margin-left: 4em;
       }
     
       .listItem__title {
           text-align: left;
           margin-top: 5em;
           margin-bottom: 0;
-          margin-left: -8.5em;
           font-size: small;
       }
 
@@ -91,14 +90,13 @@
           justify-content: space-between;
           width: 100%;
           margin-bottom: 6em;
-          margin-left: 4em;
       }
     
       .listItem__title {
           text-align: left;
           margin-top: 5em;
           margin-bottom: 0;
-          margin-left: -8.5em;
+          margin-left: -17.5em;
           font-size: small;
       }
 
