@@ -8,7 +8,7 @@ function ChooseACity({updateCity, city}) {
     const [errorMessage, setErrorMessage] = React.useState("");
     const navigate = useNavigate();
 
-    function handleClickSubmit(event) {
+    async function handleClickSubmit(event) {
       
         if (city === "") {
           setErrorMessage("Please enter a location");
@@ -19,8 +19,21 @@ function ChooseACity({updateCity, city}) {
           setErrorMessage("Is not a valid location or location is currently not supported. Please select another location");
           return;
         }
-        navigate("/home");
+        
+        await getCity(city);
+        // navigate("/home");
       }
+
+      async function getCity(city) {
+        const response = await fetch(`http://localhost:4000/guide?city=${city}`, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        });
+        const data = await response.json();
+        console.log(data);
+        // console.log(data.payload[0]);
+        //setlistItemData(data.payload[0]);
+    }
 
       function enterKeyPressed(event) {
         if(event.keyCode === 13){

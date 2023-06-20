@@ -19,6 +19,10 @@ const cityRandomData=
     {
         city: "Seoul",
     }
+    ,
+    {
+        city: "Milan",
+    }
 ]
 
 export default cityRandomData;
