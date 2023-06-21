@@ -1,21 +1,57 @@
 import React from "react";
-import "./styles.css"
+import { Button } from "@mui/material";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import Paper from "@mui/material/Paper";
+import "./styles.css";
+import {useNavigate, useLocation} from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import NavBar from "../NavBar";
 
-function Favourites() {
+function Favourites(imageUrl,altText) {
+  
+  const buttonStyle = {
+    color: "black",
+  };
+
+  const navigate = useNavigate();
+    const location = useLocation();
+    const handleClick = () => {
+        if (location.pathname === '/home' ) {
+            navigate('/'); 
+          } else {
+            navigate(-1, { replace: true });
+          }
+    };
+
   return (
     <div className="overlay">
-      <div className="header">
-        <div className="header__btn--back"></div>
-        <div className="header__marker"></div>
-        <div className="header__title"></div>
-        <div className="header__btn--profile"></div>
+      <div className="favouritesHeader">
+      <Paper
+            sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
+            elevation={3}
+            className="navBar__top"
+        >
+            <div className="navBar__top--back">
+                <Button style={buttonStyle} onClick={handleClick}>
+                    <KeyboardBackspaceIcon />
+                </Button>
+            </div>
+            <div className="navBar__top--title">
+                <h1>Favourites</h1>
+            </div>
+            <div className="navBar__top--image">
+               <NavLink to="/ProfilePage" activeClassName = "active"> 
+               <img src={imageUrl} alt={altText} />
+               </NavLink> 
+            </div>
+        </Paper>
       </div>
       <div className="main">
-
-      <h1> Hello AHHHHHH</h1>
         <div className="main__list"></div>
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <NavBar />
+      </div>
     </div>
   );
 }
