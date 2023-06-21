@@ -76,7 +76,7 @@ function ChooseACity({updateCity, city}) {
                 <div className="header__img--logo">
                     <img
                         className="logo__image"
-                        src="../image/image-(2).png"
+                        src="../image/image-(1).png"
                         alt="logo"
                     />
                 </div>
@@ -97,8 +97,16 @@ function ChooseACity({updateCity, city}) {
             </div>
 
             <div className="main">
-                <div className="main__animated--globe">globe</div>
+                <div className="main__animated--globe">
+                <img
+                        className="globe__image"
+                        src="../image/Globe.png"
+                        alt="globe"
+                    />
+                </div>
+                <div className="main__btn">
                     <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
+                    </div>
             </div>
         </div>
     );
