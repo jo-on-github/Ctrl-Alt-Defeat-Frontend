@@ -10,11 +10,17 @@
     background-size: cover;
 }
 .listItem__icons {
+
     display: flex;
-    justify-content: space-between;
     width: 13.3em;
     height: 2em;
     margin-top: .6em;
+}
+.listItem__icons--favourite{
+    border: 1px solid red;
+    height: 100%;
+    display: flex;
+
 }
 
 .listItem__title {

@@ -66,7 +66,7 @@ function ChooseACity({updateCity, city}) {
             <div className="modal-overlay">
                 <div 
                     className="error">{errorMessage} 
-                    <button  onClick={handleErrorClick}>Okay!</button>
+                    <button onClick={handleErrorClick}>Okay!</button>
                 </div>
             </div>}
             <div className="header">

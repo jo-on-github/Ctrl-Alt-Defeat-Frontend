@@ -1,0 +1,138 @@
+.createAGuideHeader{
+    height: 3em;
+    width: 100%;
+}
+
+.main{
+    width: 99%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 2em 0 12em 0;
+}
+.main__form{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+}
+.main__form>form{
+    width: 85%;
+    height: 100%;
+}
+
+.main__form--input{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.main__form--input>input{
+    width: 90%;
+    height: 18%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 42px;
+    margin-bottom: 1em;
+}
+.main__form--dropdown{
+    width: 100%;
+    height: 19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.form__dropdown--options{
+    width: 100%;
+    height: 35%;
+    padding: 10px;
+    text-align: center;
+}
+.form__dropdown--options>select{
+    width: 100%;
+    height: 78%;
+    border-radius: 42px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.main__form--budget{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.form__budget--radio{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #616161;
+}
+.main__form--highlight{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.form__highlight--title{
+    display: flex;
+    justify-content: center;
+}
+.form__highlight--btn{
+    display: flex;
+    justify-content: center;
+
+}
+.form__highlight--input{
+    display: flex;
+    flex-direction: column;
+}
+.form__highlight--list{
+    border: 1px solid black;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.form__highlight--list button{
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color:rgb(219, 1, 1);
+    color: white;
+    margin-left: 5px;
+}
+.main__form--experience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__form--submit{
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+.main__form--submit>button{
+    width: 70%;
+    height: 60%;
+    border-radius: 42px;
+    border: 1px solid transparent;
+    background-color:#0002FF;
+    color: white;
+    margin-left: 5px;
+}

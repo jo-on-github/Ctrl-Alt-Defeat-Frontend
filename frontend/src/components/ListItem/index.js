@@ -17,9 +17,6 @@ function ListItem ({title, city, handleListItemClick, id, imageURL}) {
     return (
         <div className='listItem'  theme xs={4} sm={5} md={7} lg={9} xl={11}>
             <div className='listItem__icons'>
-                <div className='listItem__icons--activity'>
-                    <RestaurantIcon style={iconStyle} />
-                </div>
                 <div className='listItem__icons--favourite'>
                     <BookmarkBorderOutlinedIcon style={iconStyle} />
                 </div>
