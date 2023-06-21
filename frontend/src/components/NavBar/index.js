@@ -6,7 +6,7 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import "./styles.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
     //controls state of buttons to highlight when clicked
@@ -24,24 +24,24 @@ function NavBar() {
                     setValue(newValue);
                 }}
             >
-                <Link to={"/home"}>
+                <NavLink to={"/home"} className="nav-link">
                     <BottomNavigationAction
                         label="Home"
                         icon={<HomeOutlinedIcon />}
                     />
-                </Link>
-                <Link to={"/planner"}>
+                </NavLink>
+                <NavLink to={"/createaguide"} className="nav-link">
                     <BottomNavigationAction
-                        label="planner"
+                        label="createaguide"
                         icon={<AddBoxOutlinedIcon />}
                     />
-                </Link>
-                <Link to={"/Favourites"}>
+                </NavLink>
+                <NavLink to={"/Favourites"} className="nav-link">
                     <BottomNavigationAction
                         label="Favourites"
                         icon={<BookmarkBorderOutlinedIcon />}
                     />
-                </Link>
+                </NavLink>
             </BottomNavigation>
         </Paper>
     );

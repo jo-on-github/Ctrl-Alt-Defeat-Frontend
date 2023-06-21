@@ -114,9 +114,9 @@
   font-size: 1em;
 }
 
-.active button {
+.active button  {
   text-decoration: underline;
-  color: white;
+  font-weight: bold;
   font-family: product-sans-bold; 
 }
 

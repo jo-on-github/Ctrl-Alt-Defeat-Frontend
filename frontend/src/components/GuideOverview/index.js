@@ -74,17 +74,17 @@ function GuideOverview() {
       </div>
       <div className="middleNavBar">
         <div className="middleNavBar__btn--overview">
-          <NavLink to="/guide/overview" activeClassName="active">
+          <NavLink to="/guide/overview" activeClassName="active" className="guideActive" >
             <button>Overview</button>
           </NavLink>
         </div>
         <div className="middleNavBar__btn--experience">
-          <NavLink to="/guide/experience" activeClassName="active">
+          <NavLink to="/guide/experience" activeClassName="active" className="guideActive">
             <button>Experience</button>
           </NavLink>
         </div>
         <div className="middleNavBar__btn--reviews">
-          <NavLink to="/guide/reviews" activeClassName="active">
+          <NavLink to="/guide/reviews" activeClassName="guideactive" className="guideActive">
             <button>Reviews</button>
           </NavLink>
         </div>
