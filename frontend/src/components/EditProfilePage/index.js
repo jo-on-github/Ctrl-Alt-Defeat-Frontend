@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./styles.css"
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import {Button} from "@mui/material";
 
 function EditProfilePage() {
