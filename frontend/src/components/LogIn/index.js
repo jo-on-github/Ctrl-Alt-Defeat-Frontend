@@ -6,13 +6,25 @@ import { Link } from "react-router-dom";
 function LogInSignUp() {
     return(
        <div className="login_overlay">
+         
             <div className="header">
-                <h1 className="header__title">Welcome To Neighbourhood Nomad</h1>
+                <h1 className="header__title">Neighbourhood Nomad</h1>
             </div>
+
+           
             <div className="login_container">
+
+            <div className="header__img--logo">
+                    <img
+                        className="logo__image"
+                        src="../image/image-(1).png"
+                        alt="logo" 
+                    />
+                </div>
                 <div className="login_container__title">
                     <h3>Log In</h3>
                 </div>
+
                 <div className="login_container__formcontainer">
                     
                     <div className="login_container__form">
