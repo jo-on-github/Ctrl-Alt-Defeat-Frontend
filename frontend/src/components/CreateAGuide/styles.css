@@ -114,6 +114,7 @@
     margin-left: 5px;
 }
 .main__form--experience{
+    height: 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,4 +136,17 @@
     background-color:#0002FF;
     color: white;
     margin-left: 5px;
+}
+.form__experience--textArea{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form__experience--textArea textarea{
+    width: 70%;
+    height: 100%;
+    
 }

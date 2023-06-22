@@ -124,7 +124,6 @@ import SearchBar from "../SearchBar";
 import NavBar from "../NavBar";
 import Header from "../Header/index";
 import dummy from "../images/profile_photo/dummy.jpg";
-import listItemData from "../../dummyData/listItemData";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";

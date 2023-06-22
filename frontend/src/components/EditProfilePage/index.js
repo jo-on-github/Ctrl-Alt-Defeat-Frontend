@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "./styles.css"
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import { useNavigate, Link } from "react-router-dom";
+import {Button} from "@mui/material";
 
 function EditProfilePage() {
     const [profilePicture, setProfilePicture] = useState(""); // State to store the image source
@@ -30,14 +32,26 @@ function EditProfilePage() {
   
       reader.readAsDataURL(file); // Read the file as a data URL
 
-
+      
       
     };
+    const buttonStyle = {
+        color: "black",
+        border: "none",
+    };
+
+    const handleClick = () => {
+        navigate(-1, { replace: false });
+    };
+        const navigate = useNavigate();
+
     return (
         <div className="editProfile_overlay">
             <div className="editProfile__header">
                 <div className="editProfile__header--btn">
-                    <KeyboardBackspaceIcon />
+                    <Button onClick={handleClick} style={buttonStyle}>
+                        <KeyboardBackspaceIcon />
+                    </Button>
                 </div>
                 <div className="editProfile__header--title">
 
