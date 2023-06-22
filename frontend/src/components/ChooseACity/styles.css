@@ -147,14 +147,14 @@ body {
  /* Extra Small (xs) devices */
  @media (max-width: 599px) {
 .header__title {
-  font-size: 26px;
+  font-size: 20px;
   text-align: center;
   flex-direction: column; /* Added this line */
 }
 
 .logo__image{
-    width: 14em;
-    height: 14em;
+    width: 10em;
+    height: 10em;
 
 }
 
@@ -209,7 +209,6 @@ body {
   }
     
   .main__animated--globe {
-    border: 1px solid red;
     height: 10em;
     width: 10em;
     margin-bottom: 3em;
