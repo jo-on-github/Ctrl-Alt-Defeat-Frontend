@@ -1,6 +1,7 @@
-import react from "react";
+import React from "react";
 import "./styles.css";
-import { Paper } from "@mui/material";
+import { Link } from "react-router-dom";
+
 
 function LogInSignUp() {
     return(
@@ -24,7 +25,10 @@ function LogInSignUp() {
                         </form>
                         <div className="login_container__signup_container">
                             <h4>Don't Have An Account?</h4>
-                            <button>Sign Up</button>
+                            <Link to="/login/signup">
+
+                                <button>Sign Up</button>
+                            </Link>
                         </div>
                     </div>
 

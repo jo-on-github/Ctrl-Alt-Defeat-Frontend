@@ -85,7 +85,7 @@
     justify-content: center;
     align-items: center;
 }
-.login_container__signup_container>button{
+.login_container__signup_container button{
     width: 18em;
     height: 3em;
     padding: 10px;
