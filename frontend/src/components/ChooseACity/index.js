@@ -73,15 +73,14 @@ function ChooseACity({updateCity, city}) {
                 <div className="header__title">
                     <h1>Neighbourhood Nomad</h1>
                 </div>
-                <div className="header__img--logo">
+            </div>
+            <div className="header__img--logo">
                     <img
                         className="logo__image"
                         src="../image/image-(1).png"
-                        alt="logo"
+                        alt="logo" 
                     />
                 </div>
-            </div>
-
             <div className="userInput">
                 <input
                     className="userInput__input"
@@ -90,7 +89,6 @@ function ChooseACity({updateCity, city}) {
                     onChange={handleInputChange}
                     onKeyDown={enterKeyPressed}
                 />
-    
                     <button className="userInput__btn--randomiser" onClick={handleClickRandomiser}>
                         I'm feeling adventurous!
                     </button>  
