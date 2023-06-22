@@ -1,6 +1,12 @@
 html {
-  background-color: #f7f5e81c;
+  background-color: #f0edd733;
+  overflow: hidden; /* Prevent scrolling */
 }
+
+body {
+  overflow: hidden; /* Prevent scrolling */
+}
+
 
 
 .overlay {
@@ -9,6 +15,7 @@ html {
     align-items: center;
     width: 100%;
     height: 100vh;
+    padding: 0%;
   }
   .modal-overlay {
     position: fixed;
@@ -40,7 +47,7 @@ html {
     background-color: white;
     color: #0002FF;
     border-radius: 10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-weight: 600;
   }
   
@@ -48,33 +55,36 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 16em;
+    /* height: 16em; */
   }
   
   .header__title {
-    font-size: 18px;
+    font-size: 26px;
     text-align: center;
     color: rgba(34, 31, 31, 0.793);
     width: 90%;
-    margin-top: 7em;
-
-
+    display: flex;
+    flex-direction: column; /* Added this line */
   }
+  
   
   .logo__image {
-    width: 12em;
-    height: 12em;
-    margin-bottom: 3em;
-
+    width: 16em;
+    height: 16em;
+    padding-top: 0%;
+    padding-bottom: 0%;
   }
-  
+
   .userInput {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin-top: 5em;
+    padding-top: 0%;
+    padding-bottom: 0%;
+  /* Adjust this value to control the spacing */
   }
+  
   
   .userInput__input {
     height: 2.5em;
@@ -83,7 +93,7 @@ html {
     border: 1px solid rgb(172, 171, 171);
     text-align: center;
     position: relative;
-    margin-top: 2em;
+    /* margin-top: 2em; */
   }
   
   .userInput__btn--randomiser {
@@ -92,15 +102,16 @@ html {
     border: 0px;
     text-decoration: underline;
     display: block;
-    margin-top: .7em;
+    padding-top: 1em;
+    /* margin-top: 7em; */
   }
   
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1em;
-    height: 18em;
+    margin-top: 0.5em;
+    height: 20em;
     width: 13em;
   }
   
@@ -110,7 +121,7 @@ html {
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    /* margin-top: 2em; */
   }
 
   .globe__image {
@@ -125,39 +136,181 @@ html {
     border-radius: 10px;
     background: #0002FF;
     color: white;
-    margin-top: 3em;
+    margin-top:0.5em;
+  }
+
+
+
+  
+ /* responsiveness starts here*/
+
+ /* Extra Small (xs) devices */
+ @media (max-width: 599px) {
+.header__title {
+  font-size: 26px;
+  text-align: center;
+  flex-direction: column; /* Added this line */
+}
+
+.logo__image{
+    width: 14em;
+    height: 14em;
+
+}
+
+  .userInput__btn--randomiser {
+    padding-top: 1em;
+
+  }
+
+  .main__animated--globe {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  .main__btn--submit {
+    font-weight: 700;
+    height: 4em;
+    width: 12em;
+    border-radius: 10px;
+    background: #0002FF;
+    color: white;
+    margin-top:0.5em;
+  }
+}
+/* CSS rules for Small (sm) devices */
+@media (min-width: 600px) and (max-width: 959px) {
+
+  .header__title {
+    font-size: 26px;
+    text-align: center;
+    flex-direction: column; /* Added this line */
   }
   
-  /* @media (min-width: 833px) { 
-
-    .header__title {
-      font-size: 32px;
-
-    }
+  .logo__image{
+      width: 14em;
+      height: 14em;
   
-    .logo__image {
-      width: 15em;
-      height: 15em;
-    }
-  
-    .userInput {
-      width: 80%;
-      margin: auto;
-    }
-  
+  }
+  .userInput__btn--randomiser {
+    padding-top: 1em;
+    width: 10em;
+    font-size: 1em;
+  }
 
-  
-
-  } */
-
-  @media (min-width: 426px) {
-
-    .logo__image {
-      margin-top: 4.5em;
-    }
-
+  .userInput__input {
+    width: 30em;
+  }
     
-
-
-
+  .main__animated--globe {
+    height: 10em;
+    width: 10em;
   }
+  
+ 
+}
+
+/* CSS rules for Medium (md) devices */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .header__title {
+    font-size: 26px;
+  }
+
+  .logo__image {
+    width: 13em;
+    height: 13em;
+  }
+
+  .userInput__btn--randomiser {
+    padding-top: 1em;
+    width: 13em;
+    font-size: 1.8em;
+  }
+
+  .userInput__input {
+    width: 48em;
+  }
+
+  .main__animated--globe {
+    height: 10em;
+    width: 10em;
+  }
+
+  .main__btn--submit {
+     height: 4.5em;
+    width: 30em;
+ margin-bottom: 12em;
+  }
+}
+
+
+/* CSS rules for Large (lg) devices */
+  
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .header__title {
+    font-size: 20px;
+  }
+
+  .logo__image {
+    width: 15em;
+    height: 15em;
+  }
+
+  .userInput__btn--randomiser {
+    padding-top: 1em;
+    width: 13em;
+    font-size: 1.8em;
+  }
+
+  .userInput__input {
+    width: 48em;
+  }
+
+  .main__animated--globe {
+    height: 10em;
+    width: 10em;
+  }
+
+  .main__btn--submit {
+    width: 30em;
+  }
+}
+
+
+
+
+/* CSS rules for Extra Large (xl) devices */
+@media (min-width: 1920px)  {
+  .header__title {
+    font-size: 30px;
+  }
+
+  .logo__image {
+    width: 18em;
+    height: 18em;
+  }
+
+  .userInput__btn--randomiser {
+    padding-top: 1em;
+    width: 13em;
+    font-size: 1.8em;
+  }
+
+  .userInput__input {
+    width: 48em;
+  }
+
+  .main__animated--globe {
+    height: 15em;
+    width: 15em;
+  }
+
+  .main__btn--submit {
+    width: 40em;
+    height: 8em;
+  }
+}
