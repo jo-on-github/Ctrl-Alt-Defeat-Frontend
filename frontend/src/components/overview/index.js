@@ -1,26 +1,20 @@
 import React from "react";
 import "./styles.css";
+import { useParams } from "react-router-dom";
 
 
 
 export default function Overview({chosenCity}) {
-  // const [overviewData, setOverviewData] = React.useState(null);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const data = await getGuideData(id); 
-  //     setOverviewData(data);
-  //     console.log(overviewData);
-  //   };
-  //   fetchData();
-  // }, [getGuideData, id, setOverviewData, overviewData ]);
+  const {id} = useParams();
 
-  //   console.log(guideData.overview)
+  const selectedItem = chosenCity.find(item => item._id === id);
+  console.log(chosenCity);
   return (
     <div className="subInfo">
       <div className="subInfo__title">Overview</div>
-      {chosenCity &&<div className="subInfo__description">
-       {chosenCity.overview}
-      </div>}
+      <div className="subInfo__description">
+       {selectedItem.overview}
+      </div>
 
   
     </div>
