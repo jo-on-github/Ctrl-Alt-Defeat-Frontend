@@ -1,6 +1,5 @@
 import React from 'react';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-
 import './styles.css';
 
 
