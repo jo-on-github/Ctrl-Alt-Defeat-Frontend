@@ -3,11 +3,7 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import './styles.css';
 
 
-function ListItem ({title, city, handleListItemClick, id, imageURL}) {
-    
-    function handleClick(id) {
-        handleListItemClick(id)
-    }
+function ListItem ({title, city, handleListItemClick, imageURL}) {
     
 
     const iconStyle = {

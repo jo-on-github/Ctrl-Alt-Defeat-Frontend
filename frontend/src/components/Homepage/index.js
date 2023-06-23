@@ -12,19 +12,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 
 function Homepage({ city, updateSearchFilter }) {
-    const [searchFilter, setSearchFilter] = useState(null);
     const [filterClicked, setFilterClicked] = useState(false);
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
-    const [uniqueID, setUniqueID] = useState();
 
-   const handleListItemClick = (id) => {
-        setUniqueID(id);
-    }
-
-    const handleSearchFilterChange = (searchFilter) => {
-        setSearchFilter(searchFilter);
-    };
 
     const cityData = getlistItemData();
     console.log(cityData);
@@ -82,7 +73,6 @@ function Homepage({ city, updateSearchFilter }) {
             />
             <SearchBar
                 sx={{ zIndex: 1 }}
-                handleSearchFilterChange={handleSearchFilterChange}
                 position="relative"
                 setFilterClicked={setFilterClicked}
                 filterClicked={filterClicked}
@@ -93,7 +83,7 @@ function Homepage({ city, updateSearchFilter }) {
                     {cityData.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <Link to="/guide/overview">
-                                <ListItem title={item.title} id={item._id} onClick={handleListItemClick}/>
+                                <ListItem title={item.title} id={item._id}/>
                             </Link>
                         </Grid>
                     ))}
