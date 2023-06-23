@@ -5,10 +5,7 @@ import './styles.css';
 
 
 function ListItem ({title, city, handleListItemClick, id, imageURL}) {
-    
-    function handleClick(id) {
-        handleListItemClick(id)
-    }
+
     
 
     const iconStyle = {

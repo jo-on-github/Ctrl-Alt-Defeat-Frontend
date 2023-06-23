@@ -7,27 +7,26 @@ import dummy from "../images/profile_photo/dummy.jpg";
 import ListItem from "../ListItem";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import {getlistItemData } from "../Data/index.js";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-function Homepage({ city, updateSearchFilter }) {
+function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCity }) {
     const [searchFilter, setSearchFilter] = useState(null);
     const [filterClicked, setFilterClicked] = useState(false);
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
-    const [uniqueID, setUniqueID] = useState();
 
-   const handleListItemClick = (id) => {
-        setUniqueID(id);
-    }
+    const handleListItemClick = (id) => {
+        const selectedItem = chosenCity.find((item) => item._id === id);
+        setId(id);
+        setChosenCity(selectedItem);
+        Navigate("/guide/overview");
+      };
 
     const handleSearchFilterChange = (searchFilter) => {
         setSearchFilter(searchFilter);
     };
-
-    const cityData = getlistItemData();
-    console.log(cityData);
 
     const handleFilterClick = () => {
         setFilterClicked(false);
@@ -90,10 +89,10 @@ function Homepage({ city, updateSearchFilter }) {
        
             <Box className="main__listItems" sx={{ position: "relative", top: 75 }}>
                 <Grid className="main__listItems--grid" container spacing={2}>
-                    {cityData.map((item, index) => (
+                    {chosenCity.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <Link to="/guide/overview">
-                                <ListItem title={item.title} id={item._id} onClick={handleListItemClick}/>
+                                <ListItem title={item.title} id={item._id} onClick={ handleListItemClick}/>
                             </Link>
                         </Grid>
                     ))}
