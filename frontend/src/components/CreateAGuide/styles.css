@@ -2,18 +2,24 @@
     height: 3em;
     width: 100%;
 }
-
-.main{
-    width: 99%;
-    height: 100vh;
+.createAGuide_Overlay{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    padding: 2em 0 12em 0;
+}
+.main{
+    width: 99%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 1em 0 0 0;
 }
 .main__form{
-    width: 85%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -24,6 +30,8 @@
 .main__form>form{
     width: 85%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .main__form--input{

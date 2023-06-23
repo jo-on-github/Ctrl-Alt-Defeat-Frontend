@@ -23,6 +23,7 @@ function ChooseACity({updateCity, city}) {
         
         await getCity(city);
         navigate("/home");
+        updateCity("");
       }
 
       async function getCity(city) {
