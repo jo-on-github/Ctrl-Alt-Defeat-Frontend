@@ -89,7 +89,7 @@ function Homepage({ city, chosenCity, setChosenCity }) {
                 <Grid className="main__listItems--grid" container spacing={2}>
                     {chosenCity.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
-                            <Link to="/guide/overview">
+                            <Link to={`/guide/${item._id}/overview`}>
                                 <ListItem title={item.title} id={item._id} image={item.imageURL} onClick={handleListItemClick}/>
                             </Link>
                         </Grid>
