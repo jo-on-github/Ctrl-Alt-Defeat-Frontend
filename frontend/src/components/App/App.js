@@ -80,7 +80,7 @@ function App() {
         <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
-          <Route path="/guide/overview" element={<Overview  chosenCity={chosenCity} />} />
+          <Route path="/guide/overview" element={<Overview />} />
           <Route path="/guide/experience" element={<Experience />} />
           <Route path="/guide/reviews" element={<Reviews />} />
         </Route>
