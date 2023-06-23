@@ -144,7 +144,7 @@ body {
   
  /* responsiveness starts here*/
 
- /* Extra Small (xs) devices */
+/* CSS rules for all mobile phones */
  @media (max-width: 599px) {
 .header__title {
   font-size: 20px;
@@ -173,6 +173,11 @@ body {
     
    
   }
+
+}
+
+/* CSS rules for Medium (md) devices */
+@media (min-width: 833px) {
 
   .main__btn--submit {
     font-weight: 700;
@@ -219,6 +224,7 @@ body {
 
 /* CSS rules for Medium (md) devices */
 @media (min-width: 750px) and (max-width: 1279px) {
+
   .header__title {
     font-size: 26px;
   }
@@ -235,7 +241,7 @@ body {
   }
 
   .userInput__input {
-    width: 48em;
+    width: 40em;
   }
 
   .main__animated--globe {
@@ -245,33 +251,36 @@ body {
 
   .main__btn--submit {
      height: 4.5em;
+
+ 
+
     width: 30em;
  margin-bottom: 10em;
+
   }
 }
 
 
-/* CSS rules for Large (lg) devices */
-  
-@media (min-width: 1280px) and (max-width: 1919px) {
+/* CSS rules for Extra Large (xl) devices */
+@media (min-width: 1279px)  {
   .header__title {
-    font-size: 20px;
+    font-size: 29px;
   }
 
   .logo__image {
-    width: 15em;
-    height: 15em;
+    width: 12em;
+    height: 12em;
   }
 
   .userInput__btn--randomiser {
-    padding-top: 1em;
     width: 13em;
-    font-size: 1.8em;
+    font-size: 1em;
   }
 
   .userInput__input {
-    width: 48em;
+    width: 35em;
   }
+
 
   .main__animated--globe {
     height: 10em;
@@ -279,41 +288,7 @@ body {
   }
 
   .main__btn--submit {
-    width: 30em;
-  }
-}
-
-
-
-
-/* CSS rules for Extra Large (xl) devices */
-@media (min-width: 1920px)  {
-  .header__title {
-    font-size: 30px;
-  }
-
-  .logo__image {
-    width: 18em;
-    height: 18em;
-  }
-
-  .userInput__btn--randomiser {
-    padding-top: 1em;
-    width: 13em;
-    font-size: 1.8em;
-  }
-
-  .userInput__input {
-    width: 48em;
-  }
-
-  .main__animated--globe {
-    height: 15em;
-    width: 15em;
-  }
-
-  .main__btn--submit {
-    width: 40em;
-    height: 8em;
+    width: 28em;
+    height: 4em;
   }
 }
