@@ -2,14 +2,14 @@
     height: 3em;
     width: 100%;
 }
-.createAGuide_Overlay{
+/* .createAGuide_Overlay{
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-}
-.main{
+} */
+.main_gO{
     width: 99%;
     height: 100%;
     display: flex;
@@ -129,12 +129,12 @@
     align-items: center;
 }
 .main__form--submit{
-    height: 7%;
+    height: 15%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    /* margin-top: 2em; */
 }
 .main__form--submit>button{
     width: 70%;

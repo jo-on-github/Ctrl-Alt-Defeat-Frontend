@@ -86,7 +86,7 @@ function CreateAGuide({ imageUrl, altText }) {
           </div>
         </Paper>
       </div>
-      <div className="main">
+      <div className="main_gO">
         <div className="main__form">
           <form>
             <div className="main__form--input">
