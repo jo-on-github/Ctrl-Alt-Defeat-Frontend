@@ -6,7 +6,7 @@ import { Route, Routes} from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
 import Overview from "../GuideOverview/overview/index.js";
-// import Experience from "../GuideOverview/experience/index.js";
+import Experience from "../GuideOverview/experience/index.js";
 import Reviews from "../GuideOverview/reviews/index.js";
 
 
@@ -44,7 +44,7 @@ function App() {
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
           <Route path="/guide/overview" element={<Overview />} />
-          {/* <Route path="/guide/experience" element={<Experience />} /> */}
+          <Route path="/guide/experience" element={<Experience />} />
           <Route path="/guide/reviews" element={<Reviews />} />
         </Route>
         <Route path="/createaguide" element={<CreateAGuide />} />
