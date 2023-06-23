@@ -1,11 +1,29 @@
 import React from "react";
 import "./styles.css";
 
-export default function Overview() {
+
+
+export default function Overview({chosenCity}) {
+  // const [overviewData, setOverviewData] = React.useState(null);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await getGuideData(id); 
+  //     setOverviewData(data);
+  //     console.log(overviewData);
+  //   };
+  //   fetchData();
+  // }, [getGuideData, id, setOverviewData, overviewData ]);
+
+  //   console.log(guideData.overview)
   return (
     <div className="subInfo">
       <div className="subInfo__title">Overview</div>
-      <div className="subInfo__description">The Duomo di Milano is a magnificent Gothic cathedral located in Milan, Italy. With its awe-inspiring architecture, intricate details, and pink-tinged white marble exterior, it stands as one of the world's largest and most renowned cathedrals.</div>
+      {chosenCity &&<div className="subInfo__description">
+       {chosenCity.overview}
+      </div>}
+
+export default function Overview() {
+  
     </div>
   );
 }

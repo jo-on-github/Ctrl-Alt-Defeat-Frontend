@@ -3,14 +3,21 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 import './styles.css';
 
 
-function ListItem ({title, city, handleListItemClick, imageURL}) {
+function ListItem ({title, city, id, image}) {
+
+
     
 
     const iconStyle = {
         color: 'white'
     }
     return (
-        <div className='listItem'  theme xs={4} sm={5} md={7} lg={9} xl={11}>
+        <div className='listItem'  
+        style={{
+            backgroundImage: `url(${image})`,
+
+            }} 
+        theme xs={4} sm={5} md={7} lg={9} xl={11}>
             <div className='listItem__icons'>
                 <div className='listItem__icons--favourite'>
                     <BookmarkBorderOutlinedIcon style={iconStyle} />
