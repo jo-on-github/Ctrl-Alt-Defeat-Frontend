@@ -169,6 +169,8 @@ body {
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    margin-bottom: 2em;
+    
    
   }
 
@@ -176,6 +178,53 @@ body {
 
 /* CSS rules for Medium (md) devices */
 @media (min-width: 833px) {
+
+  .main__btn--submit {
+    font-weight: 700;
+    height: 4em;
+    width: 12em;
+    border-radius: 10px;
+    background: #0002FF;
+    color: white;
+    margin-top:0.5em;
+  }
+}
+/* CSS rules for Small (sm) devices */
+@media (min-width: 600px) and (max-width: 959px) {
+
+  .header__title {
+    font-size: 26px;
+    text-align: center;
+    flex-direction: column; /* Added this line */
+  }
+  
+  .logo__image{
+      width: 14em;
+      height: 14em;
+  
+  }
+  .userInput__btn--randomiser {
+    padding-top: 1em;
+    width: 10em;
+    font-size: 1em;
+  }
+
+  .userInput__input {
+    width: 30em;
+  }
+    
+  .main__animated--globe {
+    height: 10em;
+    width: 10em;
+    margin-bottom: 3em;
+  }
+  
+ 
+}
+
+/* CSS rules for Medium (md) devices */
+@media (min-width: 750px) and (max-width: 1279px) {
+
   .header__title {
     font-size: 26px;
   }
@@ -202,8 +251,12 @@ body {
 
   .main__btn--submit {
      height: 4.5em;
-    width: 25em;
+
  
+
+    width: 30em;
+ margin-bottom: 10em;
+
   }
 }
 

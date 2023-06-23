@@ -1,21 +1,23 @@
 import React from 'react';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-import RestaurantIcon from '@mui/icons-material/Restaurant';
 import './styles.css';
 
 
-function ListItem ({title, city, handleListItemClick, id, imageURL}) {
-    
-    function handleClick(id) {
-        handleListItemClick(id)
-    }
+function ListItem ({title, city, id, image}) {
+
+
     
 
     const iconStyle = {
         color: 'white'
     }
     return (
-        <div className='listItem'  theme xs={4} sm={5} md={7} lg={9} xl={11}>
+        <div className='listItem'  
+        style={{
+            backgroundImage: `url(${image})`,
+
+            }} 
+        theme xs={4} sm={5} md={7} lg={9} xl={11}>
             <div className='listItem__icons'>
                 <div className='listItem__icons--favourite'>
                     <BookmarkBorderOutlinedIcon style={iconStyle} />
