@@ -22,7 +22,6 @@ export default function Overview({chosenCity}) {
        {chosenCity.overview}
       </div>}
 
-export default function Overview() {
   
     </div>
   );

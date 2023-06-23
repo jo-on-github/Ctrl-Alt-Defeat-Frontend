@@ -21,7 +21,6 @@ function Homepage({ city, chosenCity, setChosenCity }) {
 
 
    const handleListItemClick = (id) => {
-        
     }
 
 
@@ -91,7 +90,7 @@ function Homepage({ city, chosenCity, setChosenCity }) {
                     {chosenCity.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <Link to="/guide/overview">
-                                <ListItem title={item.title} id={item._id}/>
+                                <ListItem title={item.title} id={item._id} image={item.imageURL} onClick={handleListItemClick}/>
                             </Link>
                         </Grid>
                     ))}
