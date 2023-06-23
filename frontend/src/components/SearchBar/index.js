@@ -122,12 +122,9 @@ import { useTheme } from "@mui/material/styles";
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-export default function SearchBar({ handleSearchFilterChange, setFilterClicked, filterClicked }) {
+export default function SearchBar({ setFilterClicked, filterClicked }) {
     const theme = useTheme();
 
-    function handleChange(event) {
-        handleSearchFilterChange(event.target.value);
-    }
 
     function handleClick() {
         console.log("clicked");

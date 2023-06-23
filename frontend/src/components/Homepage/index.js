@@ -9,20 +9,20 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 
-function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCity }) {
+
+function Homepage({ city, chosenCity, setChosenCity }) {
     
     const [filterClicked, setFilterClicked] = useState(false);
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
+    const [uniqueID, setUniqueID] = useState();
 
-    const handleListItemClick = (id) => {
-        const selectedItem = chosenCity.find((item) => item._id === id);
-        setId(id);
-        setChosenCity(selectedItem);
-        Navigate("/guide/overview");
-      };
+   const handleListItemClick = (id) => {
+        
+    }
+
+    
 
     
 
@@ -79,7 +79,7 @@ function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCi
             />
             <SearchBar
                 sx={{ zIndex: 1 }}
-                
+               
                 position="relative"
                 setFilterClicked={setFilterClicked}
                 filterClicked={filterClicked}
@@ -90,7 +90,7 @@ function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCi
                     {chosenCity.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <Link to="/guide/overview">
-                                <ListItem title={item.title} id={item._id} image={item.imageURL} onClick={ handleListItemClick}/>
+                                <ListItem title={item.title} id={item._id} onClick={handleListItemClick}/>
                             </Link>
                         </Grid>
                     ))}
