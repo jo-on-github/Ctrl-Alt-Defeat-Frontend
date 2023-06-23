@@ -108,7 +108,6 @@
 
 import * as React from "react";
 import Paper from "@mui/material/Paper";
-import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import TuneIcon from "@mui/icons-material/Tune";
 import SearchIcon from "@mui/icons-material/Search";
@@ -118,7 +117,6 @@ import Autocomplete from "@mui/material/Autocomplete";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import listItemData from "../../dummyData/listItemData";
-import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
