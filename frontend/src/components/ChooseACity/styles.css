@@ -247,6 +247,7 @@ body {
   .main__animated--globe {
     height: 10em;
     width: 10em;
+    padding-top: 8em;
   }
 
   .main__btn--submit {
