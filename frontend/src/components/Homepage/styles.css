@@ -73,6 +73,8 @@
 }
 
 
+
+
 .search {
     height: 4.2em;
     width: 95%;
@@ -109,29 +111,20 @@
 @media (max-width: 599px) {
 }
 
-/* CSS rules for Small (sm) devices */
-@media (min-width: 600px) and (max-width: 959px) {
+/* CSS rules for Small (sm) devices - not needed for tablet size*/
+@media (min-width: 833px)  {
+
 }
+
 
 /* CSS rules for Medium (md) devices */
-@media (min-width: 960px) and (max-width: 1279px) {
-
-    .h1 {
-    
-     color: red;
-
-    }
-}
-
-
-
-
-/* CSS rules for Large (lg) devices */
-  
-@media (min-width: 1280px) and (max-width: 1919px) {
-}
-
-
-
 @media (min-width: 1279px) {
+.listItem {
+    height: 1em;
+    width: 1em;
+  }
 }
+
+
+
+

@@ -17,7 +17,7 @@
     margin-top: .6em;
 }
 .listItem__icons--favourite{
-    border: 1px solid red;
+    
     height: 100%;
     display: flex;
 
@@ -39,7 +39,7 @@
 }
 
 /*media queries for list item to make them relative to page size*/
-
+/* 
 @media (max-width: 490px){
     .listItem {
         width: 8em;
@@ -174,10 +174,10 @@
     }
   }
 
-  @media (min-width: 1164px) {
+  @media (min-width: 1279px) {
     .listItem {
-      width: 18em;
-      height: 18em;
+      width: 40px;
+      height: 4cm;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -206,4 +206,4 @@
         margin-left: -8.5em;
         font-size: xx-large;
     }
-  }
+  } */

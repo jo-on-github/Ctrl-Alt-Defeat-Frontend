@@ -93,7 +93,7 @@ function Homepage({ city, updateSearchFilter }) {
                     {cityData.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>
                             <Link to="/guide/overview">
-                                <ListItem title={item.title} id={item._id} onClick={handleListItemClick}/>
+                                <ListItem className="tiles" title={item.title} id={item._id} onClick={handleListItemClick}/>
                             </Link>
                         </Grid>
                     ))}

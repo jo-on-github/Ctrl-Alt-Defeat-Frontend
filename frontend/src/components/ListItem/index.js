@@ -34,5 +34,6 @@ function ListItem ({title, city, handleListItemClick, id, imageURL}) {
 
 export default ListItem;
 
+// style={{height: "1em", width: "1em"}}
 
 // style={{backgroundImage: `url("${imageURL}")`}}
