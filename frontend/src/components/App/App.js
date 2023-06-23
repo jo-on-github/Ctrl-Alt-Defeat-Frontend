@@ -5,9 +5,9 @@ import Itinerary from "../Itinerary";
 import { Route, Routes} from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
-import Overview from "../GuideOverview/overview/index.js";
-import Experience from "../GuideOverview/experience/index.js";
-import Reviews from "../GuideOverview/reviews/index.js";
+import Overview from "../overview/index.js";
+import Experience from "../experience/index.js";
+import Reviews from "../reviews/index.js";
 
 
 import ProfilePage from "../ProfilePage";
