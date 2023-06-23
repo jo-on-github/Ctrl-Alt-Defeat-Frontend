@@ -21,11 +21,10 @@ function LogInSignUp() {
                         alt="logo" 
                     />
                 </div>
-                <div className="login_container__title">
+             
                     <h3>Log In</h3>
-                </div>
+         
 
-                <div className="login_container__formcontainer">
                     
                     <div className="login_container__form">
                         
@@ -44,7 +43,7 @@ function LogInSignUp() {
                         </div>
                     </div>
 
-                </div>
+          
             </div>
        </div> 
     )

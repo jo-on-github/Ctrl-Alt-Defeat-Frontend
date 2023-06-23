@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    padding-bottom: 0.01em;
   }
 
 .login_container{
@@ -34,7 +34,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9saWRheXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60")
+    background-image: url("https://images.unsplash.com/photo-1527998257557-0c18b22fa4cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9saWRheXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    
 }
 .login_container__title{
     width: 90%;
@@ -44,7 +45,12 @@
     align-items: center;
     text-align: center;
     font-size: 1em;
+    
 }
+.login_container__title>h3 {
+    font-family: Product-Sans;
+}
+
 .login_container__formcontainer{
     width: 100%;
     height: 90%;
@@ -58,15 +64,16 @@
     border-radius: 40px;
     display: flex;
     flex-direction: column;
-    padding: 15px 0px;
-  
-    
+    padding-bottom: 5em;
+
 }
+
 .login_container__form>form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 .login_container__form > form > input {
     width: 80%;
@@ -107,11 +114,12 @@
     background-color: #0002FF;
     color: white;
     border: 1px solid transparent;
+    
 }
 
 
 
-@media (max-width: 599px) {
+@media (max-width: 833px) {
     .header>h1{
               font-size: 30px;
               font-family: Product-Sans;
@@ -127,18 +135,8 @@
 }
 
   
-  @media (min-width: 600px) and (max-width: 959px) {
-    /* CSS rules for Small (sm) devices */
+  @media (min-width: 1279px) {
+   
   }
   
-  @media (min-width: 960px) and (max-width: 1279px) {
-    /* CSS rules for Medium (md) devices */
-  }
   
-  @media (min-width: 1280px) and (max-width: 1919px) {
-    /* CSS rules for Large (lg) devices */
-  }
-  
-  @media (min-width: 1920px) {
-    /* CSS rules for Extra Large (xl) devices */
-  }
