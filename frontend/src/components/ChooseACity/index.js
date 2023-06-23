@@ -22,7 +22,6 @@ function ChooseACity({updateCity, city, getCity}) {
         
         await getCity(city);
         navigate("/home");
-        updateCity("");
       }
 
       function enterKeyPressed(event) {
