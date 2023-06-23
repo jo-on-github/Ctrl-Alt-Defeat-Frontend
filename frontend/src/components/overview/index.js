@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 
 
+
 export default function Overview({chosenCity}) {
   // const [overviewData, setOverviewData] = React.useState(null);
   // useEffect(() => {
@@ -20,6 +21,9 @@ export default function Overview({chosenCity}) {
       {chosenCity &&<div className="subInfo__description">
        {chosenCity.overview}
       </div>}
+
+export default function Overview() {
+  
     </div>
   );
 }

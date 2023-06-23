@@ -5,6 +5,7 @@ import './styles.css';
 
 function ListItem ({title, city, id, image}) {
 
+
     
 
     const iconStyle = {
