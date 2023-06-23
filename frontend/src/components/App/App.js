@@ -72,7 +72,7 @@ function App() {
   
   
   return (
-    <div>
+    <div className="routerDiv">
       <Routes>
         <Route path="/login" element={<LogIn />} />
           <Route path="/login/signup" element={<SignUp/>} />
