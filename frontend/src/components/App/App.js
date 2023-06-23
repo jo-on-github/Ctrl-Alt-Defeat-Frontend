@@ -8,7 +8,7 @@ import ChooseACity from "../ChooseACity";
 import Overview from "../GuideOverview/overview/index.js";
 import Experience from "../GuideOverview/experience/index.js";
 import Reviews from "../GuideOverview/reviews/index.js";
-import ListItem from "../ListItem";
+
 import ProfilePage from "../ProfilePage";
 import EditProfilePage from "../EditProfilePage";
 import { useEffect } from "react";
@@ -27,9 +27,7 @@ function App() {
   };
 
   const [chosenCity, setChosenCity] = React.useState("");
-  const updateChosenCity = (chosenCity) => {
-    setChosenCity(chosenCity);
-  };
+ 
 
   async function getCity(city) {
     const response = await fetch(`http://localhost:4000/guide?city=${city}`, {
@@ -47,10 +45,10 @@ function App() {
     console.log(chosenCity);
   }, [chosenCity]);
 
-  const [guideData, setGuideData] = React.useState(null);
+  // const [guideData, setGuideData] = React.useState(null);
   
 
-  const [id, setId] = React.useState(null);
+  // const [id, setId] = React.useState(null);
 
   // const handleListItemClick = (id) => {
   //   setId(chosenCity.id);
@@ -78,7 +76,7 @@ function App() {
         <Route path="/login" element={<LogIn />} />
           <Route path="/login/signup" element={<SignUp/>} />
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} getCity={getCity} />} />
-        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} id={id}/>} />
+        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview />}>
           <Route path="/guide/overview" element={<Overview  chosenCity={chosenCity} />} />

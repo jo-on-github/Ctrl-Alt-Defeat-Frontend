@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { useEffect } from "react";
+
 
 export default function Overview({chosenCity}) {
   // const [overviewData, setOverviewData] = React.useState(null);

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCity }) {
-    const [searchFilter, setSearchFilter] = useState(null);
+    
     const [filterClicked, setFilterClicked] = useState(false);
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
@@ -24,9 +24,7 @@ function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCi
         Navigate("/guide/overview");
       };
 
-    const handleSearchFilterChange = (searchFilter) => {
-        setSearchFilter(searchFilter);
-    };
+    
 
     const handleFilterClick = () => {
         setFilterClicked(false);
@@ -81,7 +79,7 @@ function Homepage({ city, chosenCity, updateSearchFilter, setId, id, setChosenCi
             />
             <SearchBar
                 sx={{ zIndex: 1 }}
-                handleSearchFilterChange={handleSearchFilterChange}
+                
                 position="relative"
                 setFilterClicked={setFilterClicked}
                 filterClicked={filterClicked}
