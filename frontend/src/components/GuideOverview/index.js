@@ -43,9 +43,9 @@ function GuideOverview({chosenCity}) {
         </div>
         <div className="guideHeader__heading">
           <div className="guideHeader__heading--title">
-            <h2>The Duomo</h2>
+            <h2>{selectedItem.title}</h2>
             <h5>
-              By <a href="https://www.w3schools.com">Donald Duck</a>
+              By <a href="https://www.w3schools.com">{selectedItem.author}</a>
             </h5>
           </div>
         </div>
@@ -78,7 +78,7 @@ function GuideOverview({chosenCity}) {
         </div>
       </div>
       <div className="guide__img">
-        <img src={cath} alt="cath" />
+        <img src={selectedItem.imageURL} alt="cath" />
       </div>
       <div className="middleNavBar">
         <div className="middleNavBar__btn--overview">
