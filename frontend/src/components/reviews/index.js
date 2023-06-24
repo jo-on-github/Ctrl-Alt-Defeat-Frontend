@@ -1,11 +1,18 @@
 import React from "react";
 import "./styles.css";
+import { useParams } from "react-router-dom";
 
-export default function Reviews() {
+export default function Reviews({chosenCity}) {
+
+  const {id} = useParams();
+
+  const selectedItem = chosenCity.find(item => item._id === id);
+  console.log(chosenCity);
+
   return (
     <div className="subInfo">
       <div className="subInfo__title">Reviews</div>
-      <div className="subInfo__description">What a fantastic suggestion!! The Mr's and I really enjoyed our honeymoon around Milan & especially our trip here. Thank you Donald Duck and thank you even more NeighbourHood Nomads!</div>
+      <div className="subInfo__description">{selectedItem.reviews}</div>
     </div>
   );
 }
