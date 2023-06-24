@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { Link, useNavigate } from "react-router-dom";
+import jwtDecode from "jwt-decode";
 
 function LogInSignUp() {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ function LogInSignUp() {
       setError(true);
       return;
     }
-
+  
     try {
       const response = await fetch("http://localhost:4000/users/login", {
         method: "POST",
@@ -31,17 +32,25 @@ function LogInSignUp() {
         },
         body: JSON.stringify({ email, password }),
       });
-
+  
       if (response.ok) {
         const data = await response.json();
         const { token } = data;
         console.log("Login successful", token);
-
+  
         // Store the JWT in local storage
         localStorage.setItem("token", token);
-
-        // Redirect to the home page or any other desired page
-        navigate("/home");
+  
+        // Check if the token has expired
+        const decodedToken = jwtDecode(token);
+        const currentTime = Date.now() / 1000; // Convert milliseconds to seconds
+        if (decodedToken.exp < currentTime) {
+          // Token has expired, perform necessary actions (e.g., logout)
+          console.log("Token has expired");
+        } else {
+          // Token is valid, redirect to the home page or any other desired page
+          navigate("/");
+        }
       } else {
         setError(true);
       }
@@ -50,7 +59,6 @@ function LogInSignUp() {
       setError(true);
     }
   }
-
   const handleErrorClick = () => {
     setError(false);
   };

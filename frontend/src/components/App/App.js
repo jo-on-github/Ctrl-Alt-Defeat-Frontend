@@ -24,16 +24,41 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if the user has a JWT stored
+    // Check if the user has a JWT stored and if it's expired
     const token = localStorage.getItem("token");
     if (token) {
-      // User is logged in
-      setIsLoggedIn(true);
-    } else {
-      // User is not logged in, navigate to the login page
-      navigate("/login");
+      const decodedToken = decodeToken(token);
+      const isExpired = isTokenExpired(decodedToken);
+
+      if (!isExpired) {
+        // User is logged in
+        setIsLoggedIn(true);
+        return;
+      }
     }
+
+    // User is not logged in or token expired, navigate to the login page
+    navigate("/login");
   }, [navigate]);
+
+  const decodeToken = (token) => {
+    try {
+      // Decode the JWT token
+      const decodedToken = JSON.parse(atob(token.split(".")[1]));
+      return decodedToken;
+    } catch (error) {
+      console.error("Error decoding token:", error);
+      return null;
+    }
+  };
+
+  const isTokenExpired = (decodedToken) => {
+    if (decodedToken) {
+      const currentTime = Date.now() / 1000; // Convert to seconds
+      return decodedToken.exp < currentTime;
+    }
+    return true;
+  };
 
   const [city, setCity] = React.useState("");
 
