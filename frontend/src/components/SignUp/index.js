@@ -1,8 +1,25 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Button } from "@mui/material";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import "./styles.css";
 
 function SignUp() {
+
+  const buttonStyle = {
+    color: "black",
+  };
+
+  const navigate = useNavigate();
+    const location = useLocation();
+    const handleClick = () => {
+        if (location.pathname === '/home' ) {
+            navigate('/'); 
+          } else {
+            navigate(-1, { replace: true });
+          }
+    };
 
     const [submissionSuccess, setSubmissionSuccess] = useState(false); // Form submission success flag
     const [formData, setFormData] = useState({ // Form data in the structure of the schema defined in the backend
@@ -61,7 +78,12 @@ function SignUp() {
 
     return(
          <div className="signup_overlay">
-            <div className="header">
+            <div className="signup__header">
+                <div className="header__btn--back">
+                <Button style={buttonStyle} onClick={handleClick}>
+                    <KeyboardBackspaceIcon />
+                </Button>
+                </div>
                 <h1 className="header__title">Welcome To Neighbourhood Nomad</h1>
             </div>
             <div className="signup_container">
@@ -115,9 +137,13 @@ function SignUp() {
                             name="password"
                             onChange={handleChange}
                         />
-                        <Link to="/login">
-                            <button className="submitButton" type="submit" onClick={handleSubmit}>Sign Up</button>
-                        </Link>
+
+                          <div className="signup_container__btn">
+                            <Link to="/login">
+                                <button type="submit" onClick={handleSubmit}>Sign Up</button>
+                            </Link>
+                          </div>
+
                         {submissionSuccess && 
                             <p className="success-message">Form submitted successfully!</p>}
                         </form>
