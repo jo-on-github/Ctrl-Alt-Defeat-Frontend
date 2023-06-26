@@ -115,9 +115,11 @@ function SignUp() {
                             name="password"
                             onChange={handleChange}
                         />
-                        <Link to="/login">
-                            <button type="submit" onClick={handleSubmit}>Sign Up</button>
-                        </Link>
+                          <div className="signup_container__btn">
+                            <Link to="/login">
+                                <button type="submit" onClick={handleSubmit}>Sign Up</button>
+                            </Link>
+                          </div>
                         {submissionSuccess && 
                             <p className="success-message">Form submitted successfully!</p>}
                         </form>
