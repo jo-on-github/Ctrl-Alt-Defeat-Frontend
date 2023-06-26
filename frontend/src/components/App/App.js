@@ -1,8 +1,8 @@
 import "./App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Homepage from "../Homepage";
 import Itinerary from "../Itinerary";
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
 import Overview from "../overview/index.js";
@@ -12,7 +12,6 @@ import Reviews from "../reviews/index.js";
 
 import ProfilePage from "../ProfilePage";
 import EditProfilePage from "../EditProfilePage";
-import { useEffect } from "react";
 import CreateAGuide from "../CreateAGuide";
 import Favourites from "../Favourites";
 
@@ -20,6 +19,46 @@ import LogIn from "../LogIn";
 import SignUp from "../SignUp";
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check if the user has a JWT stored and if it's expired
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decodedToken = decodeToken(token);
+      const isExpired = isTokenExpired(decodedToken);
+
+      if (!isExpired) {
+        // User is logged in
+        setIsLoggedIn(true);
+        return;
+      }
+    }
+
+    // User is not logged in or token expired, navigate to the login page
+    navigate("/login");
+  }, [navigate]);
+
+  const decodeToken = (token) => {
+    try {
+      // Decode the JWT token
+      const decodedToken = JSON.parse(atob(token.split(".")[1]));
+      return decodedToken;
+    } catch (error) {
+      console.error("Error decoding token:", error);
+      return null;
+    }
+  };
+
+  const isTokenExpired = (decodedToken) => {
+    if (decodedToken) {
+      const currentTime = Date.now() / 1000; // Convert to seconds
+      return decodedToken.exp < currentTime;
+    }
+    return true;
+  };
 
   const [city, setCity] = React.useState("");
 
@@ -76,7 +115,11 @@ function App() {
       <Routes>
         <Route path="/login" element={<LogIn />} />
           <Route path="/login/signup" element={<SignUp/>} />
+          {isLoggedIn ? (
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} getCity={getCity} />} />
+        ) : (
+          <Route path="/" element={<div>Redirecting...</div>} />
+        )}
         <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity}/>} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} />}>
