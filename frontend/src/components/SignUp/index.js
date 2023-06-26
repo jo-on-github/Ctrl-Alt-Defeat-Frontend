@@ -116,7 +116,7 @@ function SignUp() {
                             onChange={handleChange}
                         />
                         <Link to="/login">
-                            <button type="submit" onClick={handleSubmit}>Sign Up</button>
+                            <button className="submitButton" type="submit" onClick={handleSubmit}>Sign Up</button>
                         </Link>
                         {submissionSuccess && 
                             <p className="success-message">Form submitted successfully!</p>}
