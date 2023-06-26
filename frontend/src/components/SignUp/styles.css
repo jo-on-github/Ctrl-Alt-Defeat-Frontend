@@ -25,6 +25,7 @@
     color: white;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-size: 22px;
     
 }
 .signup_container__formcontainer{
@@ -124,8 +125,8 @@
     }
 
     .submitButton{
-        width: 10em;
-        height: 2.55em;
+        width: 11em;
+        height: 2.2em;
         font-size: 26px;
     } 
     
@@ -136,26 +137,28 @@
 
 @media (min-width: 1279px)  {
     .signup_container__title{
-        padding-top: 0.5em;
-        padding-bottom: 0.55em;
+        
         font-size: 32px;
        
     }
 
     .signup_container__form{
-        width: 75%;
+        width: 60%;
         padding-top: 3em; 
     }
 
     .signup_container__form > form > input {
        
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .submitButton{
-        width: 10em;
-        height: 2.55em;
-        font-size: 26px;
+        width: 9em;
+        height: 1.75em;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     } 
     
 
