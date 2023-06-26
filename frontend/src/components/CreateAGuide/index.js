@@ -89,6 +89,7 @@ function CreateAGuide({ imageUrl, altText }) {
       <div className="main_gO">
         <div className="main__form">
           <form>
+          <div>
             <div className="main__form--input">
               <label className="title" htmlFor="title">Share an experience..</label>
               <input id="title" type="text" placeholder="Title" />
@@ -100,6 +101,7 @@ function CreateAGuide({ imageUrl, altText }) {
             <div className="main__form--input">
 
               <input id="location" type="text" placeholder="Location" />
+            </div>
             </div>
             <div className="main__form--dropdown">
               <div className="form__dropdown--title">
@@ -143,7 +145,7 @@ function CreateAGuide({ imageUrl, altText }) {
               </div>
               {inputVisible ? (
                 <div className="form__highlight--input">
-                  <input
+                  <input className="form__highlight--text"
                     type="text"
                     placeholder="Enter a highlight"
                     value={inputValue}
@@ -153,8 +155,8 @@ function CreateAGuide({ imageUrl, altText }) {
                   <Button onClick={handleCancel}>Cancel</Button>
                 </div>
               ) : (
-                <div className="form__highlight--btn">
-                  <button onClick={handleClick}>Add Highlight</button>
+                <div >
+                  <button className='form__highlight--btn' onClick={handleClick}>Add Highlight</button>
                 </div>
               )}
               <div className="form__highlight--list">
@@ -169,8 +171,8 @@ function CreateAGuide({ imageUrl, altText }) {
                 <div className="form__experience--title">
                     <h3>Write About Your Experience: </h3>
                 </div>
-                <div className="form__experience--textArea">
-                    <textarea placeholder="Write about your experience here..."></textarea>
+                <div>
+                    <textarea className="form__experience--textArea" placeholder="Write about your experience here..."></textarea>
                 </div>
             </div>
             <div className="main__form--submit">

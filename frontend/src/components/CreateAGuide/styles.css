@@ -13,9 +13,10 @@
 .title 
 {
     padding-top: 3.5em;
-    padding-bottom: 1.5em;
+    padding-bottom: 1em;
     font-size: 19px;
     font-weight: bold;
+    
 }
 
 .main_gO{
@@ -36,7 +37,6 @@
     align-items:center;
     background-size: cover;
     background-position: center;
-    background-color: green;
     background-image: url("https://images.unsplash.com/photo-1531979730819-503feb5fbdf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80");
 
 }
@@ -55,15 +55,15 @@
     justify-content: center;
     align-items:center;
     color: white;
-  
+   
 }
 .main__form--input>input{
     width: 16em;
     height: 0.2em;
     padding: 15px;
     text-align: center;
-    border-radius: 40px;
-    margin-bottom: 1em;
+    border-radius: 42px;
+    margin-bottom: 0.5em;
 }
 .main__form--dropdown{
     width: 100%;
@@ -72,26 +72,24 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    
+
 }
 
 .form__dropdown--title {
     color: white;
-    padding-bottom: 0em;
 }
 
 .form__dropdown--options{
     width: 16em;
-    height: 35%;
+    height: 3em;
     padding: px;
     text-align: center;
-
+    color: black;
 }
 .form__dropdown--options>select{
     width: 100%;
     height: 78%;
     border-radius: 42px;
-    border: 1px solid #ccc;
     background-color: #fff;
     padding: 10px;
     text-align: center;
@@ -115,40 +113,63 @@
     height: 30%;
     display: flex;
     flex-direction: column;
+    align-items:center;
 }
 .form__highlight--title{
     display: flex;
     justify-content: center;
     color: white;
 }
+
+.form__highlight--text{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+   color:black
+}
 .form__highlight--btn{
     display: flex;
     justify-content: center;
-
+    align-items:center;
+    border-radius: 42px;
+    width: 14em;
+    height: 2.8em;
+    color: black;
+    background-color: white;
 }
+
 .form__highlight--input{
     display: flex;
     flex-direction: column;
     color: white;
+    border-radius: 42px;
 }
-.form__highlight--list{
-    border: 1px solid black;
-    width: 100%;
-    height: 50%;
+
+.form__experience--textArea{
+    height: 5em;
+    width: 15em;
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    border-radius: 42px;
+}
+
+.form__highlight--list{
+    border: 1px solid white;
+    margin-top: 1em;
+    width: 15em;
+    height: 5em;
+    display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+
 }
-.form__highlight--list button{
-    border-radius: 50%;
-    border: 1px solid transparent;
-    background-color:rgb(219, 1, 1);
-    color: white;
-    margin-left: 5px;
-}
+
 .main__form--experience{
-    height: 15%;
+    height: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,19 +195,6 @@
 
 .form__experience--title{
     color:white;
-    
+    padding-top: 3em;
 }
-.form__experience--textArea{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-}
-.form__experience--textArea textarea{
-    width: 70%;
-    height: 100%;
-    
-}
