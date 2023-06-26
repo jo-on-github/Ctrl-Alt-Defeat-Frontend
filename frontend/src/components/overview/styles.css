@@ -10,7 +10,7 @@
   font-size: 18px;
   font-weight: bold;
   text-decoration: underline;
-  color: #747475;
+  color: #484848;
   margin-bottom: .5em;
   margin-left: .5em;
 }
@@ -18,11 +18,12 @@
   width: 95%;
   height: 60%;
   border-radius: 10px;
-  background-color: #cecfd178;
+  background-color: #e4e9f9c7;
   display: flex;
   justify-content: center;
   padding: .5em;
 }
+
 
 img{
   width: 100%;
