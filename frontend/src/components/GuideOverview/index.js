@@ -11,12 +11,20 @@ import cath from "../../assets/cath.jpg";
 import NavBar from "../NavBar";
 import { NavLink, Outlet } from "react-router-dom";
 import { Paper } from "@mui/material";
+import { useParams } from "react-router-dom";
 
-function GuideOverview() {
+function GuideOverview({chosenCity}) {
   const buttonStyle = {
     // color: "#444445",
     color: "#0D0D0D",
   };
+
+  const {id} = useParams();
+
+  const selectedItem = chosenCity.find(item => item._id === id);
+  console.log(chosenCity);
+
+  const selectedItemId = selectedItem ? selectedItem._id : null;
 
   return (
     <div className="guideOverlay">
@@ -35,9 +43,9 @@ function GuideOverview() {
         </div>
         <div className="guideHeader__heading">
           <div className="guideHeader__heading--title">
-            <h2>The Duomo</h2>
+            <h2>{selectedItem.title}</h2>
             <h5>
-              By <a href="https://www.w3schools.com">Donald Duck</a>
+              By <a href="https://www.w3schools.com">{selectedItem.author}</a>
             </h5>
           </div>
         </div>
@@ -70,24 +78,29 @@ function GuideOverview() {
         </div>
       </div>
       <div className="guide__img">
-        <img src={cath} alt="cath" />
+        <img src={selectedItem.imageURL} alt="cath" />
       </div>
       <div className="middleNavBar">
         <div className="middleNavBar__btn--overview">
-          <NavLink to="/guide/overview" activeClassName="active" className="guideActive" >
+       
+          <NavLink to={`/guide/${selectedItemId}/overview`} activeClassName="active" className="guideActive" >
             <button>Overview</button>
           </NavLink>
+        
         </div>
         <div className="middleNavBar__btn--experience">
-          <NavLink to="/guide/experience" activeClassName="active" className="guideActive">
+          <NavLink to={`/guide/${selectedItemId}/experience`} activeClassName="active" className="guideActive">
             <button>Experience</button>
           </NavLink>
         </div>
         <div className="middleNavBar__btn--reviews">
-          <NavLink to="/guide/reviews" activeClassName="guideactive" className="guideActive">
+        
+          <NavLink to={`/guide/${selectedItemId}/reviews`} activeClassName="guideactive" className="guideActive">
             <button>Reviews</button>
           </NavLink>
+        
         </div>
+        
       </div>
       <Outlet />
 

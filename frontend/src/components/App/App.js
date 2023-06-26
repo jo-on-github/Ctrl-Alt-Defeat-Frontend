@@ -79,10 +79,10 @@ function App() {
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} getCity={getCity} />} />
         <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity}/>} />
         <Route path="/planner" element={<Itinerary />} />
-        <Route path="/guide" element={<GuideOverview />}>
+        <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} />}>
           <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity}/>} />
-          <Route path="/guide/experience" element={<Experience />} />
-          <Route path="/guide/reviews" element={<Reviews />} />
+          <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity}/>} />
+          <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity}/>} />
         </Route>
         <Route path="/createaguide" element={<CreateAGuide />} />
         <Route path="/ProfilePage" element={<ProfilePage />} />
