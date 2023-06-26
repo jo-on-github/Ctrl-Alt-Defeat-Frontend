@@ -20,7 +20,6 @@ function Homepage({ city, chosenCity, setChosenCity }) {
     const matches2 = useMediaQuery("(min-width: 1279px) ");
     const [selectedActivityTypes, setSelectedActivityTypes] = useState([]);
 
-    const cityGuides = [...chosenCity]
 
    const handleListItemClick = (id) => {
     }
