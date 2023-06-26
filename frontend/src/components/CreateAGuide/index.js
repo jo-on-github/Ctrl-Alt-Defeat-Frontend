@@ -90,15 +90,15 @@ function CreateAGuide({ imageUrl, altText }) {
         <div className="main__form">
           <form>
             <div className="main__form--input">
-              <label htmlFor="title">Title</label>
+              <label className="title" htmlFor="title">Share an experience..</label>
               <input id="title" type="text" placeholder="Title" />
             </div>
             <div className="main__form--input">
-              <label htmlFor="summary">Summary</label>
+            
               <input id="summary" type="text" placeholder="Summary" />
             </div>
             <div className="main__form--input">
-              <label htmlFor="location">Location</label>
+
               <input id="location" type="text" placeholder="Location" />
             </div>
             <div className="main__form--dropdown">

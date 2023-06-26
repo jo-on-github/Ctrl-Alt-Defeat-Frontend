@@ -88,7 +88,7 @@ function SignUp() {
             </div>
             <div className="signup_container">
                 <div className="signup_container__title">
-                    <h3>Sign Up</h3>
+                    <h3>Create an account</h3>
                 </div>
                 <div className="signup_container__formcontainer">
 

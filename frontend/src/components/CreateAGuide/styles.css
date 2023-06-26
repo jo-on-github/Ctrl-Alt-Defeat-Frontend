@@ -9,8 +9,17 @@
     justify-content: center;
     align-items:center;
 } */
+
+.title 
+{
+    padding-top: 3.5em;
+    padding-bottom: 1.5em;
+    font-size: 19px;
+    font-weight: bold;
+}
+
 .main_gO{
-    width: 99%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -25,6 +34,10 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    background-size: cover;
+    background-position: center;
+    background-color: green;
+    background-image: url("https://images.unsplash.com/photo-1531979730819-503feb5fbdf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80");
 
 }
 .main__form>form{
@@ -41,13 +54,15 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    color: white;
+  
 }
 .main__form--input>input{
-    width: 90%;
-    height: 18%;
-    padding: 10px;
+    width: 16em;
+    height: 0.2em;
+    padding: 15px;
     text-align: center;
-    border-radius: 42px;
+    border-radius: 40px;
     margin-bottom: 1em;
 }
 .main__form--dropdown{
@@ -57,12 +72,20 @@
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    
 }
+
+.form__dropdown--title {
+    color: white;
+    padding-bottom: 0em;
+}
+
 .form__dropdown--options{
-    width: 100%;
+    width: 16em;
     height: 35%;
-    padding: 10px;
+    padding: px;
     text-align: center;
+
 }
 .form__dropdown--options>select{
     width: 100%;
@@ -72,19 +95,20 @@
     background-color: #fff;
     padding: 10px;
     text-align: center;
-    margin-bottom: 1em;
+  
 }
 .main__form--budget{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+    color: white;
 }
 .form__budget--radio{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    color: #616161;
+    color: white;
 }
 .main__form--highlight{
     width: 100%;
@@ -95,6 +119,7 @@
 .form__highlight--title{
     display: flex;
     justify-content: center;
+    color: white;
 }
 .form__highlight--btn{
     display: flex;
@@ -104,6 +129,7 @@
 .form__highlight--input{
     display: flex;
     flex-direction: column;
+    color: white;
 }
 .form__highlight--list{
     border: 1px solid black;
@@ -145,6 +171,11 @@
     color: white;
     margin-left: 5px;
 }
+
+.form__experience--title{
+    color:white;
+    
+}
 .form__experience--textArea{
     width: 100%;
     height: 50%;
@@ -152,6 +183,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .form__experience--textArea textarea{
     width: 70%;
