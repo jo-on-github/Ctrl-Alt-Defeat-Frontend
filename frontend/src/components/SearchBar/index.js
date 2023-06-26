@@ -116,13 +116,12 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import listItemData from "../../dummyData/listItemData";
 import { useTheme } from "@mui/material/styles";
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-export default function SearchBar({ setFilterClicked, filterClicked }) {
+export default function SearchBar({ setFilterClicked, filterClicked, handleCheckboxChange, chosenCity }) {
     const theme = useTheme();
 
 
@@ -181,7 +180,7 @@ export default function SearchBar({ setFilterClicked, filterClicked }) {
                 placeholder="Choose a guide"
                 multiple
                 id="checkboxes-tags-demo"
-                options={listItemData}
+                options={chosenCity}
                 disableCloseOnSelect
                 getOptionLabel={(option) => option.title}
                 renderOption={(props, option, { selected }) => (
@@ -191,6 +190,7 @@ export default function SearchBar({ setFilterClicked, filterClicked }) {
                             checkedIcon={checkedIcon}
                             style={{ marginRight: 8 }}
                             checked={selected}
+                            onChange={handleCheckboxChange}
                         />
                         {option.title}
                     </li>

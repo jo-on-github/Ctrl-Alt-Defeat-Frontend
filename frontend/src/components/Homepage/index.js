@@ -103,6 +103,9 @@ function Homepage({ city, chosenCity, setChosenCity }) {
                 position="relative"
                 setFilterClicked={setFilterClicked}
                 filterClicked={filterClicked}
+                handleCheckboxChange={handleCheckboxChange}
+                // selectedActivityTypes={selectedActivityTypes}
+                // setSelectedActivityTypes={setSelectedActivityTypes}
             />
        
        
