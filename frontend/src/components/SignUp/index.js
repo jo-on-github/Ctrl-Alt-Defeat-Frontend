@@ -140,7 +140,7 @@ function SignUp() {
 
                           <div className="signup_container__btn">
                             <Link to="/login">
-                                <button type="submit" onClick={handleSubmit}>Sign Up</button>
+                                <button className="submitButton" type="submit" onClick={handleSubmit}>Sign Up</button>
                             </Link>
                           </div>
 
