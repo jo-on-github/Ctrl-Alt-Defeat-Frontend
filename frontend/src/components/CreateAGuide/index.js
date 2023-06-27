@@ -152,17 +152,17 @@ function CreateAGuide({ imageUrl, altText }) {
                     onChange={handleInputChange}
                     onKeyPress={handleInputKeyPress}
                   />
-                  <Button onClick={handleCancel}>Cancel</Button>
+                  <Button onClick={handleCancel}></Button>
                 </div>
               ) : (
-                <div >
+                <div className="highlightBtnDiv">
                   <button className='form__highlight--btn' onClick={handleClick}>Add Highlight</button>
                 </div>
               )}
               <div className="form__highlight--list">
-                <ul>
+                <ul >
                   {highlights.map((highlight, index) => (
-                    <li key={index}>{highlight} <button onClick={() => deleteHighlight(index)}>X</button></li>
+                    <li key={index}>{highlight} <button className="deleteHighlightButton" onClick={() => deleteHighlight(index)}>X</button></li>
                   ))}
                 </ul>
               </div>
@@ -172,7 +172,7 @@ function CreateAGuide({ imageUrl, altText }) {
                     <h3>Write About Your Experience: </h3>
                 </div>
                 <div>
-                    <textarea className="form__experience--textArea" placeholder="Write about your experience here..."></textarea>
+                    <textarea className="form__experience--textArea" ></textarea>
                 </div>
             </div>
             <div className="main__form--submit">

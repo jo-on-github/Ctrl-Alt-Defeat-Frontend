@@ -116,10 +116,13 @@
     align-items:center;
 }
 .form__highlight--title{
+    padding-top: 1em;
     display: flex;
     justify-content: center;
     color: white;
 }
+
+
 
 .form__highlight--text{
     display: flex;
@@ -128,6 +131,7 @@
    color:black
 }
 .form__highlight--btn{
+
     display: flex;
     justify-content: center;
     align-items:center;
@@ -138,6 +142,10 @@
     background-color: white;
 }
 
+.highlightBtnDiv{
+    padding-bottom: 1em;
+}
+
 .form__highlight--input{
     display: flex;
     flex-direction: column;
@@ -146,28 +154,44 @@
 }
 
 .form__experience--textArea{
-    height: 5em;
-    width: 15em;
+    height: 8em;
+    width: 20em;
+    padding-top: 3em;
+    padding-bottom: 1em;
     display: flex;
     flex-direction: column;
     text-align: center;
     color: white;
-    border-radius: 42px;
+   
+    opacity: 50%;
 }
 
 .form__highlight--list{
-    border: 1px solid white;
-    margin-top: 1em;
     width: 15em;
-    height: 5em;
+    height: 6em;
+
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-
+    background-color: white;
+    opacity: 50%;
 }
 
+.deleteHighlightButton{
+
+    border-radius: 20px;
+    
+}
+
+.listItem{
+    color:black;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  
+}
 .main__form--experience{
     height: 5em;
     display: flex;
@@ -176,25 +200,34 @@
     align-items: center;
 }
 .main__form--submit{
-    height: 15%;
-    width: 100%;
+    height: 3em;
+    width: 5em;
+    font-size: 12px;
+    padding-top: 14em; 
+    padding-bottom: 3em;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    /* margin-top: 2em; */
+ 
+ align-items: center;
+ padding-left: 10.5em;
 }
 .main__form--submit>button{
-    width: 70%;
-    height: 60%;
+    width: 10em;
+    height: 3em;
     border-radius: 42px;
-    border: 1px solid transparent;
     background-color:#0002FF;
     color: white;
-    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .form__experience--title{
     color:white;
-    padding-top: 3em;
+    padding-top: 10em;
 }
 
