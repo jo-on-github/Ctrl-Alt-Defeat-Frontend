@@ -92,9 +92,14 @@
     margin-top: 10em;
 }
 
-.main__list {
-    height: 35em;
+.space{
+  border: 1px solid white;
+    height: 4em;
     width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
 }
 
 .footer {
