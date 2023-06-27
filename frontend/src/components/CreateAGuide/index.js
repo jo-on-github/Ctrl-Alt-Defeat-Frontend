@@ -347,14 +347,14 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
               </div>
               <div className="form__experience--textArea">
 
-                <textarea className="form__experience--textAreaBox"></textarea>
+                <textarea className="form__experience--textAreaBox"
 
                   id="experience"
                   placeholder="Write about your experience here..."
                   name="experience"
                   value={formData.experience}
-                  onChange={handleChange}
-                ></textarea>
+                  onChange={handleChange}>
+                </textarea>
               </div>
             </div>
             <div className="main__form--submit">
