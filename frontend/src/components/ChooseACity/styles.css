@@ -14,6 +14,10 @@ body {
     width: 100%;
     height: 100vh;
     padding: 0%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80");
   }
   .modal-overlay {
     position: fixed;
@@ -95,7 +99,7 @@ body {
   }
   
   .userInput__btn--randomiser {
-    color: rgba(46, 41, 41, 0.69);
+    color: white;
     background-color:#f7f5e81c ;
     border: 0px;
     text-decoration: underline;
@@ -109,7 +113,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 0.5em;
-    height: 20em;
+    height: 15em;
     width: 13em;
   }
   
@@ -129,12 +133,13 @@ body {
   
   .main__btn--submit {
     font-weight: 700;
-    height: 4em;
-    width: 18em;
+    height: 3em!important;
+    width: 8em !important;
     border-radius: 10px;
     background: #0002FF;
     color: white;
     margin-top:0.5em;
+    
   }
 
 
@@ -161,17 +166,6 @@ body {
 
   }
 
-  .main__animated--globe {
-    height: 10em;
-    width: 10em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2em;
-    
-   
-  }
-
 }
 
 /* CSS rules for Medium (md) devices */
@@ -184,7 +178,6 @@ body {
     border-radius: 10px;
     background: #0002FF;
     color: white;
-    margin-top:0.5em;
   }
 }
 /* CSS rules for Small (sm) devices */
@@ -203,7 +196,7 @@ body {
   }
   .userInput__btn--randomiser {
     padding-top: 1em;
-    width: 10em;
+    width: 12em;
     font-size: 1em;
   }
 
@@ -211,11 +204,6 @@ body {
     width: 30em;
   }
     
-  .main__animated--globe {
-    height: 10em;
-    width: 10em;
-    margin-bottom: 3em;
-  }
   
  
 }
@@ -242,11 +230,6 @@ body {
     width: 40em;
   }
 
-  .main__animated--globe {
-    height: 10em;
-    width: 10em;
-    padding-top: 8em;
-  }
 
   .main__btn--submit {
      height: 4.5em;

@@ -72,7 +72,7 @@ function ChooseACity({updateCity, city, getCity}) {
                 <input
                     className="userInput__input"
                     type="text"
-                    placeholder="🔍      Choose your location..."
+                    placeholder="🔍      Choose a location..."
                     onChange={handleInputChange}
                     onKeyDown={enterKeyPressed}
                 />
@@ -82,15 +82,9 @@ function ChooseACity({updateCity, city, getCity}) {
             </div>
 
             <div className="main">
-                <div className="main__animated--globe">
-                <img
-                        className="globe__image"
-                        src="../image/Globe.png"
-                        alt="globe"
-                    />
-                </div>
+                
                 <div className="main__btn">
-                    <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
+                    <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE </button>
                     </div>
             </div>
         </div>
