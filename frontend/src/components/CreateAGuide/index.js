@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
@@ -65,43 +66,37 @@ function CreateAGuide({ imageUrl, altText }) {
 
   return (
     <div className="createAGuide_Overlay">
-      <div className="createAGuideHeader">
-        <Paper
-          sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
-          elevation={3}
-          className="navBar__top"
-        >
-          <div className="navBar__top--back">
-            <Button style={buttonStyle} onClick={handleGoBack}>
-              <KeyboardBackspaceIcon />
-            </Button>
-          </div>
-          <div className="navBar__top--title">
-            <h1>Create A Guide</h1>
-          </div>
-          <div className="navBar__top--image">
-            <NavLink to="/ProfilePage" activeClassName="active">
-              <img src={imageUrl} alt={altText} />
-            </NavLink>
-          </div>
-        </Paper>
-      </div>
+      <Paper
+        sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
+        elevation={3}
+        className="navBar__top"
+      >
+        <div className="navBar__top--back">
+          <Button style={buttonStyle} onClick={handleGoBack}>
+            <KeyboardBackspaceIcon />
+          </Button>
+        </div>
+        <div className="navBar__top--title">
+          <h1>Create A Guide</h1>
+        </div>
+        <div className="navBar__top--image">
+          <NavLink to="/ProfilePage" activeClassName="active">
+            <img src={imageUrl} alt={altText} />
+          </NavLink>
+        </div>
+      </Paper>
       <div className="main_gO">
         <div className="main__form">
           <form>
-          <div>
             <div className="main__form--input">
               <label className="title" htmlFor="title">Share an experience..</label>
               <input id="title" type="text" placeholder="Title" />
             </div>
             <div className="main__form--input">
-            
               <input id="summary" type="text" placeholder="Summary" />
             </div>
             <div className="main__form--input">
-
               <input id="location" type="text" placeholder="Location" />
-            </div>
             </div>
             <div className="main__form--dropdown">
               <div className="form__dropdown--title">
@@ -145,14 +140,15 @@ function CreateAGuide({ imageUrl, altText }) {
               </div>
               {inputVisible ? (
                 <div className="form__highlight--input">
-                  <input className="form__highlight--text"
+                  <input
+                    className="form__highlight--text"
                     type="text"
                     placeholder="Enter a highlight"
                     value={inputValue}
                     onChange={handleInputChange}
                     onKeyPress={handleInputKeyPress}
                   />
-                  <Button onClick={handleCancel}></Button>
+                  <Button onClick={handleCancel}>Cancel</Button>
                 </div>
               ) : (
                 <div className="highlightBtnDiv">
@@ -160,25 +156,31 @@ function CreateAGuide({ imageUrl, altText }) {
                 </div>
               )}
               <div className="form__highlight--list">
-                <ul >
+                <ul>
                   {highlights.map((highlight, index) => (
-                    <li key={index}>{highlight} <button className="deleteHighlightButton" onClick={() => deleteHighlight(index)}>X</button></li>
+                    <li key={index}>
+                      {highlight}{" "}
+                      <button
+                        className="deleteHighlightButton"
+                        onClick={() => deleteHighlight(index)}
+                      >
+                        X
+                      </button>
+                    </li>
                   ))}
                 </ul>
               </div>
             </div>
-
             <div className="main__form--experience">
-                <div className="form__experience--title">
-                    <h3>Write About Your Experience: </h3>
-                </div>
-                <div className="form__experience--textArea">
-                    <textarea className="form__experience--textAreaBox"></textarea>
-                </div>
+              <div className="form__experience--title">
+                <h3>Write About Your Experience: </h3>
+              </div>
+              <div className="form__experience--textArea">
+                <textarea className="form__experience--textAreaBox"></textarea>
+              </div>
             </div>
             <div className="main__form--submit">
-                <button>Submit</button>
-          
+              <button >Submit</button>
             </div>
           </form>
         </div>
