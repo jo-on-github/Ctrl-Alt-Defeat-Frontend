@@ -167,16 +167,18 @@ function CreateAGuide({ imageUrl, altText }) {
                 </ul>
               </div>
             </div>
+
             <div className="main__form--experience">
                 <div className="form__experience--title">
                     <h3>Write About Your Experience: </h3>
                 </div>
-                <div>
-                    <textarea className="form__experience--textArea" ></textarea>
+                <div className="form__experience--textArea">
+                    <textarea className="form__experience--textAreaBox"></textarea>
                 </div>
             </div>
             <div className="main__form--submit">
                 <button>Submit</button>
+          
             </div>
           </form>
         </div>
