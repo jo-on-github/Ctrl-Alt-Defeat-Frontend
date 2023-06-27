@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 
 
 function Homepage({ city, chosenCity, setChosenCity }) {
+
+    console.log(chosenCity)
     
 
     const [filterClicked, setFilterClicked] = useState(false);
@@ -24,24 +26,31 @@ function Homepage({ city, chosenCity, setChosenCity }) {
    const handleListItemClick = (id) => {
     }
 
-    const handleCheckboxChange = (event) => {
-        const { value, checked } = event.target;
-        if (checked) {
-          setSelectedActivityTypes((prevTypes) => [...prevTypes, value]);
-        } else {
-          setSelectedActivityTypes((prevTypes) =>
+// This function handles the change event of a checkbox in the Autocomplete component.
+const handleCheckboxChange = (event) => {
+    // Extract the value and checked properties from the event target (checkbox).
+    const { value, checked } = event.target;
+
+    // If the checkbox is checked, add the value to the selected activity types.
+    if (checked) {
+        setSelectedActivityTypes((prevTypes) => [...prevTypes, value]);
+    } else {
+        // If the checkbox is unchecked, remove the value from the selected activity types.
+        setSelectedActivityTypes((prevTypes) =>
             prevTypes.filter((type) => type !== value)
-          );
-        }
-      };
+        );
+    }
+};
     
-    //   const filteredCity = cityGuides.filter((item) =>
-    //     selectedActivityTypes.includes(item.activityType)
-    //   );
+    // Filter the chosenCity array based on the selected activity types.
+    // If there are selected activity types, filter the chosenCity array to include only items with matching activity types.
+    // Otherwise, return the original chosenCity array.
 
       const filteredCity = selectedActivityTypes.length > 0
       ? chosenCity.filter((item) => selectedActivityTypes.includes(item.activityType))
       : chosenCity;
+
+      
       
 
 
@@ -104,8 +113,9 @@ function Homepage({ city, chosenCity, setChosenCity }) {
                 setFilterClicked={setFilterClicked}
                 filterClicked={filterClicked}
                 handleCheckboxChange={handleCheckboxChange}
-                // selectedActivityTypes={selectedActivityTypes}
-                // setSelectedActivityTypes={setSelectedActivityTypes}
+                selectedActivityTypes={selectedActivityTypes}
+                setSelectedActivityTypes={setSelectedActivityTypes}
+                chosenCity={chosenCity}
             />
        
        
