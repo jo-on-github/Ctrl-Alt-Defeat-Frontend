@@ -4,6 +4,17 @@
     display: flex;
     flex-direction: column;
 }
+.signup__header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__title{
+    font-size: 3em;
+    font-weight: bold;
+}
 .signup_container{
     width: 100%;
     height: 90%;
@@ -11,6 +22,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://plus.unsplash.com/premium_photo-1676517031869-8b518857919d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80");
 }
 .signup_container__title{
     width: 100%;
@@ -19,15 +33,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1em;
+    color: white;
+    font-size: 22px;
+    
 }
+
 .signup_container__formcontainer{
-    width: 100%;
-    height: 90%;
+    width: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 .signup_container__form{
     width: 95%;
@@ -36,7 +52,7 @@
     display: flex;
     flex-direction: column;
     padding: 15px 0px;
-    background-color: #e6e2e2;
+   
 
 }
 .signup_container__form>form {
@@ -56,14 +72,105 @@
     
 }
 
-.signup_container__form > form > button{
+
+.submitButton{
+
     width: 18em;
     height: 3em;
     padding: 10px;
     text-align: center;
     border-radius: 42px;
     margin-top: .5em;
-    background-color: #0002FF;
     color: white;
     border: 1px solid transparent;
+    background-color: #0002FF;
+} 
+
+/* Media queries start here */
+
+@media (min-width: 599px) {
+
+    .signup_container__title{
+        padding-top: 0.5em;
+        padding-bottom: 0.55em;
+        font-size: 22px;
+       
+    }
+
+    .signup_container__form{
+        width: 75%;
+        padding-top: 3em; 
+    }
+
+    .signup_container__form > form > input {
+       
+        font-size: 15px;
+    }
+
+    .submitButton{
+        width: 15em;
+        height: 2.75em;
+        font-size: 16px;
+    }
+
+}
+
+
+@media (min-width: 833px) {
+
+    .signup_container__title{
+        padding-top: 0.5em;
+        padding-bottom: 0.55em;
+        font-size: 32px;
+       
+    }
+
+    .signup_container__form{
+        width: 75%;
+        padding-top: 3em; 
+    }
+
+    .signup_container__form > form > input {
+       
+        font-size: 24px;
+    }
+
+    .submitButton{
+        width: 11em;
+        height: 2.2em;
+        font-size: 26px;
+    } 
+    
+    
+
+}
+
+
+@media (min-width: 1279px)  {
+    .signup_container__title{
+        
+        font-size: 32px;
+       
+    }
+
+    .signup_container__form{
+        width: 60%;
+        padding-top: 3em; 
+    }
+
+    .signup_container__form > form > input {
+       
+        font-size: 20px;
+    }
+
+    .submitButton{
+        width: 9em;
+        height: 1.75em;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    
+
 }
