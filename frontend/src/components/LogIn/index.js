@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
 import { Link, useNavigate } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 
-function LogInSignUp() {
+function LogInSignUp({users}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const navigate = useNavigate(); // Add useNavigate hook
-
+  
+  useEffect(() => {
+    console.log(email);
+  }, [email]);
+  
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
-
+  
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-
+  
   async function handleSubmit(event) {
     event.preventDefault();
     if (email === "" || password === "") {
       setError(true);
       return;
     }
-  
+    
     try {
       const response = await fetch("http://localhost:4000/users/login", {
         method: "POST",
@@ -32,15 +36,15 @@ function LogInSignUp() {
         },
         body: JSON.stringify({ email, password }),
       });
-  
+      
       if (response.ok) {
         const data = await response.json();
         const { token } = data;
         console.log("Login successful", token);
-  
+        
         // Store the JWT in local storage
         localStorage.setItem("token", token);
-  
+        
         // Check if the token has expired
         const decodedToken = jwtDecode(token);
         const currentTime = Date.now() / 1000; // Convert milliseconds to seconds
@@ -59,9 +63,12 @@ function LogInSignUp() {
       setError(true);
     }
   }
+  
+  
   const handleErrorClick = () => {
     setError(false);
   };
+  
 
   return (
     <div className="login_overlay">

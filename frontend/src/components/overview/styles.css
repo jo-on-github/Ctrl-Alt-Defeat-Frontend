@@ -1,25 +1,217 @@
-.subInfo{
-    width: 90%;
+
+.subInfo {
+  width: 95%;
+  height: 100%;
+  margin-top: 0.7em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ 
+}
+
+.subInfo__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #484848;
+  margin-bottom: 0.2em;
+  margin-left: 0.5em;
+}
+
+.subInfo__description {
+  width: 95%;
+  height: 60%;
+  border-radius: 10px;
+  background-color: #e4e9f9c7;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.guide__img {
+  width: 84%;
+  height: 38%;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 0.6em;
+}
+
+.middleNavBar {
+  width: 75%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guideSubHeader {
+  width: 89%;
+  height: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guideSubHeader__icons {
+  width: 40px;
+  height: 30px;
+  margin-right: 3em;
+  margin-left: 1.5em;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 0.25em;
+  cursor: pointer;
+}
+
+.guideHeader {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.css-gy4i07-MuiPaper-root {
+  width: 100%;
+  height: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e4e9f9c7;
+}
+
+/* Responsiveness for small screens */
+@media (max-width: 599px) {
+  .subInfo__title {
+    font-size: 18px;
+    margin-bottom: 0.4em;
+    
+  }
+  
+  .subInfo__description {
+    height: 65%;
+  }
+  
+  .guide__img {
+    width: 80%;
+    height: 40%;
+  }
+  
+  .middleNavBar {
+    width: 75%;
+    padding: 0px 12px 0px 12px;
+  }
+
+  .css-gy4i07-MuiPaper-root {
+    width: 100%;
+    height: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e4e9f9c7;
+  }
+}
+/* Responsiveness for medium screens */
+@media (min-width: 833px) and (max-width: 1024px) {
+  .subInfo__title {
+    font-size: 22px; 
+    margin-bottom: 0.4em;
+  }
+  
+  .subInfo__description {
+    width: 100%;
+    height: 60%;
+    background-color: #e4e9f9c7;
+    display: flex;
+    justify-content: center;
+ 
+  }
+
+  .subInfo {
+    width: 100%;
     height: 100%;
-    margin-top: .7em;
+    margin-top: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+  }
+  
+  .middleNavBar {
+    width: 75%;
+    padding: 0px 15px 0px 15px;
+  }
+  
+  
+  .guide__img {
+    width: 75%; 
+    height: 45%; 
+    margin-top: 0.1em;
+  }
+  
+  .middleNavBar {
+    width: 80%;
+    margin-top: -2em;
+  }
+
+  .guideOverlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.middleNavBar button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.8em;
+}
+}
+ 
+
+/* Responsiveness for large screens */
+@media (min-width: 1279px) {
+  .subInfo__title {
+    font-size: 26px;
+    margin-bottom: 0.4em;
+  }
+  
+  .guide__img {
+    width: 60%; 
+    height: 89%; 
+    margin-top: 0.1em;
+  }
+  
+  .subInfo__description {
+    width: 100%;
+    height: 30vh;
+    background-color: #e4e9f9c7;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .subInfo {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .subInfo__title{
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: underline;
-    color: #747475;
-    margin-bottom: .5em;
-    margin-left: .5em;
+  
+  .middleNavBar {
+    width: 60%;
+    margin-top: -2em;
+    padding: 13px 10px 13px 10px;
   }
-  .subInfo__description{
-    width: 95%;
-    height: 60%;
-    border-radius: 10px;
-    background-color: #cecfd178;
-    display: flex;
-    justify-content: center;
-    padding: .5em;
+
+ 
+
+  .middleNavBar button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: bold;
+    font-size: 1.8em;
   }
+}

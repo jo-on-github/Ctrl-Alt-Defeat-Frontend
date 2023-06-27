@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  
 }
 
 .modal-overlay {
@@ -92,10 +93,14 @@
     margin-top: 10em;
 }
 
-.main__list {
+.main__listItems {
+  width: 80%;
+}
+/* .main__list {
     height: 35em;
     width: 95%;
-}
+} */
+
 
 .footer {
     height: 4.5em;
@@ -103,26 +108,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-/* resonsiveness starts here */
-
-/* Extra Small (xs) devices */
-@media (max-width: 599px) {
-}
-
-/* CSS rules for Small (sm) devices - not needed for tablet size*/
-@media (min-width: 833px)  {
-
-}
-
-
-/* CSS rules for Medium (md) devices */
-@media (min-width: 1279px) {
-.listItem {
-    height: 1em;
-    width: 1em;
-  }
 }
 
 
