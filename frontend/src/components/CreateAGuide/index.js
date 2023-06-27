@@ -12,17 +12,19 @@ function CreateAGuide({ imageUrl, altText, token }) {
     color: "black",
   };
 
+  const [guideImage, setGuideImage] = useState(""); // State to store the image source
+
   const [submissionSuccess, setSubmissionSuccess] = useState(false); // Form submission success flag
   const [formData, setFormData] = useState({ // Form data in the structure of the schema defined in the backend
-    city: `${token.location}`,
+    city: `${token.userLocation}`,
     title: '',
-    author: '',
+    author: `${token.userFirstName} ${token.userSurname}`,
     location: '',
     imageURL: '',
     overview: '',
     experience: '',
     activityType: '', 
-    userId: `${token._id}`,
+    userId: `${token.userId}`,
     budget: '',  
     highlights: '', 
   });
@@ -57,9 +59,9 @@ function CreateAGuide({ imageUrl, altText, token }) {
       setSubmissionSuccess(true);
       // Reset form data
       setFormData({
-        city: '',
+        city: `${token.location}`,
         title: '',
-        author: '',
+        author: `${token.firstName} ${token.surname}`,
         location: '',
         imageURL: '',
         overview: '',
@@ -100,9 +102,6 @@ function CreateAGuide({ imageUrl, altText, token }) {
     setFormData({ ...formData, highlights: newHighlights });
   };
   
-  // const addHighlight = () => {
-    //   setHighlights((prevHighlights) => [...prevHighlights, inputValue]);
-    // };
     
     const deleteHighlight = (index) => {
       setHighlights((prevHighlights) => {
@@ -112,13 +111,6 @@ function CreateAGuide({ imageUrl, altText, token }) {
       });
     };
     
-    // const handleInputKeyPress = (event) => {
-      //   if (event.key === "Enter" && inputValue !== "") {
-        //     addHighlight();
-        //     setInputVisible(false);
-        //     setInputValue("");
-        //   }
-        // };
         
         const handleInputKeyPress = (event) => {
           if (event.key === "Enter" && inputValue !== "") {
@@ -144,6 +136,15 @@ function CreateAGuide({ imageUrl, altText, token }) {
     } else {
       navigate(-1, { replace: true });
     }
+  };
+
+  const handlePictureChange = (event) => {
+    const file = event.target.files[0]; // Get the selected file
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      setGuideImage(e.target.result); // Set the selected image as the profile picture
+    };
   };
 
   return (
@@ -184,6 +185,11 @@ function CreateAGuide({ imageUrl, altText, token }) {
               <label htmlFor="location">Location</label>
               <input id="location" type="text" placeholder="Location" name="location" value={formData.location} onChange={handleChange}/>
             </div>
+            <div className="main__form--input">
+              <label htmlFor="imageURL">Insert image URL</label>
+              <input id="imageURL" type="text" placeholder="imageURL" name="imageURL" value={formData.imageURL} onChange={handleChange}/>
+            </div>
+            
             <div className="main__form--dropdown">
               <div className="form__dropdown--title">
                 <h3> Type Of Activity: </h3>
