@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
@@ -15,46 +15,48 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
   const [guideImage, setGuideImage] = useState(""); // State to store the image source
 
   const [submissionSuccess, setSubmissionSuccess] = useState(false); // Form submission success flag
-  const [formData, setFormData] = useState({ // Form data in the structure of the schema defined in the backend
+  const [formData, setFormData] = useState({
+    // Form data in the structure of the schema defined in the backend
     city: `${token.userLocation}`,
-    title: '',
+    title: "",
     author: `${token.userFirstName} ${token.userSurname}`,
-    location: '',
-    imageURL: '',
-    overview: '',
-    experience: '',
-    activityType: 'foodanddrink', 
+    location: "",
+    imageURL: "",
+    overview: "",
+    experience: "",
+    activityType: "foodanddrink",
     userId: `${token.userId}`,
-    budget: '',  
-    highlights: '', 
+    budget: "",
+    highlights: "",
   });
 
-  
-  
-  async function postGuide(url = '', data = {}) {
+  async function postGuide(url = "", data = {}) {
     const response = await fetch(url, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
-    return response.json();
+    const contentType = response.headers.get("Content-Type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("Response was not in JSON format");
+    }
+    return response.ok;
   }
-  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     console.log(formData);
   };
-  
+
   // Updates form data by adding new key-value pair using the input name and value
   const handleSubmit = async (e) => {
-    
     e.preventDefault(); // preventDefault prevents the default behaviour of the form which is to refresh the page on submission
-    
+
     try {
       // Make POST request to /users endpoint and pass form data state as the body
-      const response = await postGuide('http://localhost:4000/guide', formData);
+      const response = await postGuide("http://localhost:4000/guide", formData);
       console.log(response);
       // Get city data to update the city page
       getCity(token.userLocation);
@@ -63,81 +65,80 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
       // Reset form data
       setFormData({
         city: `${token.location}`,
-        title: '',
+        title: "",
         author: `${token.firstName} ${token.surname}`,
-        location: '',
-        imageURL: '',
-        overview: '',
-        experience: '',
-        activityType: '', 
+        location: "",
+        imageURL: "",
+        overview: "",
+        experience: "",
+        activityType: "",
         userId: `${token._id}`,
-        budget: '',  
-        highlights: '', 
+        budget: "",
+        highlights: "",
       });
     } catch (error) {
       console.error(error);
       // Show error prompt
-      alert('Guide submission failed. Please try again.');
-    }finally{
-      navigate('/');
+      alert("Guide submission failed. Please try again.");
+    }
+
+      finally{
+      navigate('/home');
     }
   };
-  
+
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   const [highlights, setHighlights] = useState([]);
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  
+
   const handleClick = () => {
     setInputVisible(true);
   };
-  
+
   const handleInputChange = (event) => {
     const newValue = event.target.value;
     if (newValue !== inputValue) {
       setInputValue(newValue);
     }
   };
-  
+
   const addHighlight = () => {
     const newHighlights = [...highlights, inputValue];
     setHighlights(newHighlights);
     setFormData({ ...formData, highlights: newHighlights });
   };
-  
-    
-    const deleteHighlight = (index) => {
-      setHighlights((prevHighlights) => {
-        const updatedHighlights = [...prevHighlights];
-        updatedHighlights.splice(index, 1);
-        return updatedHighlights;
-      });
-    };
-    
-        
-        const handleInputKeyPress = (event) => {
-          if (event.key === "Enter" && inputValue !== "") {
-            const newHighlights = [...highlights, inputValue];
-            console.log(newHighlights);
-            setHighlights(newHighlights);
-            console.log(highlights);
-            setFormData({ ...formData, highlights: newHighlights });
-            setInputVisible(false);
+
+  const deleteHighlight = (index) => {
+    setHighlights((prevHighlights) => {
+      const updatedHighlights = [...prevHighlights];
+      updatedHighlights.splice(index, 1);
+      return updatedHighlights;
+    });
+  };
+
+  const handleInputKeyPress = (event) => {
+    if (event.key === "Enter" && inputValue !== "") {
+      const newHighlights = [...highlights, inputValue];
+      console.log(newHighlights);
+      setHighlights(newHighlights);
+      console.log(highlights);
+      setFormData({ ...formData, highlights: newHighlights });
+      setInputVisible(false);
       setInputValue("");
     }
   };
- 
-  
+
   const handleCancel = () => {
     setInputVisible(false);
     setInputValue("");
   };
 
   const handleGoBack = () => {
-    if (location.pathname === '/home') {
-      navigate('/');
+    if (location.pathname === "/home") {
+      navigate("/");
     } else {
       navigate(-1, { replace: true });
     }
@@ -180,29 +181,59 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
           <form>
             <div className="main__form--input">
               <label htmlFor="title">Title</label>
-              <input id="title" type="text" placeholder="Title" name="title" value={formData.title} onChange={handleChange}/>
+              <input
+                id="title"
+                type="text"
+                placeholder="Title"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+              />
             </div>
             <div className="main__form--input">
               <label htmlFor="summary">Summary</label>
-              <input id="summary" type="text" placeholder="Summary" name="overview" value={formData.overview} onChange={handleChange}/>
+              <input
+                id="summary"
+                type="text"
+                placeholder="Summary"
+                name="overview"
+                value={formData.overview}
+                onChange={handleChange}
+              />
             </div>
             <div className="main__form--input">
               <label htmlFor="location">Location</label>
-              <input id="location" type="text" placeholder="Location" name="location" value={formData.location} onChange={handleChange}/>
+              <input
+                id="location"
+                type="text"
+                placeholder="Location"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+              />
             </div>
             <div className="main__form--input">
               <label htmlFor="imageURL">Insert image URL</label>
-              <input id="imageURL" type="text" placeholder="imageURL" name="imageURL" value={formData.imageURL} onChange={handleChange}/>
+              <input
+                id="imageURL"
+                type="text"
+                placeholder="imageURL"
+                name="imageURL"
+                value={formData.imageURL}
+                onChange={handleChange}
+              />
             </div>
-            
+
             <div className="main__form--dropdown">
               <div className="form__dropdown--title">
                 <h3> Type Of Activity: </h3>
               </div>
               <div className="form__dropdown--options">
-                <select value={formData.activityType}
+                <select
+                  value={formData.activityType}
                   name="activityType"
-                  onChange={handleChange}>
+                  onChange={handleChange}
+                >
                   <option value="foodanddrink">Food & Drink</option>
                   <option value="sightseeing">Sightseeing</option>
                   <option value="historical">Historical</option>
@@ -218,24 +249,54 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
               </div>
               <div className="form__budget--radio">
                 <label htmlFor="budget1">£</label>
-                <input type="radio" id="budget1" name="budget" value="budget1" checked={formData.budget === "budget1"}
-                  onChange={handleChange}/>
+                <input
+                  type="radio"
+                  id="budget1"
+                  name="budget"
+                  value="budget1"
+                  checked={formData.budget === "budget1"}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="budget2">££</label>
-                <input type="radio" id="budget2" name="budget" value="budget2" checked={formData.budget === "budget2"}
-                  onChange={handleChange}/>
+                <input
+                  type="radio"
+                  id="budget2"
+                  name="budget"
+                  value="budget2"
+                  checked={formData.budget === "budget2"}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="budget3">£££</label>
-                <input type="radio" id="budget3" name="budget" value="budget3" checked={formData.budget === "budget3"}
-                  onChange={handleChange}/>
+                <input
+                  type="radio"
+                  id="budget3"
+                  name="budget"
+                  value="budget3"
+                  checked={formData.budget === "budget3"}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="budget4">££££</label>
-                <input type="radio" id="budget4" name="budget" value="budget4" checked={formData.budget === "budget4"}
-                  onChange={handleChange}/>
+                <input
+                  type="radio"
+                  id="budget4"
+                  name="budget"
+                  value="budget4"
+                  checked={formData.budget === "budget4"}
+                  onChange={handleChange}
+                />
 
                 <label htmlFor="budget5">£££££</label>
-                <input type="radio" id="budget5" name="budget" value="budget5" checked={formData.budget === "budget5"}
-                  onChange={handleChange}/>
+                <input
+                  type="radio"
+                  id="budget5"
+                  name="budget"
+                  value="budget5"
+                  checked={formData.budget === "budget5"}
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div className="main__form--highlight">
@@ -243,7 +304,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                 <h3> Add A Highlight (Up To 4): </h3>
               </div>
               {inputVisible ? (
-                <div className="form__highlight--input" >
+                <div className="form__highlight--input">
                   <input
                     type="text"
                     placeholder="Enter a highlight"
@@ -261,23 +322,30 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
               <div className="form__highlight--list">
                 <ul>
                   {highlights.map((highlight, index) => (
-                    <li key={index}>{highlight} <button onClick={() => deleteHighlight(index)}>X</button></li>
+                    <li key={index}>
+                      {highlight}{" "}
+                      <button onClick={() => deleteHighlight(index)}>X</button>
+                    </li>
                   ))}
                 </ul>
               </div>
             </div>
             <div className="main__form--experience">
-                <div className="form__experience--title">
-                    <h3>Write About Your Experience: </h3>
-                </div>
-                <div className="form__experience--textArea">
-                    <textarea id="experience" placeholder="Write about your experience here..." name="experience"
-                value={formData.experience}
-                onChange={handleChange}></textarea>
-                </div>
+              <div className="form__experience--title">
+                <h3>Write About Your Experience: </h3>
+              </div>
+              <div className="form__experience--textArea">
+                <textarea
+                  id="experience"
+                  placeholder="Write about your experience here..."
+                  name="experience"
+                  value={formData.experience}
+                  onChange={handleChange}
+                ></textarea>
+              </div>
             </div>
             <div className="main__form--submit">
-                <button onClick={handleSubmit}>Submit</button>
+              <button onClick={handleSubmit}>Submit</button>
             </div>
           </form>
         </div>
