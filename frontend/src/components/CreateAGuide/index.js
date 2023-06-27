@@ -23,7 +23,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
     imageURL: '',
     overview: '',
     experience: '',
-    activityType: '', 
+    activityType: 'foodanddrink', 
     userId: `${token.userId}`,
     budget: '',  
     highlights: '', 
