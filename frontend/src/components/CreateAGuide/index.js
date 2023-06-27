@@ -7,7 +7,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import NavBar from "../NavBar";
 
-function CreateAGuide({ imageUrl, altText, token }) {
+function CreateAGuide({ imageUrl, altText, token, getCity }) {
   const buttonStyle = {
     color: "black",
   };
@@ -23,12 +23,13 @@ function CreateAGuide({ imageUrl, altText, token }) {
     imageURL: '',
     overview: '',
     experience: '',
-    activityType: '', 
+    activityType: 'foodanddrink', 
     userId: `${token.userId}`,
     budget: '',  
     highlights: '', 
   });
 
+  
   
   async function postGuide(url = '', data = {}) {
     const response = await fetch(url, {
@@ -55,6 +56,8 @@ function CreateAGuide({ imageUrl, altText, token }) {
       // Make POST request to /users endpoint and pass form data state as the body
       const response = await postGuide('http://localhost:4000/guide', formData);
       console.log(response);
+      // Get city data to update the city page
+      getCity(token.userLocation);
       // Set submission success flag
       setSubmissionSuccess(true);
       // Reset form data
@@ -75,6 +78,8 @@ function CreateAGuide({ imageUrl, altText, token }) {
       console.error(error);
       // Show error prompt
       alert('Guide submission failed. Please try again.');
+    }finally{
+      navigate('/');
     }
   };
   

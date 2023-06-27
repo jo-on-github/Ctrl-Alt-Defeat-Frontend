@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React, { useState, useEffect }from "react";
 import "./styles.css";
 import SearchBar from "../SearchBar";
 import NavBar from "../NavBar";
@@ -141,6 +141,10 @@ const handleCheckboxChange = (event) => {
                     )}
                 </Grid>
             </Box>
+            <div className="space">
+
+            </div>
+
             <NavBar />
         </div>
     );
