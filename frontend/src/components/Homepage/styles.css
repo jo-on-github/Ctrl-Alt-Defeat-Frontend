@@ -105,26 +105,6 @@
     justify-content: center;
 }
 
-/* resonsiveness starts here */
-
-/* Extra Small (xs) devices */
-@media (max-width: 599px) {
-}
-
-/* CSS rules for Small (sm) devices - not needed for tablet size*/
-@media (min-width: 833px)  {
-
-}
-
-
-/* CSS rules for Medium (md) devices */
-@media (min-width: 1279px) {
-.listItem {
-    height: 1em;
-    width: 1em;
-  }
-}
-
 
 
 

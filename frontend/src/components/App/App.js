@@ -39,7 +39,9 @@ function App() {
     }
 
     // User is not logged in or token expired, navigate to the login page
-    navigate("/login");
+    if (window.location.pathname !== "/login" && window.location.pathname !== "/login/signup") {
+      navigate("/login");
+    }
   }, [navigate]);
 
   const decodeToken = (token) => {
@@ -100,17 +102,17 @@ function App() {
         ) : (
           <Route path="/" element={<div>Redirecting...</div>} />
         )}
-        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity}/>} />
+        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} />} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} />}>
-          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity}/>} />
-          <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity}/>} />
-          <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity}/>} />
+          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} />} />
+          <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity} />} />
+          <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity} />} />
         </Route>
         <Route path="/createaguide" element={<CreateAGuide token={token}/>} />
         <Route path="/ProfilePage" element={<ProfilePage />} />
-           <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
-        <Route path= "/Favourites" element={<Favourites />} />
+        <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
+        <Route path="/Favourites" element={<Favourites />} />
       </Routes>
     </div>
   );}
