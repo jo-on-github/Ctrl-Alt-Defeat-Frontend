@@ -119,6 +119,8 @@ button:hover{
     border-radius: 10px;
     text-align: left;
   padding-bottom: 3.3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .profile__info>h4{
     display: inline;
