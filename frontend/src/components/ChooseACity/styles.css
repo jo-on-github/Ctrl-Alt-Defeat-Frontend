@@ -7,8 +7,6 @@ body {
   overflow: hidden; /* Prevent scrolling */
 }
 
-
-
 .overlay {
     display: flex;
     flex-direction: column;

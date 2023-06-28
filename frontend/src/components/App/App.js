@@ -1,18 +1,16 @@
 import "./App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Homepage from "../Homepage";
 import Itinerary from "../Itinerary";
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import GuideOverview from "../GuideOverview";
 import ChooseACity from "../ChooseACity";
 import Overview from "../overview/index.js";
 import Experience from "../experience/index.js";
 import Reviews from "../reviews/index.js";
 
-
 import ProfilePage from "../ProfilePage";
 import EditProfilePage from "../EditProfilePage";
-import { useEffect } from "react";
 import CreateAGuide from "../CreateAGuide";
 import Favourites from "../Favourites";
 
@@ -20,6 +18,54 @@ import LogIn from "../LogIn";
 import SignUp from "../SignUp";
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+  const [currentUser, setCurrentUser] = useState("");
+  const [token, setToken] = useState(null);
+  const [allUsers, setAllUsers] = useState([]);
+
+  useEffect(() => {
+    // Check if the user has a JWT stored and if it's expired
+    const token = localStorage.getItem("token");
+    if (token) {
+      const decodedToken = decodeToken(token);
+      const isExpired = isTokenExpired(decodedToken);
+
+      if (!isExpired) {
+        // User is logged in
+        setIsLoggedIn(true);
+        return;
+      }
+    }
+
+    // User is not logged in or token expired, navigate to the login page
+    if (window.location.pathname !== "/login" && window.location.pathname !== "/login/signup") {
+      navigate("/login");
+    }
+  }, [navigate]);
+
+  const decodeToken = (token) => {
+    try {
+      // Decode the JWT token
+      const decodedToken = JSON.parse(atob(token.split(".")[1]));
+      setToken(decodedToken)
+      return decodedToken;
+    } catch (error) {
+      console.error("Error decoding token:", error);
+      return null;
+    }
+  };
+
+  console.log(token);
+
+  const isTokenExpired = (decodedToken) => {
+    if (decodedToken) {
+      const currentTime = Date.now() / 1000; // Convert to seconds
+      return decodedToken.exp < currentTime;
+    }
+    return true;
+  };
 
   const [city, setCity] = React.useState("");
 
@@ -43,51 +89,42 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(chosenCity);
   }, [chosenCity]);
-
-  // const [guideData, setGuideData] = React.useState(null);
   
-
-  // const [id, setId] = React.useState(null);
-
-  // const handleListItemClick = (id) => {
-  //   setId(chosenCity.id);
-  //   console.log(id);
-  //   }
-    
-  // async function getGuideData(id) {
-  //   const response = await fetch(`http://localhost:4000/guide/${id}/overview`, {
-  //     method: "GET",
-  //     headers: { "Content-Type": "application/json" },
-  //   });
-  //   const data = await response.json();
-  //   setGuideData(data);
-  //   console.log(guideData);
-  // }
-
-  // useEffect(() => {
-  //   console.log(guideData);
-  // }, [guideData]);
+  useEffect(() => {
+    async function getAllUsers() {
+      const response = await fetch("http://localhost:4000/users", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await response.json();
+      setAllUsers(data);
+    }
+    getAllUsers();
+  }, []); // Provide an empty dependency array here
   
   
   return (
     <div className="routerDiv">
       <Routes>
-        <Route path="/login" element={<LogIn />} />
-          <Route path="/login/signup" element={<SignUp/>} />
+        <Route path="/login" element={<LogIn token={token} setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
+          <Route path="/login/signup" element={<SignUp allUsers={allUsers}/>} />
+          {isLoggedIn ? (
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} getCity={getCity} />} />
-        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity}/>} />
+        ) : (
+          <Route path="/" element={<div>Redirecting...</div>} />
+        )}
+        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} />} />
         <Route path="/planner" element={<Itinerary />} />
-        <Route path="/guide" element={<GuideOverview />}>
-          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity}/>} />
-          <Route path="/guide/experience" element={<Experience />} />
-          <Route path="/guide/reviews" element={<Reviews />} />
+        <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} />}>
+          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} />} />
+          <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity} />} />
+          <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity} />} />
         </Route>
-        <Route path="/createaguide" element={<CreateAGuide />} />
+        <Route path="/createaguide" element={<CreateAGuide token={token} getCity={getCity}/>} />
         <Route path="/ProfilePage" element={<ProfilePage />} />
-           <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
-        <Route path= "/Favourites" element={<Favourites />} />
+        <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
+        <Route path="/Favourites" element={<Favourites />} />
       </Routes>
     </div>
   );}

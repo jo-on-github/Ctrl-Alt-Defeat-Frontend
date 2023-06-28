@@ -1,8 +1,33 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Button } from "@mui/material";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import "./styles.css";
 
-function SignUp() {
+function SignUp({ allUsers }) {
+
+  const [emailExists, setEmailExists] = useState(false); // Email exists flag
+
+  const handleErrorClick = () => {
+    setEmailExists(false);
+  };
+
+  
+
+  const buttonStyle = {
+    color: "black",
+  };
+
+  const navigate = useNavigate();
+    const location = useLocation();
+    const handleClick = () => {
+        if (location.pathname === '/home' ) {
+            navigate('/'); 
+          } else {
+            navigate(-1, { replace: true });
+          }
+    };
 
     const [submissionSuccess, setSubmissionSuccess] = useState(false); // Form submission success flag
     const [formData, setFormData] = useState({ // Form data in the structure of the schema defined in the backend
@@ -32,8 +57,24 @@ function SignUp() {
     };
 
     const handleSubmit = async (e) => {
-    
+
         e.preventDefault(); // preventDefault prevents the default behaviour of the form which is to refresh the page on submission
+        // Check if email already exists
+        const emailExists = allUsers.some((user) => user.email === formData.email);
+        if (emailExists) {
+          setEmailExists(true);
+          setFormData({
+            email: '',
+            firstName: '',
+            surname: '',
+            dateOfBirth: '',
+            password: '',
+            location: ''
+          });
+          return;
+        }
+    
+        
     
         try {
           // Make POST request to /users endpoint and pass form data state as the body
@@ -61,12 +102,25 @@ function SignUp() {
 
     return(
          <div className="signup_overlay">
-            <div className="header">
+            {emailExists && (
+              <div className="modal-overlay">
+                  <div className="error">
+                      <p>Account with this Email already exists. Please enter a different Email.</p>
+                      <button onClick={handleErrorClick}>Okay!</button>
+                  </div>
+            </div>
+            )}
+            <div className="signup__header">
+                <div className="header__btn--back">
+                <Button style={buttonStyle} onClick={handleClick}>
+                    <KeyboardBackspaceIcon />
+                </Button>
+                </div>
                 <h1 className="header__title">Welcome To Neighbourhood Nomad</h1>
             </div>
             <div className="signup_container">
                 <div className="signup_container__title">
-                    <h3>Sign Up</h3>
+                    <h3>Create an account</h3>
                 </div>
                 <div className="signup_container__formcontainer">
 
@@ -109,15 +163,17 @@ function SignUp() {
                             onChange={handleChange}
                         />
                         <input 
-                            type="text" 
+                            type="password" 
                             placeholder="Password" 
                             value={formData.password}
                             name="password"
                             onChange={handleChange}
                         />
-                        <Link to="/login">
-                            <button type="submit" onClick={handleSubmit}>Sign Up</button>
-                        </Link>
+
+                          <div className="signup_container__btn">
+                                <button className="submitButton" type="submit" onClick={handleSubmit}>Sign Up</button>
+                          </div>
+
                         {submissionSuccess && 
                             <p className="success-message">Form submitted successfully!</p>}
                         </form>
