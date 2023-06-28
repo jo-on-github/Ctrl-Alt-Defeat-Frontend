@@ -95,8 +95,10 @@ function GuideOverview({chosenCity}) {
         </div>
         <div className="middleNavBar__btn--reviews">
 
-          <NavLink to="/guide/reviews" activeClassName="guideactive" className="guideActive">
+          <NavLink to="/guide/reviews" activeClassName="guideactive" className="guideActive"> 
             <button>Location</button>
+            </NavLink>
+
 
         
           <NavLink to={`/guide/${selectedItemId}/reviews`} activeClassName="guideactive" className="guideActive">
