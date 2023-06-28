@@ -22,7 +22,7 @@ function Header(props ) {
     };
     return (
         <Paper
-            sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
+            sx={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1}}
             elevation={3}
             className="navBar__top"
         >

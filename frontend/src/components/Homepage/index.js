@@ -119,7 +119,7 @@ const handleCheckboxChange = (event) => {
             />
        
        
-            <Box className="main__listItems" sx={{ position: "relative", top: 75 }}>
+            <Box className="main__listItems" sx={{ position: "relative", top: 150, bottom: 150 }}>
                 <Grid className="main__listItems--grid" container spacing={2}>
                     {filteredCity.map((item, index) => (
                         <Grid item xs={6} sm={4} md={3} key={index}>

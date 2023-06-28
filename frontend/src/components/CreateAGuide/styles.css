@@ -1,160 +1,409 @@
-.createAGuideHeader{
+.createAGuideHeader {
+    width: 100%;
     height: 3em;
+    background-color: #0002FF;
+  }
+  
+  .title {
+    font-size: 19px;
+    font-weight: bold;
+    padding-top: 3.5em;
+    padding-bottom: 1em;
+  }
+  
+  .main_gO {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-}
-/* .createAGuide_Overlay{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-} */
-.main_gO{
-    width: 99%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
     padding: 1em 0 0 0;
-}
-.main__form{
-    width: 100%;
-    height: 100%;
+  }
+  
+  .main__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
-
-}
-.main__form>form{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1531979730819-503feb5fbdf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80");
+  }
+  
+  .main__form > form {
+    display: flex;
+    flex-direction: column;
     width: 85%;
     height: 100%;
+  }
+  
+  .main__form--input {
     display: flex;
     flex-direction: column;
-}
-
-.main__form--input{
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 10%;
+    color: white;
+  }
+  
+  .main__form--input > input {
+    width: 16em;
+    height: 0.2em;
+    padding: 15px;
+    text-align: center;
+    border-radius: 42px;
+    margin-bottom: 0.5em;
+  }
+  
+  .main__form--dropdown {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
-}
-.main__form--input>input{
-    width: 90%;
-    height: 18%;
-    padding: 10px;
-    text-align: center;
-    border-radius: 42px;
-    margin-bottom: 1em;
-}
-.main__form--dropdown{
+    align-items: center;
     width: 100%;
     height: 19%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-}
-.form__dropdown--options{
-    width: 100%;
-    height: 35%;
-    padding: 10px;
+  }
+  
+  .form__dropdown--title {
+    color:white;
+
+  }
+  
+  .form__dropdown--options {
+    padding: 5px;
+    width: 20em;
+    height: 3em;
     text-align: center;
-}
-.form__dropdown--options>select{
-    width: 100%;
-    height: 78%;
+    color: black;
+  }
+  
+  .form__dropdown--options > select {
+    width: 14em;
+    height: 3em;
     border-radius: 42px;
-    border: 1px solid #ccc;
     background-color: #fff;
     padding: 10px;
     text-align: center;
-    margin-bottom: 1em;
-}
-.main__form--budget{
+  }
+  
+  .main__form--budget {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
-}
-.form__budget--radio{
-    width: 100%;
+    align-items: center;
+    color: white;
+  }
+  
+  .form__budget--radio {
     display: flex;
     justify-content: space-evenly;
-    color: #616161;
-}
-.main__form--highlight{
+    width: 100%;
+    color: white;
+  }
+  
+  .main__form--highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 30%;
+
+  }
+  
+  .form__highlight--title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-top: 1em;
+
+  }
+  
+  .form__highlight--text {
+    display: flex;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    opacity: 50%;
+  }
+  
+  .form__highlight--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14em;
+    height: 2.8em;
+    border-radius: 42px;
+    color: black;
+    background-color: white;
+   
+  }
+  
+  .highlightBtnDiv {
+    padding-bottom: 1em;
+  }
+  
+  .form__highlight--input {
     display: flex;
     flex-direction: column;
-}
-.form__highlight--title{
+    color: white;
+    border-radius: 42px;
+   
+  }
+
+   .form__experience--title {
+    color: white;
+    padding-top: 10em;
+  }
+  
+  .form__experience--textArea {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 12em;
+    width: 20em;
+    padding-bottom: 3em;
+   
+  }
+
+  .form__experience--textAreaBox{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 1em;
+    width: 12em;
+    padding-top:5em;
+    padding-bottom: 1em;
+    opacity: 50%;
+    font-size: 18px;
+  }
+
+  .form__highlight--list {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 6em;
+    background-color: white;
+    opacity: 50% 
+  }
+  
+  .deleteHighlightButton {
+    border-radius: 20px;
+  }
+  
+  .listItem {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: black;
+  }
+  
+  .main__form--experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+  }
+  
+  .main__form--submit {
     display: flex;
     justify-content: center;
-}
-.form__highlight--btn{
+    align-items: center;
+    flex-direction: column;
+    width: 5em;
+    height: 3em;
+    font-size: 12px;
+    padding-top: 10em;
+    padding-bottom: 3em;
+    padding-left: 10.5em;
+  }
+  
+  .main__form--submit > button {
+    width: 10em;
+    height: 3em;
+    border-radius: 42px;
+    background-color: #0002FF;
+    color: white;
     display: flex;
+    flex-direction: center;
+    align-items: center;
     justify-content: center;
+  }
+  
+ 
+  
+
+  /*Media queries start here */
+
+@media (min-width: 599px) {
+
+ .form__experience--title {
+    padding-top: 10em;
+      }
+
+      .form__experience--textArea {
+        height: 10em;
+        width: 20em;
+        padding-bottom: 1em;
+      }
+    
+      .form__experience--textAreaBox{
+        height: 10em;
+        width: 10em;
+        padding-top:5em;
+        padding-bottom: 1em;
+        padding-left: 7.75em;
+        font-size: 20px;
+      }
+
+      .form__budget--radio {
+        display: flex;
+        justify-content: space-evenly;
+        width: 85%;
+        color: white;
+      }
+
+      .main__form--budget {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }
+    
+      .main__form--submit {
+        width: 5em;
+        height: 3em;
+        padding-top: 13em;
+        padding-bottom: 3em;
+        padding-left: 18em;
+      }
+      
+      .main__form--submit > button {
+        width: 10em;
+        height: 3em;
+
+      }
+      
 
 }
-.form__highlight--input{
-    display: flex;
-    flex-direction: column;
-}
-.form__highlight--list{
-    border: 1px solid black;
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-}
-.form__highlight--list button{
-    border-radius: 50%;
-    border: 1px solid transparent;
-    background-color:rgb(219, 1, 1);
-    color: white;
-    margin-left: 5px;
-}
-.main__form--experience{
-    height: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.main__form--submit{
-    height: 15%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin-top: 2em; */
-}
-.main__form--submit>button{
-    width: 70%;
-    height: 60%;
-    border-radius: 42px;
-    border: 1px solid transparent;
-    background-color:#0002FF;
-    color: white;
-    margin-left: 5px;
-}
-.form__experience--textArea{
-    width: 100%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.form__experience--textArea textarea{
-    width: 70%;
-    height: 100%;
+
+
+@media (min-width: 833px) {
+
+  .form__experience--title {
+    padding-top: 7em;
+      }
+
+      .title {
+        font-weight: bold;
+        padding-top: 3.5em;
+        padding-bottom: 1em;
+      }
+
+      .title {
+      font-size: 30px;
+      }
+
+      .main__form--input > input {
+        width: 23em;
+        height: 0.75em;
+      }
+
+      .form__highlight--list {
+        width: 18em;
+        height: 8em;
+      }
+      
+      
+      .form__dropdown--title {
+       font-size: 27px;
+      padding-bottom: 0.01em;
+      }
+
     
+      .form__experience--textArea {
+        height: 10em;
+        width: 20em;
+        padding-bottom: 1em;
+      }
+    
+      .form__experience--textAreaBox{
+        height: 10em;
+        width: 10em;
+        padding-top:8em;
+        padding-bottom: 3em;
+        padding-left: 7.75em;
+        font-size: 20px;
+      }
+
+      .form__budget--radio {
+        display: flex;
+        justify-content: space-evenly;
+        width: 85%;
+        color: white;
+        font-size: 25px
+      }
+
+      .form__budget--title {
+        font-size: 27px;
+      }
+
+      .form__highlight--btn {
+        width: 15em;
+        height: 3.2em;
+        font-size: 15px;
+      }
+
+      .form__highlight--title {
+        font-size: 27px;
+      }
+
+      .form__experience--title {
+        font-size: 27px;
+      }
+    
+      .main__form--submit {
+        width: 5em;
+        height: 3em;
+        padding-top: 23em;
+        padding-bottom: 3em;
+        padding-left: 26.5em;
+      }
+      
+      .main__form--submit > button {
+        width: 10em;
+        height: 2em;
+        font-size: 20px;
+        padding: 1em;
+      }
+
+}
+
+
+@media (min-width: 1279px)  {
+
+  .form__budget--radio {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    color: white;
+    font-size: 25px
+  }
+
+  .main__form--submit {
+    width: 5em;
+    height: 3em;
+    padding-top: 23em;
+    padding-bottom: 3em;
+    padding-left: 42em;
+  }
 }

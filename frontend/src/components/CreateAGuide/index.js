@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+
+
+import React, { useState } from 'react';
+
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
@@ -155,32 +158,31 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
 
   return (
     <div className="createAGuide_Overlay">
-      <div className="createAGuideHeader">
-        <Paper
-          sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
-          elevation={3}
-          className="navBar__top"
-        >
-          <div className="navBar__top--back">
-            <Button style={buttonStyle} onClick={handleGoBack}>
-              <KeyboardBackspaceIcon />
-            </Button>
-          </div>
-          <div className="navBar__top--title">
-            <h1>Create A Guide</h1>
-          </div>
-          <div className="navBar__top--image">
-            <NavLink to="/ProfilePage" activeClassName="active">
-              <img src={imageUrl} alt={altText} />
-            </NavLink>
-          </div>
-        </Paper>
-      </div>
+      <Paper
+        sx={{ position: "fixed", top: 0, left: 0, right: 0 }}
+        elevation={3}
+        className="navBar__top"
+      >
+        <div className="navBar__top--back">
+          <Button style={buttonStyle} onClick={handleGoBack}>
+            <KeyboardBackspaceIcon />
+          </Button>
+        </div>
+        <div className="navBar__top--title">
+          <h1>Create A Guide</h1>
+        </div>
+        <div className="navBar__top--image">
+          <NavLink to="/ProfilePage" activeClassName="active">
+            <img src={imageUrl} alt={altText} />
+          </NavLink>
+        </div>
+      </Paper>
       <div className="main_gO">
         <div className="main__form">
           <form>
             <div className="main__form--input">
-              <label htmlFor="title">Title</label>
+
+              <label htmlFor="title">Share an experience...</label>
               <input
                 id="title"
                 type="text"
@@ -222,6 +224,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                 value={formData.imageURL}
                 onChange={handleChange}
               />
+
             </div>
 
             <div className="main__form--dropdown">
@@ -306,6 +309,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
               {inputVisible ? (
                 <div className="form__highlight--input">
                   <input
+                    className="form__highlight--text"
                     type="text"
                     placeholder="Enter a highlight"
                     value={inputValue}
@@ -315,8 +319,8 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                   <Button onClick={handleCancel}>Cancel</Button>
                 </div>
               ) : (
-                <div className="form__highlight--btn">
-                  <button onClick={handleClick}>Add Highlight</button>
+                <div className="highlightBtnDiv">
+                  <button className='form__highlight--btn' onClick={handleClick}>Add Highlight</button>
                 </div>
               )}
               <div className="form__highlight--list">
@@ -324,7 +328,14 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                   {highlights.map((highlight, index) => (
                     <li key={index}>
                       {highlight}{" "}
-                      <button onClick={() => deleteHighlight(index)}>X</button>
+
+                      <button
+                        className="deleteHighlightButton"
+                        onClick={() => deleteHighlight(index)}
+                      >
+                        X
+                      </button>
+
                     </li>
                   ))}
                 </ul>
@@ -335,17 +346,20 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                 <h3>Write About Your Experience: </h3>
               </div>
               <div className="form__experience--textArea">
-                <textarea
+
+                <textarea className="form__experience--textAreaBox"
+
                   id="experience"
                   placeholder="Write about your experience here..."
                   name="experience"
                   value={formData.experience}
-                  onChange={handleChange}
-                ></textarea>
+                  onChange={handleChange}>
+                </textarea>
               </div>
             </div>
             <div className="main__form--submit">
               <button onClick={handleSubmit}>Submit</button>
+
             </div>
           </form>
         </div>

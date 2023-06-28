@@ -34,10 +34,11 @@ export default function SearchBar({ setFilterClicked, filterClicked, handleCheck
         <Paper
             component="form"
             sx={{
+                zIndex: 1,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                position: "relative",
+                position: "absolute",
                 top: 60,
                 width: "100%",
                 px: 2,
