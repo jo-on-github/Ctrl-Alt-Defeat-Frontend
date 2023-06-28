@@ -61,7 +61,7 @@ const handleCheckboxChange = (event) => {
     };
 
     return (
-        <div className="overlay">
+        <div className="h_overlay">
 
             {filterClicked && 
                 <div className="modal-overlay">

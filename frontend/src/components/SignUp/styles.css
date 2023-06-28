@@ -12,8 +12,10 @@
     align-items: center;
 }
 .header__title{
-    font-size: 2.5em;
+    font-size: 25px;
     font-weight: bold;
+    position: relative;
+    right: 1em;
 }
 .signup_container{
     width: 100%;

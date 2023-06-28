@@ -164,18 +164,14 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
         className="navBar__top"
       >
         <div className="navBar__top--back">
-          <Button style={buttonStyle} onClick={handleGoBack}>
+          <Button style={buttonStyle}  onClick={handleGoBack}>
             <KeyboardBackspaceIcon />
           </Button>
         </div>
         <div className="navBar__top--title">
           <h1>Create A Guide</h1>
         </div>
-        <div className="navBar__top--image">
-          <NavLink to="/ProfilePage" activeClassName="active">
-            <img src={imageUrl} alt={altText} />
-          </NavLink>
-        </div>
+        <div></div>
       </Paper>
       <div className="main_gO">
         <div className="main__form">
@@ -350,7 +346,6 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                 <textarea className="form__experience--textAreaBox"
 
                   id="experience"
-                  placeholder="Write about your experience here..."
                   name="experience"
                   value={formData.experience}
                   onChange={handleChange}>

@@ -48,7 +48,7 @@ function ChooseACity({updateCity, city, getCity}) {
       }
 
     return (
-        <div className="overlay">
+        <div className="overlayChooseACity">
             {errorMessage && 
             <div className="modal-overlay">
                 <div 

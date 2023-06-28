@@ -17,6 +17,8 @@ function SignUp({ allUsers }) {
 
   const buttonStyle = {
     color: "black",
+    position: "relative",
+    right: "10%",
   };
 
   const navigate = useNavigate();

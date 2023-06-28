@@ -7,10 +7,8 @@ import profileImg from "../../assets/profileImg.png";
 import { useNavigate, Link } from "react-router-dom";
 
 
-function ProfilePage() {
-    const iconStyle = {
-        fontSize: "36px",
-    };
+function ProfilePage({token}) {
+    
 
     const buttonStyle = {
         backgroundColor: "white",
@@ -32,19 +30,15 @@ function ProfilePage() {
                         style={buttonStyle}
                         onClick={handleClick}
                     >
-                        <KeyboardBackspaceIcon style={iconStyle} onClick={handleClick} />
+                        <KeyboardBackspaceIcon  />
                     </button>
                 </div>
 
-                <div className="profileHeader__btn--addGuide">
-                    <button variant="text" style={buttonStyle}>
-                        <AddBoxOutlinedIcon style={iconStyle} />
-                    </button>
-                </div>
+                
             </div>
             <div className="profile">
                 <div className="profile__title--profileName">
-                    <h1>Ben Nguyen</h1>
+                    <h1>{token.userFirstName} {token.userSurname}</h1>
                 </div>
 
                 <div className="profile__img--profileImg">

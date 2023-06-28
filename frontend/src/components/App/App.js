@@ -105,7 +105,7 @@ function App() {
     }
   }, []);
 
-  }, [chosenCity]);
+ 
 
   
   useEffect(() => {
@@ -139,7 +139,7 @@ function App() {
           <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity} />} />
         </Route>
         <Route path="/createaguide" element={<CreateAGuide token={token} getCity={getCity}/>} />
-        <Route path="/ProfilePage" element={<ProfilePage />} />
+        <Route path="/ProfilePage" element={<ProfilePage token={token}/>} />
         <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
         <Route path="/Favourites" element={<Favourites />} />
       </Routes>
