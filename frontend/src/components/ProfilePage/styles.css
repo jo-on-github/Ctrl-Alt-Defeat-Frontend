@@ -81,7 +81,7 @@ button:hover{
     background-color: #0002FF;
     color:white;
     font-size: .9em;
-   ;
+   
 }
 .profile__nav{
     width: 95%;
@@ -114,12 +114,11 @@ button:hover{
 .profile__info{
     width: 19em;
     height: 26em;
-    padding: 0px 8px;
-    background-color: #cecece;
+    background-color: #e4e9f9c7;
     color: black;
     border-radius: 10px;
     text-align: left;
-    /* margin-bottom: 1.3em; */
+  padding-bottom: 3.3em;
 }
 .profile__info>h4{
     display: inline;
@@ -129,7 +128,71 @@ button:hover{
     text-decoration: underline;
 }
 
+/* Media queries start here: */
 
 
+@media (min-width: 599px) {
+    .profile__info{
+        width: 25em;
+        height: 26em;
+
+    }
+
+}
+
+
+@media (min-width: 833px) {
+
+    .profile__info{
+        padding-top: 2em;
+        width: 31em;
+        height: 22em;
+        font-size: 24px;
+    
+    }
+
+    .profile__btn--editProfile button{
+
+        font-size: 22px;
+       
+    }
+
+    .profile__img--profileImg{
+        width: 11em;
+        height: 11em;
+        margin-top: 0em;
+    }
+
+    .profile__nav{
+        width: 95%;
+        height: 3.5em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 24px 3px -23px black;
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+    
+    .profile__nav--about>button{
+        font-size: 24px;
+    }
+    
+    .profile__nav--interests>button{
+        font-size: 24px;
+    }
+
+    .profile__nav--guides>button{
+        font-size: 24px;
+    }
+
+}
+
+
+@media (min-width: 1279px)  {
+
+    /* No media queries needed, page looks fine */
+
+}
 
 
