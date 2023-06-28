@@ -11,8 +11,8 @@ export default function Reviews({chosenCity}) {
 
   return (
     <div className="subInfo">
-      <div className="subInfo__title">Reviews</div>
-      <div className="subInfo__description">{selectedItem.reviews}</div>
+      <div className="subInfo__title">Location</div>
+      <div className="subInfo__description">{selectedItem.location}</div>
     </div>
   );
 }

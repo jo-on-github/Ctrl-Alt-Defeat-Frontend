@@ -30,19 +30,19 @@
   text-align: left;
 }
 
-.guideHeader__heading--title>h5 {
-    margin-top: -1em;
-
-}
-.guideHeader__heading--title a:link{
-  color: #444445;
+.guideHeader__heading--author{
+  
+  height: 10%;
+  position: absolute;
+  top: 35%;
 }
 
 
   .guideHeader__heading--title {
-    height: 80%;
     color:#444445;
+    
 
+    
   }
 
 .guideHeader__img--profile {
@@ -64,25 +64,14 @@
     height: 5%;
     display: flex;
     justify-content: space-between;
-    margin-top: 25%;
+    
 }
 .guideSubHeader__icons{
   width: 40%;
   display: flex;
   justify-content: space-between;
 }
-.guideSubHeader__icons--thumbUpRating{
-  margin-left: .5em;
-}
-.guideSubHeader__icons--thumbDownRating{
-  margin-left: .5em;
-}
-.guideSubHeader__additionalIcons{
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
+
 .guide__img{
   height: 37%;
   width: 90%;

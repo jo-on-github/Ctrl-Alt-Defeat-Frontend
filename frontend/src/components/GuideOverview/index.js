@@ -2,17 +2,13 @@ import React from "react";
 import "./styles.css";
 import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
-import ThumbDownAltOutlinedIcon from "@mui/icons-material/ThumbDownAltOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
-import PushPinOutlinedIcon from "@mui/icons-material/PushPinOutlined";
 import profileImg from "../../assets/profileImg.png";
-import cath from "../../assets/cath.jpg";
 import NavBar from "../NavBar";
 import { NavLink, Outlet } from "react-router-dom";
 import { Paper } from "@mui/material";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+
 
 function GuideOverview({chosenCity, setChosenCity}) {
   const buttonStyle = {
@@ -45,9 +41,11 @@ function GuideOverview({chosenCity, setChosenCity}) {
         <div className="guideHeader__heading">
           <div className="guideHeader__heading--title">
             <h2>{selectedItem.title}</h2>
+          <div className="guideHeader__heading--author">
             <h5>
-              By <a href="https://www.w3schools.com">{selectedItem.author}</a>
+              By {selectedItem.author}
             </h5>
+          </div>
           </div>
         </div>
         <div >
@@ -70,11 +68,9 @@ function GuideOverview({chosenCity, setChosenCity}) {
           </div> */}
         </div>
         <div className="guideSubHeader__additionalIcons">
-          <div className="guideSubHeader__additionalIcons--pin">
-            <PushPinOutlinedIcon style={buttonStyle} />
-          </div>
+          
           <div div className="guideSubHeader__additionalIcons--favourite">
-            <BookmarkBorderOutlinedIcon style={buttonStyle} />
+            <BookmarkBorderOutlinedIcon sx={{position: "relative", top: "1em"}} />
           </div>
         </div>
       </div>
@@ -94,16 +90,10 @@ function GuideOverview({chosenCity, setChosenCity}) {
             <button>Experience</button>
           </NavLink>
         </div>
-        <div className="middleNavBar__btn--reviews">
-
-          <NavLink to="/guide/reviews" activeClassName="guideactive" className="guideActive"> 
-            <button>Location</button>
-            </NavLink>
-
-
+        <div className="middleNavBar__btn--location">
         
-          <NavLink to={`/guide/${selectedItemId}/reviews`} activeClassName="guideactive" className="guideActive">
-            <button>Reviews</button>
+          <NavLink to={`/guide/${selectedItemId}/location`} activeClassName="guideactive" className="guideActive">
+            <button>Location</button>
 
           </NavLink>
         

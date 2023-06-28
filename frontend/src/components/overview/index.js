@@ -23,6 +23,7 @@ export default function Overview({chosenCity, setChosenCity}) {
       <div className="subInfo__title">Overview</div>
       <div className="subInfo__description">
        {selectedItem.overview}
+       <p>{selectedItem.highlights}</p>
       </div>
 
   

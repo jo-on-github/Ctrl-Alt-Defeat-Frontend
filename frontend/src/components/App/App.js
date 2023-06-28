@@ -136,7 +136,7 @@ function App() {
         <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} setChosenCity={setChosenCity}/>}>
           <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} setChosenCity={setChosenCity} />} />
           <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity} />} />
-          <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity} />} />
+          <Route path="/guide/:id/location" element={<Reviews chosenCity={chosenCity} />} />
         </Route>
         <Route path="/createaguide" element={<CreateAGuide token={token} getCity={getCity}/>} />
         <Route path="/ProfilePage" element={<ProfilePage token={token}/>} />
