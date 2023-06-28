@@ -72,7 +72,7 @@ function ChooseACity({updateCity, city, getCity}) {
                 <input
                     className="userInput__input"
                     type="text"
-                    placeholder="🔍      Choose a location..."
+                    placeholder="🔍      Choose your location..."
                     onChange={handleInputChange}
                     onKeyDown={enterKeyPressed}
                 />
@@ -84,7 +84,7 @@ function ChooseACity({updateCity, city, getCity}) {
             <div className="main">
                 
                 <div className="main__btn">
-                    <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE </button>
+                    <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
                     </div>
             </div>
         </div>
