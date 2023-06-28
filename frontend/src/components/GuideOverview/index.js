@@ -12,8 +12,9 @@ import NavBar from "../NavBar";
 import { NavLink, Outlet } from "react-router-dom";
 import { Paper } from "@mui/material";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
-function GuideOverview({chosenCity}) {
+function GuideOverview({chosenCity, setChosenCity}) {
   const buttonStyle = {
     // color: "#444445",
     color: "#0D0D0D",

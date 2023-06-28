@@ -71,9 +71,17 @@ function App() {
 
   const updateCity = (city) => {
     setCity(city);
+    localStorage.setItem("city", city);
   };
 
-  const [chosenCity, setChosenCity] = React.useState("");
+  useEffect(() => {
+    const citySearched = localStorage.getItem("city");
+    if (citySearched) {
+      setCity(citySearched);
+    }
+  }, []);
+
+  const [chosenCity, setChosenCity] = React.useState([]);
  
 
   async function getCity(city) {
@@ -86,10 +94,19 @@ function App() {
     // how does our data display when calling this function
     setChosenCity(data);
     // console.log(chosenCity);
+    localStorage.setItem("chosenCity", JSON.stringify(data));
   }
 
   useEffect(() => {
+
+    const storedCity = localStorage.getItem("chosenCity");
+    if (storedCity) {
+      setChosenCity(JSON.parse(storedCity));
+    }
+  }, []);
+
   }, [chosenCity]);
+
   
   useEffect(() => {
     async function getAllUsers() {
@@ -116,8 +133,8 @@ function App() {
         )}
         <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} />} />
         <Route path="/planner" element={<Itinerary />} />
-        <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} />}>
-          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} />} />
+        <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} setChosenCity={setChosenCity}/>}>
+          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} setChosenCity={setChosenCity} />} />
           <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity} />} />
           <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity} />} />
         </Route>
