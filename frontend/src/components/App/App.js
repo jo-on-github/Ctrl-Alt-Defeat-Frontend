@@ -23,6 +23,7 @@ function App() {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState("");
   const [token, setToken] = useState(null);
+  const [allUsers, setAllUsers] = useState([]);
 
   useEffect(() => {
     // Check if the user has a JWT stored and if it's expired
@@ -88,15 +89,26 @@ function App() {
   }
 
   useEffect(() => {
-    console.log(chosenCity);
   }, [chosenCity]);
+  
+  useEffect(() => {
+    async function getAllUsers() {
+      const response = await fetch("http://localhost:4000/users", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await response.json();
+      setAllUsers(data);
+    }
+    getAllUsers();
+  }, []); // Provide an empty dependency array here
   
   
   return (
     <div className="routerDiv">
       <Routes>
         <Route path="/login" element={<LogIn token={token} setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
-          <Route path="/login/signup" element={<SignUp/>} />
+          <Route path="/login/signup" element={<SignUp allUsers={allUsers}/>} />
           {isLoggedIn ? (
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} getCity={getCity} />} />
         ) : (
