@@ -113,7 +113,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 10%;
+}
+
+h4{
+    position: absolute;
+    bottom: 65%;
 }
 .login_container__signup_container button{
     width: 18em;
@@ -121,11 +125,12 @@
     padding: 10px;
     text-align: center;
     border-radius: 42px;
-    margin-top: .5em;
+    /* margin-top: .5em; */
     background-color: #0002FF;
     color: white;
     border: 1px solid transparent;
-    
+    position: relative;
+    bottom: 35%;
 }
 
 
