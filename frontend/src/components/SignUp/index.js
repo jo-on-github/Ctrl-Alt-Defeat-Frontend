@@ -5,7 +5,15 @@ import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import "./styles.css";
 
-function SignUp() {
+function SignUp({ allUsers }) {
+
+  const [emailExists, setEmailExists] = useState(false); // Email exists flag
+
+  const handleErrorClick = () => {
+    setEmailExists(false);
+  };
+
+  
 
   const buttonStyle = {
     color: "black",
@@ -49,8 +57,24 @@ function SignUp() {
     };
 
     const handleSubmit = async (e) => {
-    
+
         e.preventDefault(); // preventDefault prevents the default behaviour of the form which is to refresh the page on submission
+        // Check if email already exists
+        const emailExists = allUsers.some((user) => user.email === formData.email);
+        if (emailExists) {
+          setEmailExists(true);
+          setFormData({
+            email: '',
+            firstName: '',
+            surname: '',
+            dateOfBirth: '',
+            password: '',
+            location: ''
+          });
+          return;
+        }
+    
+        
     
         try {
           // Make POST request to /users endpoint and pass form data state as the body
@@ -78,6 +102,14 @@ function SignUp() {
 
     return(
          <div className="signup_overlay">
+            {emailExists && (
+              <div className="modal-overlay">
+                  <div className="error">
+                      <p>Account with this Email already exists. Please enter a different Email.</p>
+                      <button onClick={handleErrorClick}>Okay!</button>
+                  </div>
+            </div>
+            )}
             <div className="signup__header">
                 <div className="header__btn--back">
                 <Button style={buttonStyle} onClick={handleClick}>
@@ -131,7 +163,7 @@ function SignUp() {
                             onChange={handleChange}
                         />
                         <input 
-                            type="text" 
+                            type="password" 
                             placeholder="Password" 
                             value={formData.password}
                             name="password"
@@ -139,9 +171,7 @@ function SignUp() {
                         />
 
                           <div className="signup_container__btn">
-                            <Link to="/login">
                                 <button className="submitButton" type="submit" onClick={handleSubmit}>Sign Up</button>
-                            </Link>
                           </div>
 
                         {submissionSuccess && 

@@ -6,6 +6,7 @@ import "./styles.css";
 import profileImg from "../../assets/profileImg.png";
 import { useNavigate, Link } from "react-router-dom";
 
+
 function ProfilePage() {
     const iconStyle = {
         fontSize: "36px",
@@ -43,7 +44,7 @@ function ProfilePage() {
             </div>
             <div className="profile">
                 <div className="profile__title--profileName">
-                    <h1>Bob Smith</h1>
+                    <h1>Ben Nguyen</h1>
                 </div>
 
                 <div className="profile__img--profileImg">
@@ -69,19 +70,19 @@ function ProfilePage() {
             <div className="profile__info">
                 <h4>About Me</h4>
                 <p>
-                    lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer tincidunt, nisl eget vestibulum aliquam, nunc sapien
-                    ultricies tortor, ac aliquam eros nunc vel nisl. Sed vitae
-                    nisl eget nunc aliquam ultricies. Sed vitae nisl eget nunc
-                    aliquam ultricies. Vestibulum ante ipsum primis in faucibus
-                    orci luctus et ultrices posuere cubilia curae; Donec vitae
-                    nisl eget nunc aliquam ultricies.
+                    Hi I'm Ben, a 32 year old Vietnamese-British guy living in London. I'm a software engineer and I love to travel. I've been to 20 countries so far and I'm always looking for new places to visit. I'm also a big foodie and love to try new cuisines. I'm a big fan of hiking, pubs and museums. I'm always looking for new people to travel with so feel free to message me if you're interested!
                 </p>
-                <p>
-                    lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer tincidunt, nisl eget vestibulum aliquam, nunc sapien
-                    ultricies
-                </p>
+
+                <h4>My local top tips</h4>
+                 <p>
+                     My favourite places are:
+                    Hampsead Heath men's pond, the free screens at Wimbledon during the tennis, and the bars in Dalston.
+                 </p>
+
+                 <h4>Location</h4>
+                 <p>
+                    North-East London: Walthamstow
+                 </p>
             </div>
             <div className="profile__footer">
                 <NavBar />
