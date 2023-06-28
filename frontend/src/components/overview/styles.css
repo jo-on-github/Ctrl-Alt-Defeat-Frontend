@@ -92,7 +92,7 @@
   }
   
   .guide__img {
-    width: 80%;
+    width: 89%;
     height: 40%;
   }
   
@@ -109,17 +109,21 @@
     align-items: center;
     background-color: #e4e9f9c7;
   }
+
 }
 /* Responsiveness for medium screens */
 @media (min-width: 833px) and (max-width: 1024px) {
   .subInfo__title {
     font-size: 22px; 
+    margin-left: 3em;
     margin-bottom: 0.4em;
   }
   
   .subInfo__description {
-    width: 100%;
-    height: 60%;
+    width: 85%;
+    height: 45%;
+    margin-left: 3.5em;
+    border-radius: 10px;
     background-color: #e4e9f9c7;
     display: flex;
     justify-content: center;
@@ -137,29 +141,28 @@
   }
   
   .middleNavBar {
-    width: 75%;
-    padding: 0px 15px 0px 15px;
+    width: 100%;
+    font-size: 12px;
+    padding: 5px 5px 5px 5px;
   }
   
   
   .guide__img {
-    width: 75%; 
-    height: 45%; 
-    margin-top: 0.1em;
+    width: 85%; 
+    height: 50%; 
+ 
   }
   
   .middleNavBar {
-    width: 80%;
-    margin-top: -2em;
+    width: 65%;
+    margin-top: -4em;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
   }
 
-  .guideOverlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
+
 
 .middleNavBar button {
   border: none;
@@ -167,51 +170,79 @@
   color: white;
   font-size: 1.8em;
 }
+
+.guideSubHeader__additionalIcons {
+  width: 19%;
+  height: 100%;
+  display: flex;
 }
+
+.guideSubHeader__additionalIcons--favourite{
+  margin-right: 2em;
+}
+}
+
  
 
 /* Responsiveness for large screens */
-@media (min-width: 1279px) {
+ @media (min-width: 1279px) {
   .subInfo__title {
-    font-size: 26px;
+    font-size: 22px;
+    margin-left: 6.5em;
     margin-bottom: 0.4em;
   }
-  
-  .guide__img {
-    width: 60%; 
-    height: 89%; 
-    margin-top: 0.1em;
-  }
-  
+
   .subInfo__description {
-    width: 100%;
-    height: 30vh;
+    width: 80%;
+    height: 45%;
+    margin-left: 8em;
+    border-radius: 10px;
     background-color: #e4e9f9c7;
     display: flex;
     justify-content: center;
   }
-  
+
   .subInfo {
     width: 100%;
     height: 100%;
+    margin-top: 0.7em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  
-  .middleNavBar {
-    width: 60%;
-    margin-top: -2em;
-    padding: 13px 10px 13px 10px;
-  }
 
- 
+  .middleNavBar {
+  width: 55%;
+  font-size: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: -3em;
+  white-space: nowrap;
+}
+
+  .guide__img {
+    width: 70%;
+    height: 65%;
+  } 
+
 
   .middleNavBar button {
     border: none;
     background-color: transparent;
     color: white;
-    font-size: bold;
-    font-size: 1.8em;
+    font-size: 2em;
   }
-}
+
+  .guideSubHeader__additionalIcons {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .guideSubHeader__additionalIcons--favourite {
+    margin-right: 9em;
+  }
+} 

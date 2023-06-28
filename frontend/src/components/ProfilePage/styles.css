@@ -50,12 +50,12 @@ button:hover{
     align-items: center;
 }
 .profile__img--profileImg{
-    width: 95%;
+    width: 9em;
     height: 9em;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: .5em;
+    margin-top: 0.5em;
 }
 .profile__btn--editProfile{
     width: 95%;
@@ -66,20 +66,22 @@ button:hover{
 }
 
 .profile__img--profileImg>img{
-    width: 9.5em;
-    height: 9em;
+    width: 8em;
+    height: 8em;
     border-radius: 50%;
+    padding-top:1.5em;
+    padding-bottom: 1.5em;
 }
 .profile__btn--editProfile button{
 
     width:8em;
     height: 2.2em;
-    border-radius: 10px;
+    border-radius: 42px;
     border: 1px solid transparent;
-    background-color: #cecece;
+    background-color: #0002FF;
     color:white;
     font-size: .9em;
-  
+   
 }
 .profile__nav{
     width: 95%;
@@ -110,14 +112,15 @@ button:hover{
     margin-top: 1em;
 }
 .profile__info{
-    width: 90%;
-    height: 95%;
-    padding: 0px 8px;
-    background-color: #cecece;
-    color: white;
+    width: 19em;
+    height: 26em;
+    background-color: #e4e9f9c7;
+    color: black;
     border-radius: 10px;
     text-align: left;
-    /* margin-bottom: 1.3em; */
+  padding-bottom: 3.3em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .profile__info>h4{
     display: inline;
@@ -127,18 +130,71 @@ button:hover{
     text-decoration: underline;
 }
 
-.profile__footer{
-    bottom: 0;
+/* Media queries start here: */
 
-    height: 4.5em;
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: white;
+
+@media (min-width: 599px) {
+    .profile__info{
+        width: 25em;
+        height: 26em;
+
+    }
 
 }
 
 
+@media (min-width: 833px) {
+
+    .profile__info{
+        padding-top: 2em;
+        width: 31em;
+        height: 22em;
+        font-size: 24px;
+    
+    }
+
+    .profile__btn--editProfile button{
+
+        font-size: 22px;
+       
+    }
+
+    .profile__img--profileImg{
+        width: 11em;
+        height: 11em;
+        margin-top: 0em;
+    }
+
+    .profile__nav{
+        width: 95%;
+        height: 3.5em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 24px 3px -23px black;
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+    
+    .profile__nav--about>button{
+        font-size: 24px;
+    }
+    
+    .profile__nav--interests>button{
+        font-size: 24px;
+    }
+
+    .profile__nav--guides>button{
+        font-size: 24px;
+    }
+
+}
+
+
+@media (min-width: 1279px)  {
+
+    /* No media queries needed, page looks fine */
+
+}
 
 

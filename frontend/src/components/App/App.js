@@ -23,6 +23,7 @@ function App() {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState("");
   const [token, setToken] = useState(null);
+  const [allUsers, setAllUsers] = useState([]);
 
   useEffect(() => {
     // Check if the user has a JWT stored and if it's expired
@@ -70,9 +71,17 @@ function App() {
 
   const updateCity = (city) => {
     setCity(city);
+    localStorage.setItem("city", city);
   };
 
-  const [chosenCity, setChosenCity] = React.useState("");
+  useEffect(() => {
+    const citySearched = localStorage.getItem("city");
+    if (citySearched) {
+      setCity(citySearched);
+    }
+  }, []);
+
+  const [chosenCity, setChosenCity] = React.useState([]);
  
 
   async function getCity(city) {
@@ -85,18 +94,38 @@ function App() {
     // how does our data display when calling this function
     setChosenCity(data);
     // console.log(chosenCity);
+    localStorage.setItem("chosenCity", JSON.stringify(data));
   }
 
   useEffect(() => {
-    console.log(chosenCity);
+
+    const storedCity = localStorage.getItem("chosenCity");
+    if (storedCity) {
+      setChosenCity(JSON.parse(storedCity));
+    }
+  }, []);
+
   }, [chosenCity]);
+
+  
+  useEffect(() => {
+    async function getAllUsers() {
+      const response = await fetch("http://localhost:4000/users", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await response.json();
+      setAllUsers(data);
+    }
+    getAllUsers();
+  }, []); // Provide an empty dependency array here
   
   
   return (
     <div className="routerDiv">
       <Routes>
         <Route path="/login" element={<LogIn token={token} setCurrentUser={setCurrentUser} currentUser={currentUser}/>} />
-          <Route path="/login/signup" element={<SignUp/>} />
+          <Route path="/login/signup" element={<SignUp allUsers={allUsers}/>} />
           {isLoggedIn ? (
         <Route path="/" element={<ChooseACity updateCity={updateCity} city={city} getCity={getCity} />} />
         ) : (
@@ -104,8 +133,8 @@ function App() {
         )}
         <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} />} />
         <Route path="/planner" element={<Itinerary />} />
-        <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} />}>
-          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} />} />
+        <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} setChosenCity={setChosenCity}/>}>
+          <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} setChosenCity={setChosenCity} />} />
           <Route path="/guide/:id/experience" element={<Experience chosenCity={chosenCity} />} />
           <Route path="/guide/:id/reviews" element={<Reviews chosenCity={chosenCity} />} />
         </Route>

@@ -12,8 +12,9 @@ import NavBar from "../NavBar";
 import { NavLink, Outlet } from "react-router-dom";
 import { Paper } from "@mui/material";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
-function GuideOverview({chosenCity}) {
+function GuideOverview({chosenCity, setChosenCity}) {
   const buttonStyle = {
     // color: "#444445",
     color: "#0D0D0D",
@@ -59,14 +60,14 @@ function GuideOverview({chosenCity}) {
 
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
-          <div className="guideSubHeader__icons--thumbUp">
+          {/* <div className="guideSubHeader__icons--thumbUp">
             <ThumbUpAltOutlinedIcon style={buttonStyle} />
             <span className="guideSubHeader__icons--thumbUpRating">88%</span>
           </div>
           <div className="guideSubHeader__icons--thumbDown">
             <ThumbDownAltOutlinedIcon style={buttonStyle} />
             <span className="guideSubHeader__icons--thumbDownRating">12%</span>
-          </div>
+          </div> */}
         </div>
         <div className="guideSubHeader__additionalIcons">
           <div className="guideSubHeader__additionalIcons--pin">
@@ -94,9 +95,16 @@ function GuideOverview({chosenCity}) {
           </NavLink>
         </div>
         <div className="middleNavBar__btn--reviews">
+
+          <NavLink to="/guide/reviews" activeClassName="guideactive" className="guideActive"> 
+            <button>Location</button>
+            </NavLink>
+
+
         
           <NavLink to={`/guide/${selectedItemId}/reviews`} activeClassName="guideactive" className="guideActive">
             <button>Reviews</button>
+
           </NavLink>
         
         </div>
