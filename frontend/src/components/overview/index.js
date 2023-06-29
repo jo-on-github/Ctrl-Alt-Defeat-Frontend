@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Overview({ chosenCity, setChosenCity }) {
-
-    
     useEffect(() => {
         const storedCity = localStorage.getItem("chosenCity");
         if (storedCity) {
@@ -21,18 +19,26 @@ export default function Overview({ chosenCity, setChosenCity }) {
         <div className="subInfo">
             <div className="subInfo__title">Overview</div>
             <div className="subInfo__description">
-                Summary: <br />
-                {selectedItem.overview} <br />
-                <br />
-                Budget: <br />
-                {selectedItem.budget} <br />
-                <br />
-                <ul>
-                    {selectedItem.highlights.map((item) => {
-                        return <li>{item}</li>;
-                    })}
-                </ul>
-                ;
+                <div>
+                    <b>Summary:</b> <br />
+                    {selectedItem.overview} <br />
+                    <br />
+                </div>
+                <div>
+                    <b>Budget:</b> <br />
+                    {selectedItem.budget} <br />
+                    <br />
+                </div>
+                <div>
+                    <b>Highlights:</b>
+                    <div>
+                        <ul>
+                            {selectedItem.highlights.map((item) => {
+                                return <li>{item}</li>;
+                            })}
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     );
