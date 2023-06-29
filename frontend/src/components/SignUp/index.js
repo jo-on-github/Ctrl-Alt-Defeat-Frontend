@@ -7,9 +7,13 @@ import "./styles.css";
 function SignUp({ allUsers }) {
 
   const [emailExists, setEmailExists] = useState(false); // Email exists flag
+  const [fieldsFilled, setFieldsFilled] = useState(false); // All fields filled flag
 
   const handleErrorClick = () => {
     setEmailExists(false);
+  };
+  const handleEmptyFieldsClick = () => {
+    setFieldsFilled(false);
   };
 
   
@@ -74,9 +78,22 @@ function SignUp({ allUsers }) {
           });
           return;
         }
-    
         
-    
+        // make sure all fields are filled in
+        if (!formData.email || !formData.firstName || !formData.surname || !formData.dateOfBirth || !formData.password || !formData.location) {
+
+          setFieldsFilled(true);
+          setFormData({
+            email: '',
+            firstName: '',
+            surname: '',
+            dateOfBirth: '',
+            password: '',
+            location: ''
+          });
+          return;
+
+        }
         try {
           // Make POST request to /users endpoint and pass form data state as the body
           const response = await postData('http://localhost:4000/users', formData);
@@ -99,8 +116,6 @@ function SignUp({ allUsers }) {
         }
       };
 
-
-
     return(
          <div className="signup_overlay">
             {emailExists && (
@@ -108,6 +123,14 @@ function SignUp({ allUsers }) {
                   <div className="error">
                       <p>Account with this Email already exists. Please enter a different Email.</p>
                       <button onClick={handleErrorClick}>Okay!</button>
+                  </div>
+            </div>
+            )}
+            {fieldsFilled && (
+              <div className="modal-overlay">
+                  <div className="error">
+                      <p>Please fill in all fields and try again.</p>
+                      <button onClick={handleEmptyFieldsClick}>Okay!</button>
                   </div>
             </div>
             )}
