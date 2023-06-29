@@ -15,6 +15,29 @@ export default function Overview({ chosenCity, setChosenCity }) {
 
     const selectedItem = chosenCity.find((item) => item._id === id);
     console.log(chosenCity);
+
+    // set budget to be a variable number of pound signs based on the budget value. eg if budget is budget3, then budget = "£££"
+    let budget = "";
+    switch (selectedItem.budget) 
+    {
+        case "budget1":
+            budget = "£";
+            break;
+        case "budget2":
+            budget = "££";
+            break;
+        case "budget3":
+            budget = "£££";
+            break;
+        case "budget4":
+            budget = "££££";
+            break;
+        case "budget5":
+            budget = "£££££";
+            break;
+        default:
+            budget = "£";
+    }
     return (
         <div className="subInfo">
             <div className="subInfo__title">Overview</div>
@@ -26,7 +49,7 @@ export default function Overview({ chosenCity, setChosenCity }) {
                 </div>
                 <div>
                     <b>Budget:</b> <br />
-                    {selectedItem.budget} <br />
+                    {budget} <br />
                     <br />
                 </div>
                 <div>
