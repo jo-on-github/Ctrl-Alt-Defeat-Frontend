@@ -4,12 +4,14 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 export default function Overview({ chosenCity, setChosenCity }) {
+
+    
     useEffect(() => {
         const storedCity = localStorage.getItem("chosenCity");
         if (storedCity) {
             setChosenCity(JSON.parse(storedCity));
         }
-    }, []);
+    });
 
     const { id } = useParams();
 

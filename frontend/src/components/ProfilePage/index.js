@@ -1,7 +1,6 @@
 import React from "react";
 import NavBar from "../NavBar";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import "./styles.css";
 import profileImg from "../../assets/profileImg.png";
 import { useNavigate, Link } from "react-router-dom";

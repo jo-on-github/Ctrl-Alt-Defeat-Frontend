@@ -14,7 +14,6 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
     color: "black",
   };
 
-  const [submissionSuccess, setSubmissionSuccess] = useState(false); // Form submission success flag
   const [formData, setFormData] = useState({
     // Form data in the structure of the schema defined in the backend
     city: `${token.userLocation}`,
@@ -60,8 +59,6 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
       console.log(response);
       // Get city data to update the city page
       getCity(token.userLocation);
-      // Set submission success flag
-      setSubmissionSuccess(true);
       // Reset form data
       setFormData({
         city: `${token.location}`,
