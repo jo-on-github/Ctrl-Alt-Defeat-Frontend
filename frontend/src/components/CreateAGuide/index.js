@@ -97,9 +97,9 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
   const [inputVisible, setInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  const handleClick = () => {
+  function handleClick() {
     setInputVisible(true);
-  };
+  }
 
   const handleInputChange = (event) => {
     const newValue = event.target.value;
