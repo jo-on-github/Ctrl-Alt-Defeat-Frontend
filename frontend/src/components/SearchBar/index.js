@@ -3,33 +3,21 @@ import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import TuneIcon from "@mui/icons-material/Tune";
 import SearchIcon from "@mui/icons-material/Search";
-import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
-import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import { useTheme } from "@mui/material/styles";
 
-const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
-const checkedIcon = <CheckBoxIcon fontSize="small" />;
-
-export default function SearchBar({ setFilterClicked, filterClicked, handleCheckboxChange, chosenCity, selectedActivityTypes }) {
+export default function SearchBar({ setFilterClicked, filterClicked, setSelectedTitle }) {
     const theme = useTheme();
-
-
-   
 
     function handleClick() {
         console.log("clicked");
         setFilterClicked(!filterClicked);
     }
 
-    const filteredCity = selectedActivityTypes.length > 0
-    ? chosenCity.filter((item) => selectedActivityTypes.includes(item.activityType))
-    : chosenCity;
+    function handleSearch(event) {
+        setSelectedTitle(event.target.value);
+    }
 
-    console.log(selectedActivityTypes);
-    console.log(filteredCity);
     return (
         <Paper
             component="form"
@@ -61,7 +49,7 @@ export default function SearchBar({ setFilterClicked, filterClicked, handleCheck
             <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
                 <SearchIcon />
             </IconButton>
-            <Autocomplete
+            <TextField
                 sx={{
                     flex: 1,
                     mr: 2,
@@ -78,31 +66,9 @@ export default function SearchBar({ setFilterClicked, filterClicked, handleCheck
                         width: 500,
                     },
                 }}
-                placeholder="Choose a guide"
-                multiple
-                id="checkboxes-tags-demo"
-                options={filteredCity}
-                disableCloseOnSelect
-                getOptionLabel={(option) => option.title}
-                renderOption={(props, option, { selected }) => (
-                    <li {...props}>
-                        <Checkbox
-                            icon={icon}
-                            checkedIcon={checkedIcon}
-                            style={{ marginRight: 8 }}
-                            checked={selected}
-                            onChange={handleCheckboxChange}
-                        />
-                        {option.title}
-                    </li>
-                )}
-                renderInput={(params) => (
-                    <TextField
-                        {...params}
-                        label="Choose a Guide"
-                        placeholder="Favorites"
-                    />
-                )}
+                label="Choose a Guide"
+                placeholder="Guides"
+                onChange={handleSearch}
             />
             <IconButton
                 sx={{ p: "10px" }}

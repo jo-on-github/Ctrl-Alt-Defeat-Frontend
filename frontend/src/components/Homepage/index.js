@@ -21,6 +21,7 @@ function Homepage({ city, chosenCity, setChosenCity }) {
     const matches = useMediaQuery("(min-width: 833px)");
     const matches2 = useMediaQuery("(min-width: 1279px) ");
     const [selectedActivityTypes, setSelectedActivityTypes] = useState([]);
+    const [selectedTitle, setSelectedTitle] = useState(''); // holds the user input from the search bar
 
 
    const handleListItemClick = (id) => {
@@ -115,6 +116,7 @@ const handleCheckboxChange = (event) => {
                 handleCheckboxChange={handleCheckboxChange}
                 selectedActivityTypes={selectedActivityTypes}
                 setSelectedActivityTypes={setSelectedActivityTypes}
+                setSelectedTitle={setSelectedTitle}
                 chosenCity={chosenCity}
             />
        
@@ -141,9 +143,6 @@ const handleCheckboxChange = (event) => {
                     )}
                 </Grid>
             </Box>
-            <div className="space">
-
-            </div>
 
             <NavBar />
         </div>

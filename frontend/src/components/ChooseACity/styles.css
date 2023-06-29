@@ -1,9 +1,6 @@
-html {
-  overflow: hidden; /* Prevent scrolling */
-}
 
 body {
-  overflow: hidden; /* Prevent scrolling */
+  margin: 0;
 }
 
 .overlayChooseACity {
