@@ -36,12 +36,6 @@ function ChooseACity({updateCity, city, getCity}) {
         updateCity(capitalizedValue);
       }
 
-    function handleClickRandomiser(event){
-        console.log("clicked");
-        let randomCity = cityRandomData[Math.floor(Math.random() * cityRandomData.length)];
-        updateCity(randomCity.city);
-        navigate("/home");
-    }
 
     function handleErrorClick() {
         setErrorMessage("");
@@ -75,10 +69,7 @@ function ChooseACity({updateCity, city, getCity}) {
                     placeholder="🔍      Choose your location..."
                     onChange={handleInputChange}
                     onKeyDown={enterKeyPressed}
-                />
-                    <button className="userInput__btn--randomiser" onClick={handleClickRandomiser}>
-                        I'm feeling adventurous!
-                    </button>  
+                /> 
             </div>
 
             <div className="main">
