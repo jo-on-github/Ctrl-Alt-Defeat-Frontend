@@ -75,7 +75,7 @@ function ChooseACity({updateCity, city, getCity}) {
             <div className="main">
                 
                 <div className="main__btn">
-                    <button className="main__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
+                    <button className="cocmain__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
                     </div>
             </div>
         </div>

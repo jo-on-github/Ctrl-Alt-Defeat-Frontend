@@ -57,17 +57,22 @@ body {
     align-items: center;
     /* height: 16em; */
   }
+  .header__title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
   
   .header__title>h1 {
    
     text-align: center;
     color: rgba(34, 31, 31, 0.793);
     width: 90%;
-    display: flex;
-    flex-direction: column; /* Added this line */
     position: relative;
-    top: 20%;
-    left: 3%;
+    top: .3em;
+
   }
   
   
@@ -84,7 +89,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 60%;
     padding-top: 0%;
     padding-bottom: 0%;
   /* Adjust this value to control the spacing */
@@ -132,10 +137,16 @@ body {
     width: 100%;
   }
   
-  .main__btn--submit {
+  .main__btn{
+    width: 30em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cocmain__btn--submit {
     font-weight: 700;
-    height: 3em!important;
-    width: 10em !important;
+    height: 3em;
+    width: 10em;
     border-radius: 10px;
     background: #0002FF;
     color: white;
@@ -149,11 +160,42 @@ body {
  /* responsiveness starts here*/
 
 /* CSS rules for all mobile phones */
- @media (max-width: 599px) {
-.header__title {
-  font-size: 20px;
-  text-align: center;
-  flex-direction: column; /* Added this line */
+@media (min-width: 300px) {
+  .header__title>h1 {
+    font-size: 40px;
+  }
+  
+  .logo__image{
+      width: 10em;
+      height: 10em;
+  
+  }
+  
+    .userInput__input {
+      width: 100%;
+      height: 3em;
+      position: relative;
+      top: 2em;
+    }
+  
+    .cocmain__btn--submit{
+      width: 15em;
+      height: 3.5em;
+      position: relative;
+      top: 4em;
+  
+    }
+  
+  }
+  @media (min-width: 405px) {
+    .header__title>h1 {
+      font-size: 45px;
+    }
+  }
+
+ @media (min-width: 598px) {
+.header__title>h1 {
+  font-size: 53px;
 }
 
 .logo__image{
@@ -167,105 +209,128 @@ body {
 
   }
 
-}
-
-/* CSS rules for Medium (md) devices */
-@media (min-width: 833px) {
-
-  .main__btn--submit {
-    font-weight: 700;
-    height: 4em;
-    width: 12em;
-    border-radius: 10px;
-    background: #0002FF;
-    color: white;
+  .userInput__input {
+    width: 100%;
+    height: 3em;
+    position: relative;
+    top: 2em;
   }
-}
-/* CSS rules for Small (sm) devices */
-@media (min-width: 600px) and (max-width: 959px) {
 
-  .header__title {
-    font-size: 26px;
-    text-align: center;
-    flex-direction: column; /* Added this line */
+  .cocmain__btn--submit{
+    width: 50%;
+    height: 3.5em;
+    position: relative;
+    top: 3em;
+
+  }
+
+}
+@media (min-width: 825px) {
+  .header__title>h1 {
+    font-size: 60px;
   }
   
   .logo__image{
-      width: 14em;
+      width: 15em;
       height: 14em;
   
   }
-  .userInput__btn--randomiser {
-    padding-top: 1em;
-    width: 12em;
-   
-  }
-
-  .userInput__input {
-    width: 30em;
-  }
-    
   
- 
-}
-
-/* CSS rules for Medium (md) devices */
-@media (min-width: 750px) and (max-width: 1279px) {
-
-  .header__title {
-    font-size: 26px;
+    .userInput__input {
+      width: 100%;
+      height: 3.4em;
+      position: relative;
+      top: 3em;
+    }
+  
+    .cocmain__btn--submit{
+      width: 70%;
+      height: 3.8em;
+      position: relative;
+      top: 4em;
+  
+    }
+  
   }
-
-  .logo__image {
-    width: 13em;
-    height: 13em;
-  }
-
-  .userInput__btn--randomiser {
-    padding-top: 1em;
-    width: 13em;
-   
-  }
-
-  .userInput__input {
-    width: 40em;
-  }
-
-
-  .main__btn--submit {
-     height: 4.5em;
-
-    width: 30em;
-
-
-  }
-}
-
-
-/* CSS rules for Extra Large (xl) devices */
-@media (min-width: 1279px)  {
-  .header__title {
-    font-size: 29px;
-  }
-
-  .logo__image {
-    width: 12em;
-    height: 12em;
-  }
-
-  .userInput__btn--randomiser {
-    width: 13em;
-
-  }
-
-  .userInput__input {
-    width: 35em;
-  }
-
-
-
-  .main__btn--submit {
-    width: 28em;
-    height: 4em;
-  }
-}
+  @media (min-width: 1024px) {
+    .header__title>h1 {
+      font-size: 73px;
+    }
+    
+    .logo__image{
+        width: 18em;
+        height: 16em;
+    
+    }
+    
+      .userInput__input {
+        width: 100%;
+        height: 3.6em;
+        position: relative;
+        top: 4em;
+      }
+    
+      .cocmain__btn--submit{
+        width: 85%;
+        height: 4em;
+        position: relative;
+        top: 5em;
+    
+      }
+    
+    }
+    @media (min-width: 1360px) {
+      .header__title>h1 {
+        font-size: 78px;
+      }
+      
+      .logo__image{
+          width: 19em;
+          height: 17em;
+      
+      }
+      
+        .userInput__input {
+          width: 100%;
+          height: 4em;
+          position: relative;
+          top: 5em;
+        }
+      
+        .cocmain__btn--submit{
+          width: 95%;
+          height: 4em;
+          position: relative;
+          top: 6em;
+      
+        }
+      
+      }
+      @media (min-width: 2000px) {
+        .header__title>h1 {
+          font-size: 85px;
+        }
+        
+        .logo__image{
+            width: 21em;
+            height: 19em;
+        
+        }
+        
+          .userInput__input {
+            width: 100%;
+            height: 4.3em;
+            position: relative;
+            top: 6em;
+          }
+        
+          .cocmain__btn--submit{
+            width: 95%;
+            height: 4em;
+            position: relative;
+            top: 7em;
+        
+          }
+        
+        }
+  
