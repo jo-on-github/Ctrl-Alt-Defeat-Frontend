@@ -85,7 +85,7 @@ function App() {
  
 
   async function getCity(city) {
-    const response = await fetch(`http://localhost:4000/guide?city=${city}`, {
+    const response = await fetch(`https://ctrl-alt-defeat-backend.onrender.com/guide?city=${city}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
     });
@@ -110,7 +110,7 @@ function App() {
   
   useEffect(() => {
     async function getAllUsers() {
-      const response = await fetch("http://localhost:4000/users", {
+      const response = await fetch("https://ctrl-alt-defeat-backend.onrender.com/users", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
