@@ -231,13 +231,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 5em;
-    height: 3em;
-    font-size: 12px;
-    padding-top: 10em;
-    padding-bottom: 3em;
-    padding-left: 10.5em;
+    height: 10em;
+  
   }
   
   .main__form--submit > button {
@@ -257,7 +252,7 @@
 
   /*Media queries start here */
 
-@media (min-width: 599px) {
+/* @media (min-width: 599px) {
 
  .form__experience--title {
     padding-top: 10em;
@@ -308,10 +303,10 @@
       }
       
 
-}
+} */
 
 
-@media (min-width: 833px) {
+/* @media (min-width: 833px) {
 
   .form__experience--title {
     padding-top: 7em;
@@ -400,7 +395,7 @@
         padding: 1em;
       }
 
-}
+} */
 
 
 @media (min-width: 1279px)  {
