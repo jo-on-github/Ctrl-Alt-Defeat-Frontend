@@ -7,15 +7,12 @@ import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import "./styles.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import NavBar from "../NavBar";
 
 function CreateAGuide({ imageUrl, altText, token, getCity }) {
   const buttonStyle = {
     color: "black",
   };
-
-  const [guideImage, setGuideImage] = useState(""); // State to store the image source
 
   const [submissionSuccess, setSubmissionSuccess] = useState(false); // Form submission success flag
   const [formData, setFormData] = useState({
@@ -108,11 +105,6 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
     }
   };
 
-  const addHighlight = () => {
-    const newHighlights = [...highlights, inputValue];
-    setHighlights(newHighlights);
-    setFormData({ ...formData, highlights: newHighlights });
-  };
 
   const deleteHighlight = (index) => {
     setHighlights((prevHighlights) => {
@@ -147,14 +139,6 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
     }
   };
 
-  const handlePictureChange = (event) => {
-    const file = event.target.files[0]; // Get the selected file
-    const reader = new FileReader();
-
-    reader.onload = (e) => {
-      setGuideImage(e.target.result); // Set the selected image as the profile picture
-    };
-  };
 
   return (
     <div className="createAGuide_Overlay">
