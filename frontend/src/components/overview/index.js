@@ -11,7 +11,7 @@ export default function Overview({ chosenCity, setChosenCity }) {
         if (storedCity) {
             setChosenCity(JSON.parse(storedCity));
         }
-    });
+    }, [setChosenCity]);
 
     const { id } = useParams();
 
