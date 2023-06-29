@@ -83,10 +83,13 @@
   }
   
   .form__dropdown--title {
+    width: 50%;
     color:white;
     position: relative;
     top: 2.7em;
     font-size: 13px;
+    display: flex;
+    justify-content: center;
 
   }
   
@@ -252,60 +255,6 @@
   
   /*Media queries start here */
 
-/* @media (min-width: 599px) {
-
- .form__experience--title {
-    padding-top: 10em;
-      }
-
-      .form__experience--textArea {
-        height: 10em;
-        width: 20em;
-        padding-bottom: 1em;
-      }
-    
-      .form__experience--textAreaBox{
-        height: 10em;
-        width: 10em;
-        padding-top:5em;
-        padding-bottom: 1em;
-        padding-left: 7.75em;
-        font-size: 20px;
-      }
-
-      .form__budget--radio {
-        display: flex;
-        justify-content: space-evenly;
-        width: 85%;
-        color: white;
-      }
-
-      .main__form--budget {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-      }
-    
-      .main__form--submit {
-        width: 5em;
-        height: 3em;
-        padding-top: 13em;
-        padding-bottom: 3em;
-        padding-left: 18em;
-      }
-      
-      .main__form--submit > button {
-        width: 10em;
-        height: 3em;
-
-      }
-      
-
-} */
-
-
 @media (min-width: 700px) {
 
   .main__form--input{
@@ -316,6 +265,7 @@
     height: 0.2em;
     padding: 15px;
     margin-bottom: 1em;
+    font-size: .8em;
   }
   .form__dropdown--title{
     margin-top: .3em;
@@ -364,4 +314,130 @@
   }
   
   
+}
+@media (min-width: 1070px) {
+
+  .main__form--input{
+    font-size: 26px;
+  }
+  .main__form--input>input{
+    width: 32em;
+    height: 0.5em;
+    padding: 15px;
+    margin-bottom: 1em;
+  }
+  .form__dropdown--title{
+    margin-top: 1.2em;
+    font-size: 1em;
+    margin-bottom: .5em;
+  }
+  .form__dropdown--options>select{
+    position: relative;
+    width: 23em;
+    height: 3.2em;
+    margin-top: .3em;
+    font-size: 1em;
+    right: 1.5em;
+  }
+  .main__form--budget{
+    margin-top: 1em;
+    font-size: 24px;
+  }
+  .form__budget--radio{
+    width: 75%;
+  }
+  .form__highlight--title{
+    font-size: 24px;
+  }
+  .form__highlight--btn{
+    width: 21.5em;
+    height: 3em;
+    font-size: 16px;
+  }
+  .form__highlight--list{
+    width: 25em;
+    height: 11em;
+    font-size: 16px;
+  }
+  .form__experience--title{
+    font-size: 19px;
+    margin-top: 2.3em;
+  }
+  .form__experience--textArea>textarea{
+    height: 8em;
+    width: 23em;
+    padding-bottom: 3em;
+    font-size: 16px;
+    margin-bottom: .5em;
+  }
+  .main__form--submit > button{
+    width: 10em;
+    height: 3em;
+    color: white;
+    font-size: 15px;
+    margin-top: 4em;
+  }
+}
+@media (min-width: 1550px) {
+
+  .main__form--input{
+    font-size: 33px;
+  }
+  .main__form--input>input{
+    width: 36em;
+    height: 1em;
+    padding: 17px;
+    margin-bottom: 2em;
+    font-size: .5em;
+  }
+  .form__dropdown--title{
+    margin-top: 1.7em;
+    margin-bottom: .6em;
+    font-size: 1.2em;
+  }
+  .form__dropdown--options>select{
+    position: relative;
+    width: 25em;
+    height: 3.2em;
+    margin-top: .3em;
+    right: 2.4em;
+  }
+  .main__form--budget{
+    margin-top: 1em;
+    font-size: 32px;
+  }
+  .form__budget--radio{
+    width: 65%;
+  }
+  .form__highlight--title{
+    font-size: 32px;
+  }
+  .form__highlight--btn{
+    width: 21.5em;
+    height: 3em;
+    font-size: 18px;
+  }
+  .form__highlight--list{
+    width: 25em;
+    height: 10em;
+    font-size: 18px;
+  }
+  .form__experience--title{
+    font-size: 20px;
+    margin-top: 2.3em;
+  }
+  .form__experience--textArea>textarea{
+    height: 12em;
+    width: 25em;
+    padding-bottom: 3em;
+    font-size: 18px;
+    margin-bottom: .5em;
+  }
+  .main__form--submit > button{
+    width: 10em;
+    height: 3em;
+    color: white;
+    font-size: 15px;
+    margin-top: 4em;
+  }
 }
