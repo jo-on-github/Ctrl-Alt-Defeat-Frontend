@@ -95,7 +95,7 @@
     
 }
 .login_container__form > form > button{
-    width: 18em;
+    width: 19em;
     height: 3em;
     padding: 10px;
     text-align: center;
@@ -120,7 +120,7 @@ h4{
     bottom: 65%;
 }
 .login_container__signup_container button{
-    width: 18em;
+    width: 19em;
     height: 3em;
     padding: 10px;
     text-align: center;
