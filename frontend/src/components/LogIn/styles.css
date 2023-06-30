@@ -21,11 +21,14 @@
     flex-direction: column;
     justify-content: center;
     font-size: .6em;
+    
 }
 .header>h1{
     margin-bottom: 1px;
     font-family: Product-Sans;
     font-size:40px;
+    text-align: center;
+    
 }    
 
 .header__img--logo {

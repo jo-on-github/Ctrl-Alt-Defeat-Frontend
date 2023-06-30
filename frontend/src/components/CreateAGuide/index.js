@@ -55,7 +55,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
 
     try {
       // Make POST request to /users endpoint and pass form data state as the body
-      const response = await postGuide("http://localhost:4000/guide", formData);
+      const response = await postGuide("https://ctrl-alt-defeat-backend.onrender.com/guide", formData);
       console.log(response);
       // Get city data to update the city page
       getCity(token.userLocation);

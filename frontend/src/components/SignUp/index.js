@@ -96,7 +96,7 @@ function SignUp({ allUsers }) {
         }
         try {
           // Make POST request to /users endpoint and pass form data state as the body
-          const response = await postData('http://localhost:4000/users', formData);
+          const response = await postData('https://ctrl-alt-defeat-backend.onrender.com/users', formData);
           console.log(response);
           // Set submission success flag
           setSubmissionSuccess(true);
