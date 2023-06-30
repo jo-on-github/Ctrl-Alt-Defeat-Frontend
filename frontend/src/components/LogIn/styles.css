@@ -10,6 +10,7 @@
 
 .header__title{
    position: relative;
+   text-align: center;
    left: 0;
     font-family: Product-Sans;
 }
