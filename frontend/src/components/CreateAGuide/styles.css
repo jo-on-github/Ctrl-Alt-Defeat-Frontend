@@ -28,7 +28,11 @@
   
 .navBar__top--title{
   position: relative;
-  left: -5%;
+
+}
+
+.empty__div {
+  width: 3em;
 
 }
 

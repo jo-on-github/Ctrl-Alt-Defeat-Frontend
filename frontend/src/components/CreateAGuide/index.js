@@ -152,7 +152,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
         <div className="navBar__top--title">
           <h1>Create A Guide</h1>
         </div>
-        <div></div>
+        <div className='empty__div'></div>
       </Paper>
       <div className="main_gO">
         <div className="main__form">
