@@ -170,6 +170,19 @@ h4{
        
     }
 }
+
+
+@media (min-width: 1050px){
+
+    .login_container__form > form > input{
+        width: 561px;
+    
+        
+    }
+
+
+}
+
 @media (min-width: 1500px) {
     .header>h1{
               font-size: 70px;
@@ -184,7 +197,7 @@ h4{
         font-size: 1.5em;
     }
     .login_container__form > form > input{
-        width: 50%;
+        width: 561px;
         height: 18%;
         padding: 13px;
     }

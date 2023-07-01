@@ -42,27 +42,32 @@
   }
 }
 
-@media (min-width: 834px) {
+
+@media (min-width: 1100px) {
   .listItem {
-    width: 9em;
-    height: 9em;
+    width: 13em;
+    height: 13em;
   }
 
-  .listItem__icons {
-    width: 9em;
-    height: 2em;
-  }
 }
 
 @media (min-width: 1279px) {
   .listItem {
-    width: 6em;
-    height: 6em;
+    width: 14em;
+    height: 14em;
+  }
+
+}
+
+@media (min-width: 1528px) {
+  .listItem {
+    width: 18em;
+    height: 18em;
   }
 
   .listItem__icons {
-    width: 9em;
-    height: 2em;
+    width: 27em;
+    height: 5em;
     white-space: 10em;
   }
 }
