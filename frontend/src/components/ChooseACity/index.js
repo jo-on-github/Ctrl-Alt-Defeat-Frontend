@@ -69,13 +69,14 @@ function ChooseACity({updateCity, city, getCity}) {
                     placeholder="🔍      Choose your location..."
                     onChange={handleInputChange}
                     onKeyDown={enterKeyPressed}
+                    data-testid="city-input"
                 /> 
             </div>
 
             <div className="main">
                 
                 <div className="main__btn">
-                    <button className="cocmain__btn--submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
+                    <button className="cocmain__btn--submit" data-testid="city-submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
                     </div>
             </div>
         </div>
