@@ -140,7 +140,11 @@ function SignUp({ allUsers }) {
                     <KeyboardBackspaceIcon />
                 </Button>
                 </div>
-                <h1 className="header__title">Welcome To Neighbourhood Nomad</h1>
+                <div className="header__signup--title">
+                <h1>Welcome To Neighbourhood Nomad</h1>
+                </div>
+                <div className="empty__div">
+                </div>
             </div>
             <div className="signup_container">
                 <div className="signup_container__title">

@@ -28,7 +28,11 @@
   
 .navBar__top--title{
   position: relative;
-  left: -5%;
+
+}
+
+.empty__div {
+  width: 3em;
 
 }
 
@@ -149,7 +153,10 @@
     justify-content: center;
     color: black;
     background-color: white;
+    text-align: center;
     opacity: 50%;
+    height: 2rem;
+    width: 15rem;
   }
   
   .form__highlight--btn {
@@ -203,7 +210,7 @@
 
   .form__highlight--list {
     display: flex;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -212,6 +219,13 @@
     background-color: white;
     opacity: 40%;
     margin-bottom: 80px;
+  }
+
+  .form__highlight--list > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
   }
   
   .deleteHighlightButton {
