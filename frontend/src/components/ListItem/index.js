@@ -6,7 +6,8 @@ import './styles.css';
 function ListItem ({title, city, id, image}) {
 
     const iconStyle = {
-        color: 'white'
+        color: 'white',
+        fontSize: '2rem'
     }
     return (
         <div className='listItem'  

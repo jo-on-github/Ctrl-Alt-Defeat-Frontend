@@ -14,6 +14,10 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
     color: "black",
   };
 
+  const cancelStyle = {
+    color: "white",
+};
+
   const [formData, setFormData] = useState({
     // Form data in the structure of the schema defined in the backend
     city: `${token.userLocation}`,
@@ -152,7 +156,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
         <div className="navBar__top--title">
           <h1>Create A Guide</h1>
         </div>
-        <div></div>
+        <div className='empty__div'></div>
       </Paper>
       <div className="main_gO">
         <div className="main__form">
@@ -293,7 +297,7 @@ function CreateAGuide({ imageUrl, altText, token, getCity }) {
                     onChange={handleInputChange}
                     onKeyPress={handleInputKeyPress}
                   />
-                  <Button onClick={handleCancel}>Cancel</Button>
+                  <Button style={cancelStyle} onClick={handleCancel}>Cancel</Button>
                 </div>
               ) : (
                 <div className="highlightBtnDiv">
