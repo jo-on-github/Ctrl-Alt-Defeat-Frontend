@@ -3,6 +3,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url("https://plus.unsplash.com/premium_photo-1676517031869-8b518857919d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80");
+    background-size: cover;
+    background-position: center;
 }
 .signup__header{
     width: 100%;
@@ -13,15 +16,18 @@
 }
 
 
-
-
-
-.header__title{
-    font-size: 25px;
-    font-weight: bold;
-    position: relative;
-    right: 1em;
+.header__signup--title{
+   width: 100%;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+    margin-left: 1.5em;
+    font-size: 15px;
 }
+
+
+
 .signup_container{
     width: 100%;
     height: 90%;
@@ -29,9 +35,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-image: url("https://plus.unsplash.com/premium_photo-1676517031869-8b518857919d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80");
+    margin-top: 3em;
+   
 }
 .signup_container__title{
     width: 100%;
