@@ -276,10 +276,6 @@ h4{
     
 }
 @media (max-height: 683px){
-    .login_container__signup_container{
-        border: 1px solid red;
-        margin-top: 3em;
-    }
     .login_container__signup_container>h4{
         position: relative;
         top: .1em;
@@ -287,9 +283,6 @@ h4{
 
 }
 @media (max-height: 650px){
-    .login_container__signup_container{
-        margin-top: 1.5em;
-    }
     .login_container__signup_container>h4{
         position: relative;
         top: .1em;
