@@ -6,7 +6,7 @@ import cityRandomData from "../../dummyData/cityRandom";
 function ChooseACity({updateCity, city, getCity}) {
 
     const [errorMessage, setErrorMessage] = useState("");
-    const [about, setAbout] = useState(true)
+    const [about, setAbout] = useState(false)
     const navigate = useNavigate();
 
     async function handleClickSubmit(event) {
