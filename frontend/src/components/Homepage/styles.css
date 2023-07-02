@@ -101,11 +101,9 @@ a {
 
 .main__listItems {
 width: 80%;
+padding-bottom: 50px;
 }
-/* .main__list {
-  height: 35em;
-  width: 95%;
-} */
+
 
 
 .footer {
