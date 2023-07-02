@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState }from "react";
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
 import cityRandomData from "../../dummyData/cityRandom";
 
 function ChooseACity({updateCity, city, getCity}) {
 
-    const [errorMessage, setErrorMessage] = React.useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+    const [about, setAbout] = useState(true)
     const navigate = useNavigate();
 
     async function handleClickSubmit(event) {
@@ -41,6 +42,10 @@ function ChooseACity({updateCity, city, getCity}) {
         setErrorMessage("");
       }
 
+    function handleAboutClick(){
+        setAbout(!about)
+    }
+
     return (
         <div className="overlayChooseACity">
             {errorMessage && 
@@ -48,6 +53,17 @@ function ChooseACity({updateCity, city, getCity}) {
                 <div 
                     className="error">{errorMessage} 
                     <button onClick={handleErrorClick}>Okay!</button>
+                </div>
+            </div>}
+            {about && 
+            <div className="aboutModal-overlay">
+                <div className="classModal-container">
+                    <div className="aboutModal-container__about">
+                        <p>test</p>
+                    </div>
+                    <div className="aboutModal-container__btn">
+                        <button onClick={handleAboutClick}>Go Back</button>
+                    </div>
                 </div>
             </div>}
             <div className="header">
