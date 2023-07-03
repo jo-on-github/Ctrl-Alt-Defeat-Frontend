@@ -29,6 +29,65 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
+  .aboutModal-overlay {
+    border: 1px solid red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  .aboutModal-container__header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #0002FF;
+    position: relative;
+    bottom: 10px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+  }
+  .classModal-container{
+    width: 22em;
+    height: 31em;
+    padding: 5px 0 5px 0;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .aboutModal-container__body{
+    width: 95%;
+    text-align: center;
+  }
+  .aboutModal-container__body--list{
+    width: 70%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .aboutModal-container__body--list li{
+    margin-right: 20px;
+  }
+  .aboutModal-container__btn button{
+    width: 10em;
+    height: 3em;
+    border-radius: 10px;
+    background: #0002FF;
+    color: white;
+    margin-top: 1em;
+    font-weight: 700;
+    
+  }
+
 
   .error{
     width: 17em;
@@ -72,6 +131,7 @@ body {
     width: 90%;
     position: relative;
     top: .3em;
+    letter-spacing: 1.5px;
 
   }
   
@@ -149,9 +209,20 @@ body {
     width: 10em;
     border-radius: 10px;
     background: #0002FF;
+    color: white; 
+    border: 1px solid transparent;
+  }
+  .main__about>button{
+
+    border: 1px solid transparent;
+    margin-bottom: 10px;
     color: white;
-    
-    
+    background-color: #7d7d8f76;
+    border-radius: 10px;
+    width: 9.8em;
+    letter-spacing: 2px;
+    transform: skewX(-15deg);
+    text-align: center;
   }
 
 
@@ -264,10 +335,11 @@ body {
     }
     
       .userInput__input {
-        width: 100%;
+        width: 80%;
         height: 3.6em;
         position: relative;
         top: 4em;
+        font-size: 15px;
       }
     
       .cocmain__btn--submit{
