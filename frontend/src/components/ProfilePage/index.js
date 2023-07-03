@@ -4,7 +4,7 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import "./styles.css";
 import profileImg from "../../assets/profileImg.png";
 import { useNavigate, Link } from "react-router-dom";
-
+import LogoutButton from "../LogoutButton";
 
 function ProfilePage({token}) {
     
@@ -32,7 +32,9 @@ function ProfilePage({token}) {
                         <KeyboardBackspaceIcon  />
                     </button>
                 </div>
-
+                <div className='logoutButton'>
+                    <LogoutButton />
+                    </div>
                 
             </div>
             <div className="profile">
