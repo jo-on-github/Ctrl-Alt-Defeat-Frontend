@@ -93,7 +93,7 @@
 .middleNavBar {
   background-color: #0002FF;
   height: 4rem;
-  width: 75%;
+  width: 65%;
   border-radius: 42px;
   display: flex;
   justify-content: space-between;
@@ -194,6 +194,17 @@
     margin-right: 1em;
     margin-top: 1em;
   }
+  .guideSubHeader__additionalIcons--favourite{
+    position: relative;
+    right: 7em;
+    bottom: .3em;
+  }
+  .guide__img>img{
+    height: 90%;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
   .middleNavBar{
     font-size: 15px;
     padding: 2px 5px 2px 0;
@@ -204,7 +215,14 @@
 
     .guideSubHeader__additionalIcons--favourite{
       position: relative;
-      right: 2em;
+      right: 9em;
+      bottom: .3em;
+    }
+    .guide__img>img{
+      height: 90%;
+      width: 50%;
+      border-radius: 10px;
+      margin-top: 5px;
     }
   }
 
@@ -216,7 +234,7 @@
 
   .guideSubHeader__additionalIcons--favourite{
     position: relative;
-    right: 3.5em;
+    right: 8em;
     bottom: .3em;
   }
 
@@ -227,57 +245,102 @@
   }
   .guide__img>img{
     height: 90%;
-    width: 75%;
+    width: 55%;
     border-radius: 10px;
     margin-top: 5px;
   }
-
+  @media (min-width: 800px){
+      
+      .guideSubHeader__additionalIcons--favourite{
+        position: relative;
+        right: 9em;
+        bottom: .3em;
+      }
+      .guide__img>img{
+        height: 90%;
+        width: 55%;
+        border-radius: 10px;
+        margin-top: 5px;
+      }
+  }
 
 }
 @media (min-width: 900px) {
 
   .guideSubHeader__additionalIcons--favourite{
     position: relative;
-    right: 6.5em;
+    right: 10em;
     bottom: .3em;
   }
 
   .guide__img>img{
-    height: 92%;
-    width: 67%;
+    height: 90%;
+    width: 55%;
     border-radius: 10px;
     margin-top: 5px;
   }
   .middleNavBar{
-    width: 70%;
+    width: 65%;
   }
 
 
 }
 
-/* Responsiveness for extra large screens */
-@media (min-width: 1279px) {
-
-  .guideOverlay {
-    margin-top: 6em;
-  }
-  .guideHeader__heading {
-    width: 60%;;
+@media (min-width: 1000px) {
+  .guideSubHeader__additionalIcons--favourite {
+    position: relative;
+    right: 13.5em;
+    bottom: .3em;
   }
 
-  .guideHeader__heading--title {
-    height: 80%;
+  .guide__img > img {
+    height: 90%;
+    width: 48%;
+    border-radius: 10px;
+    margin-top: 5px;
   }
-
-  .guideHeader__heading--title>h5 {
-    margin-top: -1em;
+  .middleNavBar {
+    width: 65%;
   }
-
-  .guideHeader__img--profile {
-    height: 3.5em;
-    width: 3.5em;
-    margin-right: 1em;
-    margin-top: 0.7em;
-  }
-
 }
+
+@media (min-width: 1100px) {
+  .guideSubHeader__additionalIcons--favourite {
+    position: relative;
+    right: 15em;
+    bottom: .3em;
+  }
+
+  .guide__img > img {
+    height: 90%;
+    width: 48%;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .middleNavBar {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .guideSubHeader__additionalIcons--favourite {
+    position: relative;
+    right: 16.8em;
+    bottom: .3em;
+  }
+
+  .guide__img > img {
+    height: 90%;
+    width: 45%;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .middleNavBar {
+    width: 63%;
+  }
+}
+
+
+
+
+
