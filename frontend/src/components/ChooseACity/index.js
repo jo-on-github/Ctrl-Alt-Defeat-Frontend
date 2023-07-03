@@ -6,7 +6,7 @@ import cityRandomData from "../../dummyData/cityRandom";
 function ChooseACity({updateCity, city, getCity}) {
 
     const [errorMessage, setErrorMessage] = useState("");
-    const [about, setAbout] = useState(false)
+    const [about, setAbout] = useState(true)
     const navigate = useNavigate();
 
     async function handleClickSubmit(event) {
@@ -121,6 +121,9 @@ function ChooseACity({updateCity, city, getCity}) {
                     <button className="cocmain__btn--submit" data-testid="city-submit" onClick={handleClickSubmit}>EXPLORE CITY</button>
                     </div>
             </div>
+                <div className="main__about">
+                    <button className="main__about--btn" onClick={handleAboutClick}>About Us & App Info</button>
+                </div>
         </div>
     );
 }
