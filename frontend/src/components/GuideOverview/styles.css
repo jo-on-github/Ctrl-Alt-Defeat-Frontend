@@ -71,21 +71,29 @@
   display: flex;
   justify-content: space-between;
 }
+.guideSubHeader__additionalIcons--favourite{
+  position: relative;
+  right: 2.5em;
+}
 
 .guide__img{
   height: 37%;
   width: 90%;
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .guide__img>img{
   height: 85%;
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 .middleNavBar {
   background-color: #0002FF;
   height: 4rem;
+  width: 75%;
   border-radius: 42px;
   display: flex;
   justify-content: space-between;
@@ -137,12 +145,32 @@
   width: 95%;
 }
 
+@media (min-width: 280px){
 
+  .guideOverlay {
+    margin-top: 4.5em;
+  }
+  .guideSubHeader__additionalIcons--favourite{
+    position: relative;
+    right: 1em;
+  }
+  .middleNavBar{
+    font-size: 13px;
+  }
+
+}
+@media (min-width: 450px){
+
+  .guideSubHeader__additionalIcons--favourite{
+    position: relative;
+    right: 1.5em;
+  }
+}
 
 
 
 /* Responsiveness for small screens */
-@media (max-width: 559px) {
+@media (min-width: 525px) {
   .guideOverlay {
     margin-top: 6em;
   }
@@ -166,51 +194,65 @@
     margin-right: 1em;
     margin-top: 1em;
   }
-
-  .guideSubHeader {
-    margin-top: 0;
+  .middleNavBar{
+    font-size: 15px;
+    padding: 2px 5px 2px 0;
+    
   }
 
-  .guide__img {
-    height: 30%;
-    width: 90%;
+  @media (min-width: 637px){
+
+    .guideSubHeader__additionalIcons--favourite{
+      position: relative;
+      right: 2em;
+    }
   }
+
+
 }
 
 /* Responsiveness for mid screens */
-@media (min-width: 834px) {
-  .guideOverlay {
-    margin-top: 9em;
+@media (min-width: 700px) {
+
+  .guideSubHeader__additionalIcons--favourite{
+    position: relative;
+    right: 3.5em;
+    bottom: .3em;
   }
 
-  .guideHeader__heading {
-    width: 100%;
+  .middleNavBar{
+    font-size: 17px;
+    padding: 4px 5px 4px 0;
+    
+  }
+  .guide__img>img{
+    height: 90%;
+    width: 75%;
+    border-radius: 10px;
+    margin-top: 5px;
   }
 
-  .guideHeader__heading--title {
-    height: 100%;
+
+}
+@media (min-width: 900px) {
+
+  .guideSubHeader__additionalIcons--favourite{
+    position: relative;
+    right: 6.5em;
+    bottom: .3em;
   }
 
-  .guideHeader__heading--title>h5 {
-    margin-top: 1em;
-    margin-left: 1em;
+  .guide__img>img{
+    height: 92%;
+    width: 67%;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .middleNavBar{
+    width: 70%;
   }
 
-  .guideHeader__img--profile {
-    height: 5em;
-    width: 5em;
-    margin-right: 1em;
-    margin-top: 1em;
-  }
 
-  .guideSubHeader {
-    margin-top: 0;
-  }
-
-  .guide__img {
-    height: 30%;
-    width: 90%;
-  }
 }
 
 /* Responsiveness for extra large screens */
