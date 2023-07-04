@@ -30,7 +30,6 @@ body {
     z-index: 999;
   }
   .aboutModal-overlay {
-    border: 1px solid red;
     position: fixed;
     top: 0;
     left: 0;
