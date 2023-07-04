@@ -1,6 +1,7 @@
 import React from 'react';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import './styles.css';
+import { Button } from '@mui/material';
 
 
 function ListItem ({title, city, id, image}) {
@@ -18,7 +19,9 @@ function ListItem ({title, city, id, image}) {
         theme xs={4} sm={5} md={7} lg={9} xl={9}>
             <div className='listItem__icons'>
                 <div className='listItem__icons--favourite'>
-                    <BookmarkBorderOutlinedIcon style={iconStyle} />
+                    <Button>
+                        <BookmarkBorderOutlinedIcon style={iconStyle} />
+                    </Button>
                 </div>
             </div>
             <div className='listItem__title'>
