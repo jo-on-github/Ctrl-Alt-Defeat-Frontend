@@ -137,7 +137,7 @@ function App() {
         ) : (
           <Route path="/" element={<div>Redirecting...</div>} />
         )}
-        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} />} />
+        <Route path="/home" element={<Homepage city={city} chosenCity={chosenCity} token={token} />} />
         <Route path="/planner" element={<Itinerary />} />
         <Route path="/guide" element={<GuideOverview chosenCity={chosenCity} setChosenCity={setChosenCity}/>}>
           <Route path="/guide/:id/overview" element={<Overview chosenCity={chosenCity} setChosenCity={setChosenCity} />} />

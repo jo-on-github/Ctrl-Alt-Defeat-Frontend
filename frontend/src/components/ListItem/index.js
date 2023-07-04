@@ -4,7 +4,7 @@ import './styles.css';
 import { Button } from '@mui/material';
 
 
-function ListItem ({title, city, id, image}) {
+function ListItem ({title, city, id, image, handleListFavouriteClick}) {
 
     const iconStyle = {
         color: 'white',
@@ -19,7 +19,7 @@ function ListItem ({title, city, id, image}) {
         theme xs={4} sm={5} md={7} lg={9} xl={9}>
             <div className='listItem__icons'>
                 <div className='listItem__icons--favourite'>
-                    <Button>
+                    <Button onClick={handleListFavouriteClick}>
                         <BookmarkBorderOutlinedIcon style={iconStyle} />
                     </Button>
                 </div>
