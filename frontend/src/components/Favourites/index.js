@@ -8,9 +8,10 @@ import { NavLink } from "react-router-dom";
 import NavBar from "../NavBar";
 
 
-function Favourites(imageUrl,altText,token) {
+function Favourites({imageUrl,altText,token}) {
   
   const [favourites, setFavourites] = useState([]);
+  console.log(token.userId)
 
 useEffect(() => {
   async function getFavourites() {
@@ -23,7 +24,8 @@ useEffect(() => {
     console.log(favourites);
   }
   getFavourites();
-}, [favourites, token.userId]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [token.userId]);
 
   const buttonStyle = {
     color: "black",
