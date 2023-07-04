@@ -92,7 +92,7 @@
 }
 .middleNavBar {
   background-color: #0002FF;
-  height: 4em;
+  /* height: 4em; */
   width: 65%;
   border-radius: 42px;
   display: flex;
