@@ -58,12 +58,7 @@ function GuideOverview({chosenCity, setChosenCity}) {
 
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
-        </div>
-        <div className="guideSubHeader__additionalIcons">
-          
-          <div div className="guideSubHeader__additionalIcons--favourite">
-            <BookmarkBorderOutlinedIcon sx={{position: "relative", top: "1em"}} />
-          </div>
+            <BookmarkBorderOutlinedIcon  />
         </div>
       </div>
       <div className="guide__img">

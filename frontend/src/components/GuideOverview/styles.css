@@ -60,21 +60,15 @@
 }
 
 .guideSubHeader {
-    width: 95%;
+    width: 50%;
     height: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    position: relative;
+    top: 1.2em;
     
 }
-.guideSubHeader__icons{
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-}
-.guideSubHeader__additionalIcons--favourite{
-  position: relative;
-  right: 2.5em;
-}
+
 
 .guide__img{
   height: 37%;
@@ -297,6 +291,10 @@
     position: relative;
     right: 13.5em;
     bottom: .3em;
+  }
+
+  .guideSubHeader{
+    width: 45%;
   }
 
   .guide__img > img {

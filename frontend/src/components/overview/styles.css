@@ -50,24 +50,8 @@
   align-items: center;
 } */
 
-.guideSubHeader {
-    width: 89%;
-    height: 3%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.guideSubHeader__icons {
-    width: 40px;
-    height: 30px;
-    margin-right: 3em;
-    margin-left: 1.5em;
-    justify-content: space-between;
-    display: flex;
-    margin-top: 0.25em;
-    cursor: pointer;
-}
+
 
 .guideHeader {
     width: 100%;
