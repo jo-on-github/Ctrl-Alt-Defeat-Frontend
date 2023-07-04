@@ -25,6 +25,12 @@ function App() {
   const [token, setToken] = useState(null);
   const [allUsers, setAllUsers] = useState([]);
 
+  // change document title
+
+  useEffect(() => {
+    document.title = "Neighbourhood Nomad";
+  }, []);
+
   useEffect(() => {
     // Check if the user has a JWT stored and if it's expired
     const token = localStorage.getItem("token");
