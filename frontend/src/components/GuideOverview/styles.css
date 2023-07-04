@@ -92,7 +92,7 @@
 }
 .middleNavBar {
   background-color: #0002FF;
-  height: 4rem;
+  height: 4em;
   width: 65%;
   border-radius: 42px;
   display: flex;
@@ -145,17 +145,23 @@
   width: 95%;
 }
 
-@media (min-width: 280px){
+@media (min-width: 260px){
 
   .guideOverlay {
     margin-top: 4.5em;
   }
   .guideSubHeader__additionalIcons--favourite{
-    position: relative;
-    right: 1em;
+   
+    margin-right: 3.5em;
+  }
+  .guide__img>img{
+    height: 70%;
+    width: 55%;
+    border-radius: 10px;
+    
   }
   .middleNavBar{
-    font-size: 13px;
+    font-size: 12px;
   }
 
 }

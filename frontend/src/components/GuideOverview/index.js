@@ -58,14 +58,6 @@ function GuideOverview({chosenCity, setChosenCity}) {
 
       <div className="guideSubHeader">
         <div className="guideSubHeader__icons">
-          {/* <div className="guideSubHeader__icons--thumbUp">
-            <ThumbUpAltOutlinedIcon style={buttonStyle} />
-            <span className="guideSubHeader__icons--thumbUpRating">88%</span>
-          </div>
-          <div className="guideSubHeader__icons--thumbDown">
-            <ThumbDownAltOutlinedIcon style={buttonStyle} />
-            <span className="guideSubHeader__icons--thumbDownRating">12%</span>
-          </div> */}
         </div>
         <div className="guideSubHeader__additionalIcons">
           
