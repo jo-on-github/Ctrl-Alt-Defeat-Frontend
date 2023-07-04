@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Paper from "@mui/material/Paper";
@@ -7,8 +7,26 @@ import {useNavigate, useLocation} from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import NavBar from "../NavBar";
 
-function Favourites(imageUrl,altText) {
+
+function Favourites({imageUrl,altText,token}) {
   
+  const [favourites, setFavourites] = useState([]);
+  console.log(token.userId)
+
+useEffect(() => {
+  async function getFavourites() {
+    const response = await fetch(`https://ctrl-alt-defeat-backend.onrender.com/favourites/${token.userId}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+    });
+    const data = await response.json();
+    setFavourites(data);
+    console.log(favourites);
+  }
+  getFavourites();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [token.userId]);
+
   const buttonStyle = {
     color: "black",
   };

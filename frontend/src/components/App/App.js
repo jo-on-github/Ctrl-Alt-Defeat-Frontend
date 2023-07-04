@@ -147,7 +147,7 @@ function App() {
         <Route path="/createaguide" element={<CreateAGuide token={token} getCity={getCity}/>} />
         <Route path="/ProfilePage" element={<ProfilePage token={token}/>} />
         <Route path="/ProfilePage/edit" element={<EditProfilePage />} />
-        <Route path="/Favourites" element={<Favourites />} />
+        <Route path="/favourites" element={<Favourites token={token} />} />
       </Routes>
     </div>
   );}
