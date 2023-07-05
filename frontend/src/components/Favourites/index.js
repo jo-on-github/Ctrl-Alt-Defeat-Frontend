@@ -11,7 +11,7 @@ import NavBar from "../NavBar";
 function Favourites({imageUrl,altText,token}) {
   
   const [favourites, setFavourites] = useState([]);
-  console.log(token.userId)
+
 
 useEffect(() => {
   async function getFavourites() {

@@ -10,7 +10,7 @@ import Grid from "@mui/material/Grid";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Link } from "react-router-dom";
 
-function Homepage({ city, chosenCity, setChosenCity }) {
+function Homepage({ city, chosenCity, setChosenCity, token }) {
     console.log(chosenCity);
 
     const [filterClicked, setFilterClicked] = useState(false);
@@ -20,6 +20,25 @@ function Homepage({ city, chosenCity, setChosenCity }) {
     const [selectedTitle, setSelectedTitle] = useState(""); // holds the user input from the search bar
 
     const handleListItemClick = (id) => {};
+
+    const handleListFavouriteClick = (id) => {
+        // Send a request to the backend to add the guide ID to the favorites
+        const addFavorite = async () => {
+          try {
+             await fetch(`https://ctrl-alt-defeat-backend.onrender.com/favourites/${token.userId}`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ favoriteId: id })
+            });
+            // Handle the response as needed
+          } catch (error) {
+            console.error("Error adding favorite:", error);
+          }
+        };
+      
+        addFavorite();
+      };
+      
 
     // This function handles the change event of a checkbox in the Autocomplete component.
     const handleCheckboxChange = (event) => {
@@ -195,6 +214,7 @@ function Homepage({ city, chosenCity, setChosenCity }) {
                                     id={item._id}
                                     image={item.imageURL}
                                     onClick={handleListItemClick}
+                                    handleListFavouriteClick={handleListFavouriteClick}
                                 />
                             </Link>
                         </Grid>
